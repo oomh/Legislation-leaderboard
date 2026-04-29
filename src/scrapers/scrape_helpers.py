@@ -174,6 +174,11 @@ def extract_pdf_links(soup: BeautifulSoup, page_url: str) -> list[dict]:
             log.info(f"Filtered out: {raw_title}")
             continue
 
+        # Only keep titles that start with "bill tracker"
+        if not raw_title.lower().startswith("bills tracker"):
+            log.info(f"Filtered out (not bill tracker): {raw_title}")
+            continue
+
         # Filter: must be a PDF or a /sites/default/files/ document
         is_pdf = href.lower().endswith(".pdf")
         is_doc_path = bool(re.search(r"/sites/default/files/", href, re.I))

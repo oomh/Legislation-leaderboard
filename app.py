@@ -18,9 +18,7 @@ from src.scrapers.scrape_house_leadership import (
 )
 import pandas as pd
 
-# ============================================================================
-# Initialization & Configuration
-# ============================================================================
+# ── Imports & Configuration ────────────────────────────────────────────────────
 
 log.info("Starting Legislation Leaderboard application")
 
@@ -28,17 +26,14 @@ st.set_page_config(
     page_title="Legislation Leaderboard",
     page_icon="📋",
     layout="wide",
-    initial_sidebar_state="expanded",
 )
 
 log.debug("Page configuration set")
 
 
-# ============================================================================
-# Page Renderers
-# ============================================================================
+# ── Page Definitions ──────────────────────────────────────────────────────────
 
-def _render_dashboard():
+def page_dashboard():
     """Render main dashboard page."""
     log.debug("Rendering dashboard page")
 
@@ -58,11 +53,11 @@ def _render_dashboard():
     st.info("No recent activity. Start a scraping job to begin.")
 
 
-def _render_scrapers_page(config):
+def page_scrapers():
     """Render scrapers management page."""
     log.info("Navigating to scrapers page")
 
-    # ── Initialize session state ──────────────────────────────────────────────
+    config = get_config()
 
     if "bill_tracker_urls" not in st.session_state:
         st.session_state.bill_tracker_urls = {"senate": [], "assembly": []}
@@ -76,10 +71,9 @@ def _render_scrapers_page(config):
 
     st.markdown("#### Bill Trackers")
 
-    # Scrape both button
     col_both = st.columns(1)[0]
     with col_both:
-        if st.button("Scrape Both (Page 1 Only)", key="scrape_both", use_container_width=True):
+        if st.button("Scrape Both Bill Trackers", key="scrape_both", use_container_width=True):
             log.info("Starting both bill tracker scrapers (page 1 only)")
 
             try:
@@ -102,72 +96,25 @@ def _render_scrapers_page(config):
 
     st.divider()
 
-    # Individual scrapers
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.write("**Senate Bill Tracker**")
-        if st.button("Run Senate Scraper", key="scrape_senate"):
-            log.info("Starting Senate bill tracker scrape (page 1 only)")
-            try:
-                with st.spinner("Scraping Senate bill tracker..."):
-                    pdfs = scrape_bill_tracker_senate(page_only=True)
-                    st.session_state.bill_tracker_urls["senate"] = pdfs
-                    log.info(f"Senate scrape complete: {len(pdfs)} PDFs found")
-
-                st.success(f"Found {len(pdfs)} Senate bill tracker PDFs")
-                if pdfs:
-                    with st.expander("View Senate PDFs"):
-                        for pdf in pdfs:
-                            st.write(f"- {pdf['title']}")
-                            st.write(f"  URL: {pdf['url']}")
-            except Exception as e:
-                log.error(f"Senate scraper failed: {e}")
-                st.error(f"Scraping failed: {e}")
-
-    with col2:
-        st.write("**National Assembly Bill Tracker**")
-        if st.button("Run Assembly Scraper", key="scrape_assembly"):
-            log.info("Starting National Assembly bill tracker scrape (page 1 only)")
-            try:
-                with st.spinner("Scraping National Assembly bill tracker..."):
-                    pdfs = scrape_bill_tracker_national_assembly(page_only=True)
-                    st.session_state.bill_tracker_urls["assembly"] = pdfs
-                    log.info(f"Assembly scrape complete: {len(pdfs)} PDFs found")
-
-                st.success(f"Found {len(pdfs)} National Assembly bill tracker PDFs")
-                if pdfs:
-                    with st.expander("View Assembly PDFs"):
-                        for pdf in pdfs:
-                            st.write(f"- {pdf['title']}")
-                            st.write(f"  URL: {pdf['url']}")
-            except Exception as e:
-                log.error(f"Assembly scraper failed: {e}")
-                st.error(f"Scraping failed: {e}")
-
-    # ── Stored URLs Summary ────────────────────────────────────────────────────
-
-    st.divider()
-    st.markdown("#### Latest Scraped URLs (for MinerU)")
-
+    # Display bill tracker data
     if st.session_state.bill_tracker_urls["senate"] or st.session_state.bill_tracker_urls["assembly"]:
-        col_senate, col_assembly = st.columns(2)
+        st.markdown("#### Bill Tracker Results")
 
-        with col_senate:
+        tab_senate, tab_assembly = st.tabs(["Senate Bill Trackers", "National Assembly Bill Trackers"])
+
+        with tab_senate:
             if st.session_state.bill_tracker_urls["senate"]:
-                st.write(f"**Senate:** {len(st.session_state.bill_tracker_urls['senate'])} URLs")
-                with st.expander("View Senate URLs"):
-                    for url in st.session_state.bill_tracker_urls["senate"]:
-                        st.write(f"- {url['title']}: {url['url']}")
+                senate_df = pd.DataFrame(st.session_state.bill_tracker_urls["senate"])
+                st.dataframe(senate_df, use_container_width=True)
+            else:
+                st.info("No Senate bill tracker data scraped yet")
 
-        with col_assembly:
+        with tab_assembly:
             if st.session_state.bill_tracker_urls["assembly"]:
-                st.write(f"**Assembly:** {len(st.session_state.bill_tracker_urls['assembly'])} URLs")
-                with st.expander("View Assembly URLs"):
-                    for url in st.session_state.bill_tracker_urls["assembly"]:
-                        st.write(f"- {url['title']}: {url['url']}")
-    else:
-        st.info("No URLs scraped yet. Click 'Scrape Both' or run individual scrapers.")
+                assembly_df = pd.DataFrame(st.session_state.bill_tracker_urls["assembly"])
+                st.dataframe(assembly_df, use_container_width=True)
+            else:
+                st.info("No National Assembly bill tracker data scraped yet")
 
     # ── House Leadership ──────────────────────────────────────────────────────
 
@@ -244,9 +191,11 @@ def _render_scrapers_page(config):
     st.code(f"Base URL: {config['base_url']}", language="text")
 
 
-def _render_mineru_page(config):
+def page_mineru_jobs():
     """Render MinerU extraction jobs page."""
     log.debug("Rendering MinerU extraction jobs page")
+
+    config = get_config()
 
     st.markdown("### MinerU Extraction Jobs")
 
@@ -263,7 +212,7 @@ def _render_mineru_page(config):
             st.warning("MinerU API Key not configured in secrets")
 
 
-def _render_transformations_page():
+def page_transformations():
     """Render data transformation page."""
     log.debug("Rendering data transformations page")
 
@@ -285,9 +234,11 @@ def _render_transformations_page():
             st.metric("Processed", "0")
 
 
-def _render_database_page(config):
+def page_database():
     """Render database management page."""
     log.debug("Rendering database management page")
+
+    config = get_config()
 
     st.markdown("### Database Management")
 
@@ -302,51 +253,43 @@ def _render_database_page(config):
     st.info("Database schema will appear here once initialized")
 
 
-# ============================================================================
-# Main Application
-# ============================================================================
-
-def main():
-    """Main application entry point."""
-    log.info("Initializing main application")
-
-    st.title("📋 Legislation Leaderboard")
-    st.subheader("Data Pipeline Orchestrator")
-
-    # Load configuration
-    try:
-        config = get_config()
-        log.info("Configuration loaded successfully")
-    except Exception as e:
-        log.error(f"Failed to load configuration: {e}")
-        st.error("Failed to load configuration. Check logs for details.")
-        return
-
-    # Sidebar navigation
-    with st.sidebar:
-        st.header("Navigation")
-        page = st.radio(
-            "Select Page",
-            ["Dashboard", "Scrapers", "MinerU Jobs", "Transformations", "Database"],
-        )
-
-    log.debug(f"User selected page: {page}")
-
-    # Page routing
-    if page == "Dashboard":
-        _render_dashboard()
-    elif page == "Scrapers":
-        _render_scrapers_page(config)
-    elif page == "MinerU Jobs":
-        _render_mineru_page(config)
-    elif page == "Transformations":
-        _render_transformations_page()
-    elif page == "Database":
-        _render_database_page(config)
+# ── Navigation & Main ──────────────────────────────────────────────────────────
 
 
-if __name__ == "__main__":
-    log.info("Application started")
-    main()
-    log.debug("Application render cycle complete")
+# Load configuration - validate early
+try:
+    config = get_config()
+    log.info("Configuration loaded successfully")
+except Exception as e:
+    log.error(f"Failed to load configuration: {e}")
+    st.error("Failed to load configuration. Check logs for details.")
+    st.stop()
+
+
+# Define pages
+pages = [
+    st.Page(page_dashboard, icon=":material/home:", title="Dashboard"),
+    st.Page(page_scrapers, icon=":material/settings:", title="Scrapers"),
+    st.Page(page_mineru_jobs, icon=":material/cloud_queue:", title="MinerU Jobs"),
+    st.Page(page_transformations, icon=":material/transform:", title="Transformations"),
+    st.Page(page_database, icon=":material/database:", title="Database"),
+]
+
+current_page = st.navigation(pages=pages, position="hidden")
+
+# Create custom navigation bar
+num_cols = max(len(pages) + 1, 6)
+columns = st.columns(num_cols, vertical_alignment="bottom")
+
+columns[0].write("**Legislation Leaderboard**")
+
+for col, page in zip(columns[1:], pages):
+    col.page_link(page, icon=page.icon)
+
+st.title(f"{current_page.icon} {current_page.title}")
+
+log.info(f"Rendering page: {current_page.title}")
+current_page.run()
+
+log.debug("Application render cycle complete")
 
