@@ -17,3 +17,5 @@ Untitled-1.ipynb
 # Streamlit cache
 .streamlit/
 .github
+
+data/

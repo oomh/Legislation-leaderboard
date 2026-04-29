@@ -23,6 +23,7 @@ from src.scrapers.scrape_members import (
 from src.scrapers.scrape_committee_members_pdf import (
     scrape_committee_leadership,
 )
+from src.minerU_extractors import extract_bill_trackers_and_committee
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -37,6 +38,22 @@ st.set_page_config(
 )
 
 log.debug("Page configuration set")
+
+# Initialize session state for all pages
+if "bill_tracker_urls" not in st.session_state:
+    st.session_state.bill_tracker_urls = {"senate": [], "assembly": []}
+
+if "house_leadership" not in st.session_state:
+    st.session_state.house_leadership = {"senate": [], "assembly": []}
+
+if "member_lists" not in st.session_state:
+    st.session_state.member_lists = {"senate": [], "assembly": []}
+
+if "committee_leadership" not in st.session_state:
+    st.session_state.committee_leadership = []
+
+if "mineru_extraction_results" not in st.session_state:
+    st.session_state.mineru_extraction_results = None
 
 
 # ── Page Definitions ──────────────────────────────────────────────────────────
@@ -104,19 +121,6 @@ def page_scrapers():
     log.info("Navigating to scrapers page")
 
     config = get_config()
-
-    if "bill_tracker_urls" not in st.session_state:
-        st.session_state.bill_tracker_urls = {"senate": [], "assembly": []}
-    
-    if "house_leadership" not in st.session_state:
-        st.session_state.house_leadership = {"senate": [], "assembly": []}
-    
-    if "member_lists" not in st.session_state:
-        st.session_state.member_lists = {"senate": [], "assembly": []}
-    
-    if "committee_leadership" not in st.session_state:
-        st.session_state.committee_leadership = []
-
 
     with st.expander('Individual Scrapers'):
         st.markdown("You can also run individual scrapers below. Note that some scrapers may take longer to run, especially if they are configured to scrape all pages of data.")
@@ -241,13 +245,13 @@ def page_scrapers():
             
             with tab_senate:
                 if st.session_state.bill_tracker_urls["senate"]:
-                    st.dataframe(pd.DataFrame(st.session_state.bill_tracker_urls["senate"]), use_container_width=True)
+                    st.dataframe(pd.DataFrame(st.session_state.bill_tracker_urls["senate"]), width='content')
                 else:
                     st.info("No Senate bill tracker data")
             
             with tab_assembly:
                 if st.session_state.bill_tracker_urls["assembly"]:
-                    st.dataframe(pd.DataFrame(st.session_state.bill_tracker_urls["assembly"]), use_container_width=True)
+                    st.dataframe(pd.DataFrame(st.session_state.bill_tracker_urls["assembly"]), width='content')
                 else:
                     st.info("No National Assembly bill tracker data")
 
@@ -258,13 +262,13 @@ def page_scrapers():
             
             with tab_senate:
                 if st.session_state.house_leadership["senate"]:
-                    st.dataframe(pd.DataFrame(st.session_state.house_leadership["senate"]), use_container_width=True)
+                    st.dataframe(pd.DataFrame(st.session_state.house_leadership["senate"]), width='content')
                 else:
                     st.info("No Senate leadership data")
             
             with tab_assembly:
                 if st.session_state.house_leadership["assembly"]:
-                    st.dataframe(pd.DataFrame(st.session_state.house_leadership["assembly"]), use_container_width=True)
+                    st.dataframe(pd.DataFrame(st.session_state.house_leadership["assembly"]), width='content')
                 else:
                     st.info("No National Assembly leadership data")
 
@@ -275,20 +279,20 @@ def page_scrapers():
             
             with tab_senate:
                 if st.session_state.member_lists["senate"]:
-                    st.dataframe(pd.DataFrame(st.session_state.member_lists["senate"]), use_container_width=True)
+                    st.dataframe(pd.DataFrame(st.session_state.member_lists["senate"]), width='content')
                 else:
                     st.info("No Senate member data")
             
             with tab_assembly:
                 if st.session_state.member_lists["assembly"]:
-                    st.dataframe(pd.DataFrame(st.session_state.member_lists["assembly"]), use_container_width=True)
+                    st.dataframe(pd.DataFrame(st.session_state.member_lists["assembly"]), width='content')
                 else:
                     st.info("No National Assembly member data")
 
         # Committee Leadership
         if st.session_state.committee_leadership:
             st.markdown("**Committee Leadership**")
-            st.dataframe(pd.DataFrame(st.session_state.committee_leadership), use_container_width=True)
+            st.dataframe(pd.DataFrame(st.session_state.committee_leadership), width='content')
 
     # ── Master Control ────────────────────────────────────────────────────────
 
@@ -334,17 +338,127 @@ def page_mineru_jobs():
 
     st.markdown("### MinerU Extraction Jobs")
 
-    st.markdown("#### Active Jobs")
-    st.info("No active jobs. Upload data or start a scraper to process.")
+    # Check for required data
+    has_bill_tracker_senate = bool(st.session_state.bill_tracker_urls.get("senate"))
+    has_bill_tracker_assembly = bool(st.session_state.bill_tracker_urls.get("assembly"))
+    has_committee_leadership = bool(st.session_state.committee_leadership)
 
-    st.markdown("#### Job Configuration")
-    if st.checkbox("Show MinerU API Configuration"):
-        if config.get("mineru_api_key"):
-            log.debug("MinerU API key is configured")
-            st.success("MinerU API Key configured")
+    # Display configuration
+    st.markdown("#### Configuration")
+    
+    if config.get("mineru_api_key"):
+        log.debug("MinerU API key is configured")
+        st.success("✓ MinerU API Key configured")
+    else:
+        log.warning("MinerU API key is not configured")
+        st.error("✗ MinerU API Key not configured in secrets")
+
+    st.divider()
+
+    # Extraction controls
+    st.markdown("#### Extract Documents")
+
+    if not has_bill_tracker_senate or not has_bill_tracker_assembly or not has_committee_leadership:
+        st.warning("Run scrapers first to populate bill trackers and committee leadership data")
+        st.info(f"Senate bill tracker: {'✓ Available' if has_bill_tracker_senate else '✗ Missing'}")
+        st.info(f"Assembly bill tracker: {'✓ Available' if has_bill_tracker_assembly else '✗ Missing'}")
+        st.info(f"Committee leadership: {'✓ Available' if has_committee_leadership else '✗ Missing'}")
+    else:
+        # Get URLs from session state (0th index)
+        senate_bill_url = st.session_state.bill_tracker_urls["senate"][0].get("url") if st.session_state.bill_tracker_urls["senate"] else None
+        assembly_bill_url = st.session_state.bill_tracker_urls["assembly"][0].get("url") if st.session_state.bill_tracker_urls["assembly"] else None
+        committee_url = st.session_state.committee_leadership[0].get("url") if st.session_state.committee_leadership else None
+
+        if not senate_bill_url or not assembly_bill_url or not committee_url:
+            st.error("Missing URL data in scraped results")
         else:
-            log.warning("MinerU API key is not configured")
-            st.warning("MinerU API Key not configured in secrets")
+            # Display documents to extract
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                st.markdown("**Senate Bill Tracker**")
+                st.caption(senate_bill_url[-50:])
+            
+            with col2:
+                st.markdown("**Assembly Bill Tracker**")
+                st.caption(assembly_bill_url[-50:])
+            
+            with col3:
+                st.markdown("**Committee Leadership**")
+                st.caption(committee_url[-50:])
+
+            st.divider()
+
+            # Extract button
+            if st.button("Start MinerU Extraction", key="start_mineru_extraction", use_container_width=True):
+                if not config.get("mineru_api_key"):
+                    st.error("MinerU API key not configured")
+                else:
+                    log.info("Starting MinerU extraction workflow")
+                    
+                    try:
+                        with st.spinner("Extracting documents with MinerU..."):
+                            results = extract_bill_trackers_and_committee(
+                                bill_tracker_senate_url=senate_bill_url,
+                                bill_tracker_assembly_url=assembly_bill_url,
+                                committee_leadership_url=committee_url,
+                                api_key=config.get("mineru_api_key"),
+                            )
+
+                        st.session_state.mineru_extraction_results = results
+
+                        # Count successes
+                        success_count = sum(1 for r in results.values() if r["status"] == "success")
+                        total_count = len(results)
+
+                        st.success(f"Extraction complete: {success_count}/{total_count} documents processed")
+
+                        log.info(f"MinerU extraction complete: {success_count} successful, {total_count - success_count} failed")
+
+                    except Exception as e:
+                        log.error(f"MinerU extraction failed: {e}")
+                        st.error(f"Extraction failed: {e}")
+
+    # Display results
+    st.divider()
+    st.markdown("#### Extraction Results")
+
+    if st.session_state.mineru_extraction_results:
+        results = st.session_state.mineru_extraction_results
+
+        tab_senate, tab_assembly, tab_committee = st.tabs(["Senate Bill Tracker", "Assembly Bill Tracker", "Committee Leadership"])
+
+        with tab_senate:
+            result = results.get("bill_tracker_senate", {})
+            if result.get("status") == "success":
+                st.success(f"✓ Extracted {len(result['result']['file_list'])} files")
+                st.caption(f"Location: {result['extract_dir']}")
+                with st.expander("View extracted files"):
+                    st.text("\n".join(result["result"]["file_list"]))
+            else:
+                st.error("✗ Extraction failed")
+
+        with tab_assembly:
+            result = results.get("bill_tracker_assembly", {})
+            if result.get("status") == "success":
+                st.success(f"✓ Extracted {len(result['result']['file_list'])} files")
+                st.caption(f"Location: {result['extract_dir']}")
+                with st.expander("View extracted files"):
+                    st.text("\n".join(result["result"]["file_list"]))
+            else:
+                st.error("✗ Extraction failed")
+
+        with tab_committee:
+            result = results.get("committee_leadership", {})
+            if result.get("status") == "success":
+                st.success(f"✓ Extracted {len(result['result']['file_list'])} files")
+                st.caption(f"Location: {result['extract_dir']}")
+                with st.expander("View extracted files"):
+                    st.text("\n".join(result["result"]["file_list"]))
+            else:
+                st.error("✗ Extraction failed")
+    else:
+        st.info("Run extraction above to populate results")
 
 
 def page_transformations():
