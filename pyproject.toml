@@ -1,0 +1,12 @@
+[project]
+name = "legislation-leaderboard"
+version = "0.1.0"
+description = "This App Scrapes the 'https://www.parliament.go.ke'. Gets a list of all the Members of the National Assembly (MPs) and members of the Senate; the most recent bill trackers (Senate and National Assembly separately); and a list of the committee membership. Then Builds a Neon Database of the bills, who sponsored them, and the status."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bs4>=0.0.2",
+    "loguru>=0.7.3",
+    "streamlit>=1.28.0",
+    "requests>=2.33.1",
+]
