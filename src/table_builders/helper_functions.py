@@ -185,3 +185,44 @@ def merge_spill_rows(df: pd.DataFrame, serial_col: str = "s/no/") -> pd.DataFram
 
     # Remove spill rows and reset index
     return df[~spill_mask].reset_index(drop=True)
+
+def validate_records(records: list[dict], key_col: str | None = None) -> list[dict]:
+    """
+    Validate and clean records: filter empty key column, collapse whitespace.
+    
+    Args:
+        records: List of record dictionaries
+        key_col: Column name to check for emptiness. If None, uses first dict key.
+        
+    Returns:
+        Cleaned and validated record list
+    """
+    if not records:
+        return []
+    
+    cleaned = []
+    for record in records:
+        if not record:
+            continue
+        
+        # Determine key column if not provided
+        if key_col is None:
+            key_col = next(iter(record.keys())) if record else None
+            if not key_col:
+                continue
+        
+        # Skip if key column is empty
+        if not record.get(key_col):
+            continue
+        
+        # Collapse whitespace on all string values
+        cleaned_record = {}
+        for k, v in record.items():
+            if isinstance(v, str):
+                cleaned_record[k] = " ".join(v.split())
+            else:
+                cleaned_record[k] = v
+        
+        cleaned.append(cleaned_record)
+    
+    return cleaned
