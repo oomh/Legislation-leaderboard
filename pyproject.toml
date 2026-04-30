@@ -9,4 +9,5 @@ dependencies = [
     "loguru>=0.7.3",
     "streamlit>=1.28.0",
     "requests>=2.33.1",
+    "lxml>=6.1.0",
 ]
