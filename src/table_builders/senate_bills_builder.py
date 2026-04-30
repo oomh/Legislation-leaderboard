@@ -11,8 +11,8 @@ import pandas as pd
 
 from src.table_builders.helper_functions import (
     extract_tables_from_json,
-    convert_html_tables_to_dataframes
-    )
+    convert_html_tables_to_dataframes,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -60,7 +60,7 @@ def build_senate_bills(
         if not dataframes:
             warning_msg = "No DataFrames created from HTML conversion"
             logger.warning(warning_msg)
-            
+
             return {
                 "status": "success",
                 "data": pd.DataFrame(),
@@ -69,13 +69,15 @@ def build_senate_bills(
             }
 
         # Step 3: Concatenate all DataFrames into one
-        combined_df = pd.concat(dataframes, ignore_index=True) if dataframes else pd.DataFrame()
+        combined_df = (
+            pd.concat(dataframes, ignore_index=True) if dataframes else pd.DataFrame()
+        )
 
         # Step 4: Convert all data to strings and handle missing values for Arrow compatibility
         if not combined_df.empty:
             # Convert all columns to string type and replace NaN with empty strings
-            combined_df = combined_df.astype(str).replace('nan', '')
-            
+            combined_df = combined_df.astype(str).replace("nan", "")
+
         row_count = len(combined_df)
 
         logger.info(f"Successfully built senate bills: {row_count} rows")
