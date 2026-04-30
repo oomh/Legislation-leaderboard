@@ -14,37 +14,41 @@ from loguru import logger as log
 from src.transformations.transformation_helpers import (
     apply_mask_to_dataframe,
     create_mask_for_strings,
+    merge_spill_rows,
+    merge_duplicate_serial_rows,
+    strip_cell_punctuation,
+    apply_name_parsing,
 )
 
 # Canonical column names matching the senate bill tracker PDF header
 SENATE_BILL_COLUMNS = [
-    "NO.",
-    "BILL",
-    "SPONSOR",
-    "GAZETTE NO.",
-    "DATE OF PUBLICATION",
-    "MATURITY",
-    "DATE 1ST READ",
-    "SC COMMITTEE REFERRED TO",
-    "DATE 2ND READ",
-    "CoTW/ 3RD READ",
-    "DATE OF ASSENT",
-    "REMARKS",
+    "no.",
+    "bill",
+    "sponsor",
+    "gazette no.",
+    "date of publication",
+    "maturity",
+    "date 1st read",
+    "sc committee referred to",
+    "date 2nd read",
+    "cotw/ 3rd read",
+    "date of assent",
+    "remarks",
 ]
 
 # Strings that identify repeated header rows to be removed from the data
 HEADER_ROW_STRINGS = [
-    "NO.",
-    "BILL",
-    "SPONSOR",
-    "GAZETTE NO.",
-    "DATE OF PUBLICATION",
-    "MATURITY",
-    "DATE 1ST READ",
-    "SC COMMITTEE REFERRED TO",
-    "DATE 2ND READ",
-    "DATE OF ASSENT",
-    "REMARKS",
+    "no.",
+    # "bill",
+    # "sponsor",
+    # "gazette no.",
+    # "date of publication",
+    # "maturity",
+    # "date 1st read",
+    "sc committee referred to",
+    # "date 2nd read",
+    # "date of assent",
+    # "remarks",
 ]
 
 
@@ -62,10 +66,7 @@ def rename_senate_bill_columns(df: pd.DataFrame) -> pd.DataFrame:
         DataFrame with renamed columns.
     """
     n_cols = len(df.columns)
-    col_map = {
-        old: new
-        for old, new in zip(df.columns, SENATE_BILL_COLUMNS[:n_cols])
-    }
+    col_map = {old: new for old, new in zip(df.columns, SENATE_BILL_COLUMNS[:n_cols])}
     log.info(f"Renaming {n_cols} senate bill columns")
     return df.rename(columns=col_map)
 
@@ -84,7 +85,7 @@ def remove_header_rows(df: pd.DataFrame) -> pd.DataFrame:
         Cleaned DataFrame with header rows removed.
     """
     # Search only the first two columns so we don't accidentally drop real data
-    search_cols = [c for c in ["NO.", "BILL"] if c in df.columns]
+    search_cols = [c for c in ["no.", "sc committee referred to"] if c in df.columns]
     mask = create_mask_for_strings(
         df,
         search_strings=HEADER_ROW_STRINGS,
@@ -92,22 +93,6 @@ def remove_header_rows(df: pd.DataFrame) -> pd.DataFrame:
         case_sensitive=False,
     )
     return apply_mask_to_dataframe(df, mask)
-
-
-def drop_empty_rows(df: pd.DataFrame) -> pd.DataFrame:
-    """Drop rows where every cell is empty or whitespace.
-
-    Args:
-        df: Input DataFrame.
-
-    Returns:
-        DataFrame without all-empty rows.
-    """
-    mask_all_empty = df.apply(lambda row: row.str.strip().eq("").all(), axis=1)
-    n_dropped = mask_all_empty.sum()
-    if n_dropped:
-        log.info(f"Dropping {n_dropped} fully-empty rows")
-    return df[~mask_all_empty].reset_index(drop=True)
 
 
 def transform_senate_bills(raw_df: pd.DataFrame) -> dict:
@@ -142,9 +127,16 @@ def transform_senate_bills(raw_df: pd.DataFrame) -> dict:
 
         df = rename_senate_bill_columns(raw_df.copy())
         df = remove_header_rows(df)
-        df = drop_empty_rows(df)
+        df = merge_spill_rows(
+            df,
+            serial_col="no.",
+        )
+        df = merge_duplicate_serial_rows(df, serial_col="no.")
+        df["sponsor"] = apply_name_parsing(df, columns=["sponsor"])["sponsor"]
+        df = strip_cell_punctuation(df)
 
         row_count = len(df)
+        
         log.info(f"Senate bills transformation complete: {row_count} rows retained")
 
         return {
