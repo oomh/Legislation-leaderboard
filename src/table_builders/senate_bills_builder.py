@@ -1,183 +1,98 @@
 """
-Senate Bill Tracker Builder
+Senate Bills Table Builder
 
-Specialized handler for Senate bills tracker table extraction.
-Handles rowspan attributes, multi-row entries, and complex formatting.
+Builds and processes legislative tables from MinerU-extracted senate bill tracker JSON.
 """
 
-from pathlib import Path
-from bs4 import BeautifulSoup
-from loguru import logger as log
+import logging
+from typing import Dict, Any
 
-# ── Helper Functions ──────────────────────────────────────────────────────────
+import pandas as pd
+
+from src.table_builders.helper_functions import (
+    extract_tables_from_json,
+    convert_html_tables_to_dataframes
+    )
+
+logger = logging.getLogger(__name__)
 
 
-def parse_senate_bills_markdown(md_file: str) -> list[dict]:
+def build_senate_bills(
+    json_file_path: str = "data/mineru_output_bill_tracker_senate/content_list_v2.json",
+) -> Dict[str, Any]:
     """
-    Parse Senate bills tracker markdown file and extract structured bill data.
-    
-    Handles:
-    - Multiple HTML tables
-    - rowspan attributes
-    - Multi-row bill entries
-    - Complex remarks columns
-    
+    Build senate bill tables from MinerU-extracted JSON.
+
+    This function:
+    1. Extracts table objects from the senate bill tracker JSON file
+    2. Converts HTML content to DataFrames
+    3. Concatenates all DataFrames into a single combined DataFrame
+
     Args:
-        md_file: Path to full.md markdown file
-        
+        json_file_path (str): Path to the JSON file containing extracted senate bills.
+
     Returns:
-        List of dictionaries with bill data
-    """
-    file_path = Path(md_file)
-    
-    if not file_path.exists():
-        log.warning(f"Markdown file not found: {md_file}")
-        return []
-
-    with open(md_file, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    soup = BeautifulSoup(content, "html.parser")
-    # find all tables in the markdown content
-    all_tables = soup.find_all("table")
-
-    if not all_tables:
-        log.warning(f"No tables found in {md_file}")
-        return []
-    # list to hold all the bills
-    bills = []
-
-    # then we iterate
-    for table_idx, table in enumerate(all_tables):
-        log.info(f"Processing table {table_idx + 1}/{len(all_tables)}")
-        
-        # Extract rows from table
-        rows = table.find_all("tr")
-        
-        # Group rows by bill number
-        current_bill = None
-        
-        for row in rows:
-            cells = row.find_all("td")
-            
-            if not cells:
-                continue
-
-            # Extract cell text
-            cell_data = [cell.get_text(" ", strip=True) for cell in cells]
-
-            # Skip header rows (contain "NO.", "BILL", etc.)
-            if len(cell_data) > 0 and cell_data[0] == "NO.":
-                continue
-
-            # Check if this is a new bill entry (has a bill number in first column)
-            first_cell_text = cell_data[0] if cell_data else ""
-            
-            if first_cell_text and first_cell_text[0].isdigit():
-                # New bill entry
-                if current_bill:
-                    bills.append(current_bill)
-
-                current_bill = {
-                    "bill_number": first_cell_text,
-                    "bill_name": cell_data[1] if len(cell_data) > 1 else "",
-                    "sponsor": cell_data[2] if len(cell_data) > 2 else "",
-                    "gazette_no": cell_data[3] if len(cell_data) > 3 else "",
-                    "date_publication": cell_data[4] if len(cell_data) > 4 else "",
-                    "maturity": cell_data[5] if len(cell_data) > 5 else "",
-                    "date_1st_read": cell_data[6] if len(cell_data) > 6 else "",
-                    "sc_committee": cell_data[7] if len(cell_data) > 7 else "",
-                    "date_2nd_read": cell_data[8] if len(cell_data) > 8 else "",
-                    "cotw_3rd_read": cell_data[9] if len(cell_data) > 9 else "",
-                    "date_assent": cell_data[10] if len(cell_data) > 10 else "",
-                    "remarks": cell_data[11] if len(cell_data) > 11 else "",
-                }
-
-            elif current_bill and first_cell_text:
-                # Continuation of previous bill (additional info)
-                # This happens when a bill has multiple rows with additional details
-                # We'll append to the bill name or remarks
-                if len(cell_data) > 0:
-                    current_bill["bill_name"] += " " + first_cell_text
-                
-                # Handle additional remarks
-                if len(cell_data) > 11:
-                    current_bill["remarks"] += " " + cell_data[11]
-
-        # Don't forget the last bill
-        if current_bill:
-            bills.append(current_bill)
-
-    log.info(f"Extracted {len(bills)} bills from Senate bill tracker")
-    return bills
-
-
-def validate_and_clean_senate_bills(bills: list[dict]) -> list[dict]:
-    """
-    Validate and clean extracted bill data.
-    
-    Args:
-        bills: List of bill dictionaries
-        
-    Returns:
-        Cleaned list of bills
-    """
-    cleaned_bills = []
-    
-    for bill in bills:
-        # Skip if no bill number
-        if not bill.get("bill_number"):
-            continue
-
-        # Clean up whitespace
-        cleaned_bill = {k: v.strip() if isinstance(v, str) else v for k, v in bill.items()}
-        cleaned_bills.append(cleaned_bill)
-
-    log.info(f"Cleaned {len(cleaned_bills)} bills")
-    return cleaned_bills
-
-
-# ── Core Functions ────────────────────────────────────────────────────────────
-
-
-def build_senate_bills_table(md_file: str) -> dict:
-    """
-    Complete workflow to build Senate bills table.
-    
-    Args:
-        md_file: Path to full.md markdown file
-        
-    Returns:
-        Dictionary with table status and data
+        Dict[str, Any]: Result dictionary containing:
+            - status (str): 'success' or 'error'
+            - data (pd.DataFrame): Combined DataFrame with all bill data
+            - row_count (int): Number of rows in the result
+            - message (str): Status message
     """
     try:
-        # Parse markdown
-        bills = parse_senate_bills_markdown(md_file)
-        
-        if not bills:
-            log.warning("No bills extracted from Senate bill tracker")
+        logger.info(f"Building senate bills tables from {json_file_path}")
+
+        # Step 1: Extract tables from JSON
+        tables = extract_tables_from_json(json_file_path)
+
+        if not tables:
+            warning_msg = "No tables found in senate bills JSON"
+            logger.warning(warning_msg)
             return {
-                "status": "failed",
-                "error": "No bills found",
-                "data": [],
+                "status": "success",
+                "data": pd.DataFrame(),
                 "row_count": 0,
+                "message": warning_msg,
             }
 
-        # Validate and clean
-        cleaned_bills = validate_and_clean_senate_bills(bills)
+        # Step 2: Convert HTML tables to DataFrames
+        dataframes = convert_html_tables_to_dataframes(tables)
 
-        log.info(f"Senate bills table built: {len(cleaned_bills)} bills")
+        if not dataframes:
+            warning_msg = "No DataFrames created from HTML conversion"
+            logger.warning(warning_msg)
+            
+            return {
+                "status": "success",
+                "data": pd.DataFrame(),
+                "row_count": 0,
+                "message": warning_msg,
+            }
+
+        # Step 3: Concatenate all DataFrames into one
+        combined_df = pd.concat(dataframes, ignore_index=True) if dataframes else pd.DataFrame()
+
+        # Step 4: Convert all data to strings and handle missing values for Arrow compatibility
+        if not combined_df.empty:
+            # Convert all columns to string type and replace NaN with empty strings
+            combined_df = combined_df.astype(str).replace('nan', '')
+            
+        row_count = len(combined_df)
+
+        logger.info(f"Successfully built senate bills: {row_count} rows")
+
         return {
             "status": "success",
-            "data": cleaned_bills,
-            "row_count": len(cleaned_bills),
+            "data": combined_df,
+            "row_count": row_count,
+            "message": f"Successfully extracted {row_count} bill records",
         }
 
     except Exception as e:
-        log.error(f"Failed to build Senate bills table: {e}")
+        error_msg = f"Error building senate bills: {str(e)}"
+        logger.error(error_msg)
         return {
-            "status": "failed",
-            "error": str(e),
-            "data": [],
+            "status": "error",
+            "data": pd.DataFrame(),
             "row_count": 0,
+            "message": error_msg,
         }

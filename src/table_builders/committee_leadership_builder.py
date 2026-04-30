@@ -7,6 +7,7 @@ Extracts committee names and member information from MinerU markdown outputs.
 import re
 from typing import TypedDict, List, Dict, Any
 from loguru import logger as log
+from .markdown_parser import validate_records
 
 
 class CommitteeMember(TypedDict):
@@ -45,7 +46,6 @@ def parse_committee_leadership_markdown(markdown_content: str) -> List[Committee
     
     current_committee = ""
     committee_pattern = r"^#\s+[A-Z]+\.\s+(.+)$"
-    member_pattern = r"^\d+\.\s+(.+?)(?:\s+[-–]\s+(Chairperson|Vice-Chairperson|Chair|Vice-Chair))?\s*$"
 
     for line in lines:
         line = line.strip()
@@ -91,53 +91,16 @@ def parse_committee_leadership_markdown(markdown_content: str) -> List[Committee
             if member_name:
                 member_record: CommitteeMember = {
                     "committee_name": current_committee,
-                    "member_number": len([m for m in all_members if m["committee_name"] == current_committee]) + 1,
+                    "member_number": str(len([m for m in all_members if m["committee_name"] == current_committee]) + 1),
                     "member_name": member_name,
-                    "honors": honors,
-                    "position": position,
+                    "honors": honors if honors else "",
+                    "position": position if position else "",
                 }
                 all_members.append(member_record)
 
     log.info(f"Parsed {len(all_members)} committee members from {len(set(m['committee_name'] for m in all_members))} committees")
 
     return all_members
-
-
-# ── Validation ──────────────────────────────────────────────────────────────────
-
-
-def validate_and_clean_committee_members(
-    members: List[CommitteeMember],
-) -> List[CommitteeMember]:
-    """Validate and clean extracted committee member records.
-    
-    Args:
-        members: List of extracted member records
-        
-    Returns:
-        Cleaned and validated member records
-    """
-
-    log.info(f"Validating {len(members)} committee members")
-
-    cleaned_members: List[CommitteeMember] = []
-
-    for member in members:
-        # Skip if missing critical fields
-        if not member["committee_name"] or not member["member_name"]:
-            continue
-
-        # Clean up whitespace
-        member["member_name"] = " ".join(member["member_name"].split())
-        member["committee_name"] = " ".join(member["committee_name"].split())
-        member["honors"] = " ".join(member["honors"].split()) if member["honors"] else ""
-        member["position"] = " ".join(member["position"].split()) if member["position"] else ""
-
-        cleaned_members.append(member)
-
-    log.info(f"Validation complete: {len(cleaned_members)} valid members")
-
-    return cleaned_members
 
 
 # ── Table Organization ──────────────────────────────────────────────────────────
@@ -153,8 +116,6 @@ def organize_by_committee(members: List[CommitteeMember]) -> List[Dict[str, Any]
         List of tables with committee_name and data fields
     """
 
-    log.info("Organizing committee members into tables by committee")
-
     committees_dict: Dict[str, List[CommitteeMember]] = {}
 
     # Group members by committee
@@ -167,7 +128,17 @@ def organize_by_committee(members: List[CommitteeMember]) -> List[Dict[str, Any]
     # Convert to list of tables
     tables = []
     for committee_name, committee_members in committees_dict.items():
-        table_data = [dict(m) for m in committee_members]
+        table_data = []
+        for member in committee_members:
+            # Ensure all values are strings for proper serialization
+            table_data.append({
+                "committee_name": str(member.get("committee_name", "")),
+                "member_number": str(member.get("member_number", "")),
+                "member_name": str(member.get("member_name", "")),
+                "honors": str(member.get("honors", "")),
+                "position": str(member.get("position", "")),
+            })
+        
         tables.append({
             "committee_name": committee_name,
             "row_count": len(table_data),
@@ -183,7 +154,7 @@ def organize_by_committee(members: List[CommitteeMember]) -> List[Dict[str, Any]
 
 
 def build_committee_leadership_table(
-    mineru_markdown_path: str,
+    mineru_markdown_path: str = "data/mineru_output_committee_leadership/full.md",
 ) -> Dict[str, Any]:
     """Complete workflow to extract and build committee leadership table from MinerU markdown output.
     
@@ -204,11 +175,12 @@ def build_committee_leadership_table(
         # Parse members from markdown
         raw_members = parse_committee_leadership_markdown(markdown_content)
 
-        # Validate and clean
-        cleaned_members = validate_and_clean_committee_members(raw_members)
+        # Validate and clean using shared validator
+        members_list = [dict(m) for m in raw_members]
+        cleaned_members = validate_records(members_list, key_col="member_name")
 
         # Organize into committee tables
-        committee_tables = organize_by_committee(cleaned_members)
+        committee_tables = organize_by_committee([CommitteeMember(**m) for m in cleaned_members])
 
         log.info(
             f"Committee leadership table build successful: {len(committee_tables)} committees, {len(cleaned_members)} members extracted"
