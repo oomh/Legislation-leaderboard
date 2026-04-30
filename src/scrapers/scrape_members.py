@@ -38,6 +38,8 @@ def _extract_member_from_row(
     """
     try:
         cells = row.find_all("td")
+        # added this here so Pylance would shut up about it being possibly uninitialized in the assembly branch
+        constituency = ""
 
         if chamber == "senate":
             # Senate structure: name, image, county, party, status, more_link
@@ -45,7 +47,7 @@ def _extract_member_from_row(
                 return None
 
             name = clean_text(cells[0].get_text(strip=True))
-            county = clean_text(cells[2].get_text(strip=True))
+            county = clean_text(cells[2].get_text(strip=True,))
             party = clean_text(cells[3].get_text(strip=True))
             status = clean_text(cells[4].get_text(strip=True))
             more_link = cells[5].find("a")
@@ -57,6 +59,7 @@ def _extract_member_from_row(
 
             name = clean_text(cells[0].get_text(strip=True))
             county = clean_text(cells[2].get_text(strip=True))
+            constituency = clean_text(cells[3].get_text(strip=True))  # add this
             party = clean_text(cells[4].get_text(strip=True))
             status = clean_text(cells[5].get_text(strip=True))
             more_link = cells[6].find("a")
@@ -66,12 +69,21 @@ def _extract_member_from_row(
         if more_link and more_link.get("href"):
             profile_url = build_url(BASE_URL, more_link["href"])
 
-        if name:
+        if name and chamber == "senate":
             return {
-                "name": name,
-                "county": county,
-                "party": party,
-                "status": status,
+                "name": name.lower(),
+                "county": county.lower(),
+                "party": party.lower(),
+                "status": status.lower(),
+                "profile_url": profile_url,
+            }
+        elif name and chamber == "assembly":
+            return {
+                "name": name.lower(),
+                "county": county.lower(),
+                "constituency": constituency.lower(),
+                "party": party.lower(),
+                "status": status.lower(),
                 "profile_url": profile_url,
             }
         return None
