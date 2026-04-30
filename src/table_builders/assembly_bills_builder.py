@@ -68,13 +68,15 @@ def build_assembly_bills(
             }
 
         # Step 3: Concatenate all DataFrames into one
-        combined_df = pd.concat(dataframes, ignore_index=True) if dataframes else pd.DataFrame()
+        combined_df = (
+            pd.concat(dataframes, ignore_index=True) if dataframes else pd.DataFrame()
+        )
 
         # Step 4: Convert all data to strings and handle missing values for Arrow compatibility
         if not combined_df.empty:
             # Convert all columns to string type and replace NaN with empty strings
-            combined_df = combined_df.astype(str).replace('nan', '')
-            
+            combined_df = combined_df.astype(str).replace("nan", "")
+
         row_count = len(combined_df)
 
         logger.info(f"Successfully built assembly bills: {row_count} rows")
@@ -85,8 +87,6 @@ def build_assembly_bills(
             "row_count": row_count,
             "message": f"Successfully extracted {row_count} bill records",
         }
-        
-        
 
     except Exception as e:
         error_msg = f"Error building assembly bills: {str(e)}"

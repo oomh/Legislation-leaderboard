@@ -50,7 +50,9 @@ def extract_tables_from_json(json_file_path: str) -> List[Dict[str, Any]]:
         with open(json_path, "r") as f:
             data = json.load(f)
 
-        logger.info(f"Loaded JSON file with {len(data)} top-level items from {json_file_path}")
+        logger.info(
+            f"Loaded JSON file with {len(data)} top-level items from {json_file_path}"
+        )
 
         # Flatten the nested list structure
         all_items = []
@@ -77,7 +79,9 @@ def extract_tables_from_json(json_file_path: str) -> List[Dict[str, Any]]:
                 if len(image_path) > min_path_length and len(html_content) > 0:
                     filtered_tables.append(item)
 
-        logger.info(f"Filtered and found {len(filtered_tables)} tables matching criteria")
+        logger.info(
+            f"Filtered and found {len(filtered_tables)} tables matching criteria"
+        )
 
         return filtered_tables
 
@@ -138,10 +142,7 @@ def convert_html_tables_to_dataframes(
         except Exception as e:
             error_msg = str(e)[:100]
             logger.error(f"Table {i+1}: Error converting HTML - {error_msg}")
-            conversion_errors.append({
-                "table_index": i + 1,
-                "error": error_msg
-            })
+            conversion_errors.append({"table_index": i + 1, "error": error_msg})
 
     logger.info(
         f"Conversion complete: {len(dataframes)} DataFrames created "
@@ -186,35 +187,36 @@ def merge_spill_rows(df: pd.DataFrame, serial_col: str = "s/no/") -> pd.DataFram
     # Remove spill rows and reset index
     return df[~spill_mask].reset_index(drop=True)
 
+
 def validate_records(records: list[dict], key_col: str | None = None) -> list[dict]:
     """
     Validate and clean records: filter empty key column, collapse whitespace.
-    
+
     Args:
         records: List of record dictionaries
         key_col: Column name to check for emptiness. If None, uses first dict key.
-        
+
     Returns:
         Cleaned and validated record list
     """
     if not records:
         return []
-    
+
     cleaned = []
     for record in records:
         if not record:
             continue
-        
+
         # Determine key column if not provided
         if key_col is None:
             key_col = next(iter(record.keys())) if record else None
             if not key_col:
                 continue
-        
+
         # Skip if key column is empty
         if not record.get(key_col):
             continue
-        
+
         # Collapse whitespace on all string values
         cleaned_record = {}
         for k, v in record.items():
@@ -222,7 +224,7 @@ def validate_records(records: list[dict], key_col: str | None = None) -> list[di
                 cleaned_record[k] = " ".join(v.split())
             else:
                 cleaned_record[k] = v
-        
+
         cleaned.append(cleaned_record)
-    
+
     return cleaned
