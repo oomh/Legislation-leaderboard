@@ -12,7 +12,7 @@ from loguru import logger as log
 def get_config():
     """
     Load configuration from Streamlit secrets.
-    
+
     Returns:
         dict: Configuration dictionary with BASE_URL, SCRAPE_HEADERS, EXCLUDED_TITLES
     """
@@ -29,10 +29,10 @@ def get_config():
 def _parse_headers(headers_str):
     """
     Parse JSON headers string into dictionary.
-    
+
     Args:
         headers_str: JSON string of headers
-        
+
     Returns:
         dict: Parsed headers dictionary
     """
