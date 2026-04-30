@@ -21,11 +21,11 @@ MINERU_API_URL = "https://mineru.net/api/v4/extract/task"
 def parse_by_url(pdf_url: str, api_key: str):
     """
     Create a MinerU extraction task for the given PDF URL.
-    
+
     Args:
         pdf_url: URL of the PDF to extract
         api_key: MinerU API key for authentication
-        
+
     Returns:
         Task ID string for polling status
     """
@@ -43,16 +43,18 @@ def parse_by_url(pdf_url: str, api_key: str):
     return task_id
 
 
-def get_task_status(task_id: str, api_key: str, max_wait: int = 300, poll_interval: int = 5):
+def get_task_status(
+    task_id: str, api_key: str, max_wait: int = 300, poll_interval: int = 5
+):
     """
     Poll MinerU task status until completion or timeout.
-    
+
     Args:
         task_id: MinerU task ID to check
         api_key: MinerU API key for authentication
         max_wait: Maximum wait time in seconds (default 300)
         poll_interval: Polling interval in seconds (default 5)
-        
+
     Returns:
         Final task status string, or None if timeout
     """
@@ -63,10 +65,17 @@ def get_task_status(task_id: str, api_key: str, max_wait: int = 300, poll_interv
     while time.time() - start_time < max_wait:
         res = requests.get(url, headers=headers)
         res.raise_for_status()
-        
+
         status = res.json()["data"]["state"]
 
-        if status in ("pending", "queued", "running", "parsing", "converting", "format conversion in progress"):
+        if status in (
+            "pending",
+            "queued",
+            "running",
+            "parsing",
+            "converting",
+            "format conversion in progress",
+        ):
             log.info(f"MinerU task {task_id} status: {status}")
 
         elif status == "failed":
@@ -87,24 +96,24 @@ def get_task_status(task_id: str, api_key: str, max_wait: int = 300, poll_interv
 def get_parsed_zip(task_id: str, api_key: str, extract_to: str = None):
     """
     Download and optionally extract the parsed ZIP file from MinerU.
-    
+
     Args:
         task_id: MinerU task ID
         api_key: MinerU API key for authentication
         extract_to: Optional directory path to extract files
-        
+
     Returns:
         Dictionary with file_list, zip_buffer, and extraction status
     """
     headers = {"Authorization": f"Bearer {api_key}"}
     url = f"{MINERU_API_URL}/{task_id}"
-    
+
     res = requests.get(url, headers=headers)
     res.raise_for_status()
-    
+
     data = res.json()["data"]
     full_zip_url = data["full_zip_url"]
-    
+
     log.info(f"Downloaded MinerU ZIP URL: {full_zip_url}")
 
     # Download ZIP in memory
@@ -125,6 +134,7 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str = None):
         # Extract if directory provided
         if extract_to:
             import os
+
             os.makedirs(extract_to, exist_ok=True)
             zip_file.extractall(extract_to)
             log.info(f"MinerU files extracted to: {extract_to}")
@@ -142,12 +152,12 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str = None):
 def mineru_workflow(pdf_url: str, api_key: str, extract_dir: str = None):
     """
     Complete MinerU workflow: create task → wait for completion → download.
-    
+
     Args:
         pdf_url: URL of PDF to extract
         api_key: MinerU API key for authentication
         extract_dir: Optional directory to extract files
-        
+
     Returns:
         Dictionary with extraction results, or None if failed
     """
