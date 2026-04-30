@@ -3,6 +3,7 @@
 Utility functions for transforming and cleaning extracted table data.
 """
 
+import re
 import pandas as pd
 from typing import List
 from loguru import logger as log
@@ -132,3 +133,188 @@ def remove_duplicate_header_rows(
         df, header_indicators, columns=columns, case_sensitive=False
     )
     return apply_mask_to_dataframe(df, mask)
+
+
+def merge_spill_rows(df, serial_col="s/no/"):
+    """
+    Merge rows that spilled into next row (no serial number).
+    Occurs when table cells wrap to multiple lines in PDF.
+
+    Args:
+        df: DataFrame with potential spill rows
+        serial_col: Column name containing serial numbers
+
+    Returns:
+        DataFrame with spill rows merged into previous row
+    """
+    df = df.copy()
+
+    spill_mask = df[serial_col].isna() | (df[serial_col].astype(str).str.strip() == "")
+
+    for i in df[spill_mask].index:
+        prev = i - 1
+        if prev in df.index:
+            for col in df.columns:
+                curr_val = str(df.loc[i, col]).strip()
+                if curr_val and curr_val != "nan":
+                    prev_val = str(df.loc[prev, col]).strip()
+                    df.loc[prev, col] = (
+                        (prev_val + " " + curr_val).strip()
+                        if prev_val != "nan"
+                        else curr_val
+                    )
+
+    return df[~spill_mask].reset_index(drop=True)
+
+
+def merge_duplicate_serial_rows(df, serial_col="", separator=" "):
+    """
+    Merge rows that share the same serial number into a single row.
+
+    Occurs when a PDF table row spans multiple rows due to cell content wrapping
+    across pages or columns. Unlike merge_spill_rows (which handles rows with no
+    serial), this handles rows where the serial is explicitly repeated.
+
+    For each group of rows sharing a serial number:
+    - Columns with identical values are kept as-is
+    - Columns with differing values are concatenated using the separator
+
+    Args:
+        df: DataFrame with potential duplicate serial rows
+        serial_col: Column name containing serial numbers (default: "s/no/")
+        separator: String used to join differing cell values (default: " ")
+
+    Returns:
+        pd.DataFrame: DataFrame with duplicate serial rows merged into single rows
+
+    Example:
+        >>> df = pd.DataFrame({
+        ...     's/no/': ['97.', '97.', '97.'],
+        ...     'Bill': ['Bill A', 'Bill A', 'Bill A'],
+        ...     'Remarks': ['Note 1', 'Note 2', 'Note 3'],
+        ... })
+        >>> result = merge_duplicate_serial_rows(df)
+        >>> len(result)
+        1
+        >>> result.loc[0, 'Remarks']
+        'Note 1 Note 2 Note 3'
+    """
+    if df.empty:
+        return df
+
+    log.info(f"Merging duplicate serial rows on column: {serial_col}")
+
+    rows_before = len(df)
+    merged_rows = []
+    serial_to_idx = {}  # serial value -> position in merged_rows
+
+    for _, row in df.iterrows():
+        serial = str(row[serial_col]).strip()
+
+        # Skip rows with no serial — use merge_spill_rows for those
+        if not serial or serial == "nan":
+            merged_rows.append(row.to_dict())
+            continue
+
+        if serial in serial_to_idx:
+            idx = serial_to_idx[serial]
+            for col in df.columns:
+                curr = str(row[col]).strip()
+                prev = str(merged_rows[idx][col]).strip()
+
+                # Nothing to add
+                if not curr or curr == "nan" or curr == prev:
+                    continue
+
+                merged_rows[idx][col] = (
+                    (prev + separator + curr).strip()
+                    if prev and prev != "nan"
+                    else curr
+                )
+        else:
+            serial_to_idx[serial] = len(merged_rows)
+            merged_rows.append(row.to_dict())
+
+    result = pd.DataFrame(merged_rows).reset_index(drop=True)
+    log.info(f"Merged {rows_before} rows into {len(result)} rows")
+    return result
+
+
+_PUNCT_STRIP = re.compile(r"^[\s,;.\-/|]+|[\s,;.\-/|]+$")
+
+
+def strip_cell_punctuation(df: pd.DataFrame) -> pd.DataFrame:
+    """Strip leading/trailing punctuation and whitespace from all string cells.
+
+    Removes characters in the set ``[ , ; . - / | ]`` from the start and end
+    of every string-valued cell. Non-string values are left untouched.
+
+    Args:
+        df: Input DataFrame.
+
+    Returns:
+        Copy of DataFrame with cells cleaned.
+    """
+
+    def _clean(val):
+        if not isinstance(val, str):
+            return val
+        return _PUNCT_STRIP.sub("", val).strip()
+
+    return df.map(_clean)
+
+
+_NAME_STRIP_PARTS = [
+    "the rt.",
+    "rt. hon.",
+    "the hon.",
+    "the hon",
+    "rt. hon",
+    "hon.",
+    "the hon. ",
+    "the hon ",
+    "hon.",
+    "sen. ",
+    "sen.",
+    "m.p.",
+    ", m.p.",
+    " m.p",
+    " mp",
+    " cbs",
+    ", cbs",
+    ",cbs",
+    ", egh",
+    ", mgh",
+    ", ebs",
+    " cs",
+    ", sc",
+]
+
+
+def apply_name_parsing(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
+    """Strip legislative titles and post-nominals from name columns, then title-case.
+
+    Args:
+        df: Input DataFrame.
+        columns: Column names to clean. Missing columns are skipped.
+
+    Returns:
+        Copy of DataFrame with specified columns cleaned.
+    """
+
+    def _clean(name: str) -> str:
+        if not isinstance(name, str):
+            return name
+        result = name.lower().strip()
+        for part in _NAME_STRIP_PARTS:
+            result = result.replace(part, " ")
+        return re.sub(r"\s+", " ", result).strip().strip(",").strip().title()
+
+    df = df.copy()
+    for col in columns:
+        if col not in df.columns:
+            log.warning(f"apply_name_parsing: column '{col}' not found, skipping")
+            continue
+        log.info(f"Parsing names in column '{col}'")
+        df[col] = df[col].apply(_clean)
+    return df
