@@ -27,17 +27,19 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def detect_mineru_extraction_results():
     """Detect existing MinerU extraction results in data folder.
-    
+
     Returns dict with extraction results in session state format, or None if not found.
     """
     data_dir = "./data"
-    
+
     extractions = {
         "bill_tracker_senate": {
             "extract_dir": os.path.join(data_dir, "mineru_output_bill_tracker_senate"),
         },
         "bill_tracker_assembly": {
-            "extract_dir": os.path.join(data_dir, "mineru_output_bill_tracker_assembly"),
+            "extract_dir": os.path.join(
+                data_dir, "mineru_output_bill_tracker_assembly"
+            ),
         },
         "committee_leadership": {
             "extract_dir": os.path.join(data_dir, "mineru_output_committee_leadership"),
@@ -56,8 +58,12 @@ def detect_mineru_extraction_results():
                 "status": "success",
                 "extract_dir": extract_dir,
                 "result": {
-                    "file_list": [f for f in os.listdir(extract_dir) if os.path.isfile(os.path.join(extract_dir, f))]
-                }
+                    "file_list": [
+                        f
+                        for f in os.listdir(extract_dir)
+                        if os.path.isfile(os.path.join(extract_dir, f))
+                    ]
+                },
             }
             log.info(f"Found existing MinerU extraction: {key}")
         else:
@@ -77,7 +83,9 @@ def run_all_scrapers():
     """Run all scrapers in parallel using ThreadPoolExecutor."""
     scraper_tasks = {
         "Senate Bill Tracker": lambda: scrape_bill_tracker_senate(page_only=True),
-        "Assembly Bill Tracker": lambda: scrape_bill_tracker_national_assembly(page_only=True),
+        "Assembly Bill Tracker": lambda: scrape_bill_tracker_national_assembly(
+            page_only=True
+        ),
         "Senate Leadership": lambda: scrape_house_leadership_senate(),
         "Assembly Leadership": lambda: scrape_house_leadership_national_assembly(),
         "Senate Members": lambda: scrape_senate_members(page_only=False),
@@ -92,8 +100,7 @@ def run_all_scrapers():
     with ThreadPoolExecutor(max_workers=4) as executor:
         # Submit all tasks
         future_to_name = {
-            executor.submit(task): name 
-            for name, task in scraper_tasks.items()
+            executor.submit(task): name for name, task in scraper_tasks.items()
         }
 
         log.info(f"Started {len(future_to_name)} scrapers in parallel")

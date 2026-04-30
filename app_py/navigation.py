@@ -23,7 +23,9 @@ def get_pages():
         st.Page(page_build_tables, icon=":material/build:", title="Build Tables"),
         st.Page(page_scrapers, icon=":material/settings:", title="Scrapers"),
         st.Page(page_mineru_jobs, icon=":material/cloud_queue:", title="MinerU Jobs"),
-        st.Page(page_transformations, icon=":material/transform:", title="Transformations"),
+        st.Page(
+            page_transformations, icon=":material/transform:", title="Transformations"
+        ),
         st.Page(page_database, icon=":material/database:", title="Database"),
     ]
     return pages

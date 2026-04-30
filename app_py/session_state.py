@@ -16,6 +16,9 @@ def initialize_session_state():
     if "bill_tracker_urls" not in st.session_state:
         st.session_state.bill_tracker_urls = {"senate": [], "assembly": []}
 
+    if "bill_trackers_processed" not in st.session_state:
+        st.session_state.bill_trackers_processed = {"senate": [], "assembly": []}
+
     if "house_leadership" not in st.session_state:
         st.session_state.house_leadership = {"senate": [], "assembly": []}
 
@@ -27,6 +30,16 @@ def initialize_session_state():
 
     if "table_builder_results" not in st.session_state:
         st.session_state.table_builder_results = None
+
+    # Step 3 outputs: Raw extracted tables from MinerU data
+    if "raw_senate_bills" not in st.session_state:
+        st.session_state.raw_senate_bills = None
+
+    if "raw_assembly_bills" not in st.session_state:
+        st.session_state.raw_assembly_bills = None
+
+    if "raw_committee_membership" not in st.session_state:
+        st.session_state.raw_committee_membership = None
 
     if "mineru_extraction_results" not in st.session_state:
         # Try to detect existing MinerU extraction results from disk

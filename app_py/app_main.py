@@ -26,7 +26,7 @@ def configure_page():
 def run_app():
     """Main application entry point."""
     log.info("Starting Legislation Leaderboard application")
-    
+
     configure_page()
     initialize_session_state()
 
@@ -42,9 +42,9 @@ def run_app():
     # Get pages and setup navigation
     pages = get_pages()
     current_page = st.navigation(pages=pages, position="hidden")
-    
+
     create_navigation_bar(current_page, pages)
-    
+
     st.title(f"{current_page.icon} {current_page.title}")
 
     log.info(f"Rendering page: {current_page.title}")

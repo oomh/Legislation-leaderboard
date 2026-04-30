@@ -6,7 +6,7 @@ Manage MinerU extraction jobs for document processing.
 import streamlit as st
 from loguru import logger as log
 from src.config import get_config
-from src.minerU_extractors import extract_bill_trackers_and_committee
+from src.pipeline import run_mineru_extraction_step
 
 
 # ── MinerU Jobs Page ──────────────────────────────────────────────────────────
@@ -27,7 +27,7 @@ def page_mineru_jobs():
 
     # Display configuration
     st.markdown("#### Configuration")
-    
+
     if config.get("mineru_api_key"):
         log.debug("MinerU API key is configured")
         st.success("✓ MinerU API Key configured")
@@ -40,31 +40,55 @@ def page_mineru_jobs():
     # Extraction controls
     st.markdown("#### Extract Documents")
 
-    if not has_bill_tracker_senate or not has_bill_tracker_assembly or not has_committee_leadership:
-        st.warning("Run scrapers first to populate bill trackers and committee leadership data")
-        st.info(f"Senate bill tracker: {'✓ Available' if has_bill_tracker_senate else '✗ Missing'}")
-        st.info(f"Assembly bill tracker: {'✓ Available' if has_bill_tracker_assembly else '✗ Missing'}")
-        st.info(f"Committee leadership: {'✓ Available' if has_committee_leadership else '✗ Missing'}")
+    if (
+        not has_bill_tracker_senate
+        or not has_bill_tracker_assembly
+        or not has_committee_leadership
+    ):
+        st.warning(
+            "Run scrapers first to populate bill trackers and committee leadership data"
+        )
+        st.info(
+            f"Senate bill tracker: {'✓ Available' if has_bill_tracker_senate else '✗ Missing'}"
+        )
+        st.info(
+            f"Assembly bill tracker: {'✓ Available' if has_bill_tracker_assembly else '✗ Missing'}"
+        )
+        st.info(
+            f"Committee leadership: {'✓ Available' if has_committee_leadership else '✗ Missing'}"
+        )
     else:
         # Get URLs from session state (0th index)
-        senate_bill_url = st.session_state.bill_tracker_urls["senate"][0].get("url") if st.session_state.bill_tracker_urls["senate"] else None
-        assembly_bill_url = st.session_state.bill_tracker_urls["assembly"][0].get("url") if st.session_state.bill_tracker_urls["assembly"] else None
-        committee_url = st.session_state.committee_leadership[0].get("url") if st.session_state.committee_leadership else None
+        senate_bill_url = (
+            st.session_state.bill_tracker_urls["senate"][0].get("url")
+            if st.session_state.bill_tracker_urls["senate"]
+            else None
+        )
+        assembly_bill_url = (
+            st.session_state.bill_tracker_urls["assembly"][0].get("url")
+            if st.session_state.bill_tracker_urls["assembly"]
+            else None
+        )
+        committee_url = (
+            st.session_state.committee_leadership[0].get("url")
+            if st.session_state.committee_leadership
+            else None
+        )
 
         if not senate_bill_url or not assembly_bill_url or not committee_url:
             st.error("Missing URL data in scraped results")
         else:
             # Display documents to extract
             col1, col2, col3 = st.columns(3)
-            
+
             with col1:
                 st.markdown("**Senate Bill Tracker**")
                 st.caption(senate_bill_url[-50:])
-            
+
             with col2:
                 st.markdown("**Assembly Bill Tracker**")
                 st.caption(assembly_bill_url[-50:])
-            
+
             with col3:
                 st.markdown("**Committee Leadership**")
                 st.caption(committee_url[-50:])
@@ -72,34 +96,22 @@ def page_mineru_jobs():
             st.divider()
 
             # Extract button
-            if st.button("Start MinerU Extraction", key="start_mineru_extraction", width='content'):
-                if not config.get("mineru_api_key"):
-                    st.error("MinerU API key not configured")
+            if st.button(
+                "Start MinerU Extraction",
+                key="start_mineru_extraction",
+                width="content",
+            ):
+                with st.spinner("Extracting documents with MinerU..."):
+                    result = run_mineru_extraction_step()
+
+                if result["status"] == "success":
+                    st.success(
+                        f"Extraction complete: {result['successful']}/{result['total']} documents processed"
+                    )
                 else:
-                    log.info("Starting MinerU extraction workflow")
-                    
-                    try:
-                        with st.spinner("Extracting documents with MinerU..."):
-                            results = extract_bill_trackers_and_committee(
-                                bill_tracker_senate_url=senate_bill_url,
-                                bill_tracker_assembly_url=assembly_bill_url,
-                                committee_leadership_url=committee_url,
-                                api_key=config.get("mineru_api_key"),
-                            )
-
-                        st.session_state.mineru_extraction_results = results
-
-                        # Count successes
-                        success_count = sum(1 for r in results.values() if r["status"] == "success")
-                        total_count = len(results)
-
-                        st.success(f"Extraction complete: {success_count}/{total_count} documents processed")
-
-                        log.info(f"MinerU extraction complete: {success_count} successful, {total_count - success_count} failed")
-
-                    except Exception as e:
-                        log.error(f"MinerU extraction failed: {e}")
-                        st.error(f"Extraction failed: {e}")
+                    st.error(
+                        f"Extraction failed: {result.get('message', 'Unknown error')}"
+                    )
 
     # Display results
     st.divider()
@@ -108,7 +120,9 @@ def page_mineru_jobs():
     if st.session_state.mineru_extraction_results:
         results = st.session_state.mineru_extraction_results
 
-        tab_senate, tab_assembly, tab_committee = st.tabs(["Senate Bill Tracker", "Assembly Bill Tracker", "Committee Leadership"])
+        tab_senate, tab_assembly, tab_committee = st.tabs(
+            ["Senate Bill Tracker", "Assembly Bill Tracker", "Committee Leadership"]
+        )
 
         with tab_senate:
             result = results.get("bill_tracker_senate", {})
