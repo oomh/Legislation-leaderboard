@@ -6,7 +6,7 @@ Configure navigation between application pages.
 import streamlit as st
 from loguru import logger as log
 from app_py.pages import (
-    page_dashboard,
+    page_build_tables,
     page_scrapers,
     page_mineru_jobs,
     page_transformations,
@@ -20,7 +20,7 @@ from app_py.pages import (
 def get_pages():
     """Get list of all application pages."""
     pages = [
-        st.Page(page_dashboard, icon=":material/home:", title="Dashboard"),
+        st.Page(page_build_tables, icon=":material/build:", title="Build Tables"),
         st.Page(page_scrapers, icon=":material/settings:", title="Scrapers"),
         st.Page(page_mineru_jobs, icon=":material/cloud_queue:", title="MinerU Jobs"),
         st.Page(page_transformations, icon=":material/transform:", title="Transformations"),
