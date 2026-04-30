@@ -7,7 +7,7 @@ Extracts committee names and member information from MinerU markdown outputs.
 import re
 from typing import TypedDict, List, Dict, Any
 from loguru import logger as log
-from .markdown_parser import validate_records
+from .helper_functions import validate_records
 
 
 class CommitteeMember(TypedDict):
@@ -91,7 +91,7 @@ def parse_committee_leadership_markdown(markdown_content: str) -> List[Committee
             if member_name:
                 member_record: CommitteeMember = {
                     "committee_name": current_committee,
-                    "member_number": str(len([m for m in all_members if m["committee_name"] == current_committee]) + 1),
+                    "member_number": len([m for m in all_members if m["committee_name"] == current_committee]) + 1,
                     "member_name": member_name,
                     "honors": honors if honors else "",
                     "position": position if position else "",
