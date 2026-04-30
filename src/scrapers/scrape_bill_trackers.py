@@ -12,7 +12,9 @@ from .scrape_helpers import get_page, extract_pdf_links, get_total_pages
 # ── Core Functions ────────────────────────────────────────────────────────────
 
 
-def scrape_bill_tracker_national_assembly(delay: float = 0.5, page_only: bool = False) -> list[dict]:
+def scrape_bill_tracker_national_assembly(
+    delay: float = 0.5, page_only: bool = False
+) -> list[dict]:
     """
     Scrape bill tracker data for National Assembly bills.
 
@@ -25,7 +27,9 @@ def scrape_bill_tracker_national_assembly(delay: float = 0.5, page_only: bool = 
     """
     log.info("Scraping National Assembly bill tracker...")
 
-    url = "https://www.parliament.go.ke/the-national-assembly/house-business/bill-tracker"
+    url = (
+        "https://www.parliament.go.ke/the-national-assembly/house-business/bill-tracker"
+    )
     session = requests.Session()
 
     try:
@@ -57,7 +61,9 @@ def scrape_bill_tracker_national_assembly(delay: float = 0.5, page_only: bool = 
         return []
 
 
-def scrape_bill_tracker_senate(delay: float = 0.5, page_only: bool = False) -> list[dict]:
+def scrape_bill_tracker_senate(
+    delay: float = 0.5, page_only: bool = False
+) -> list[dict]:
     """
     Scrape bill tracker data for Senate bills.
 

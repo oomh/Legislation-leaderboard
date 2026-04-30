@@ -170,7 +170,9 @@ def extract_pdf_links(soup: BeautifulSoup, page_url: str) -> list[dict]:
             )
 
         # Skip known non-document link titles - check if title starts with excluded phrase
-        if any(raw_title.lower().startswith(phrase.lower()) for phrase in excluded_titles):
+        if any(
+            raw_title.lower().startswith(phrase.lower()) for phrase in excluded_titles
+        ):
             log.info(f"Filtered out: {raw_title}")
             continue
 

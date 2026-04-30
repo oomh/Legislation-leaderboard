@@ -142,7 +142,9 @@ def scrape_house_leadership_national_assembly() -> list[dict]:
         soup = get_page(session, url)
         leadership_data = extract_leadership_from_page(soup)
 
-        log.info(f"Extracted {len(leadership_data)} National Assembly leadership positions")
+        log.info(
+            f"Extracted {len(leadership_data)} National Assembly leadership positions"
+        )
         return leadership_data
 
     except Exception as e:
@@ -167,5 +169,7 @@ def scrape_all_house_leadership() -> dict:
         "national_assembly": na_data,
     }
 
-    log.info(f"House leadership scrape complete: {len(senate_data)} Senate positions, {len(na_data)} Assembly positions")
+    log.info(
+        f"House leadership scrape complete: {len(senate_data)} Senate positions, {len(na_data)} Assembly positions"
+    )
     return result
