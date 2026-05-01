@@ -26,6 +26,10 @@ from src.transformations.assembly_members_transformer import (
 from src.transformations.committee_transformer import (
     transform_committees,
 )
+from src.transformations.merge_transformer import (
+    merge_leadership,
+    merge_members,
+)
 
 __all__ = [
     "transform_senate_bills",
@@ -37,4 +41,6 @@ __all__ = [
     "transform_senate_members",
     "transform_assembly_members",
     "transform_committees",
+    "merge_leadership",
+    "merge_members",
 ]

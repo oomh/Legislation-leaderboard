@@ -17,7 +17,7 @@ from src.transformations.transformation_helpers import (
     merge_spill_rows,
     merge_duplicate_serial_rows,
     apply_name_parsing,
-    strip_cell_punctuation
+    strip_cell_punctuation,
 )
 
 # Canonical column names matching the assembly bill tracker PDF header
@@ -119,12 +119,12 @@ def transform_assembly_bills(raw_df: pd.DataFrame) -> dict:
 
         df = rename_assembly_bill_columns(raw_df.copy())
         df = remove_header_rows(df)
-        
+
         log.debug(f"columns at this stage: {df.columns.tolist()}")
-        
+
         df = merge_duplicate_serial_rows(df, serial_col="s/no.")
         df = merge_spill_rows(df, serial_col="s/no.")
-        
+
         df["sponsor"] = apply_name_parsing(df, columns=["sponsor"])["sponsor"]
         df = strip_cell_punctuation(df)
 

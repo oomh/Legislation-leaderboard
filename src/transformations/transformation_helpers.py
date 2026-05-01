@@ -271,6 +271,9 @@ _NAME_STRIP_PARTS = [
     "the hon",
     "rt. hon",
     "hon.",
+    "hon ",
+    "(amb.)",
+    "(amb)",
     "the hon. ",
     "the hon ",
     "hon.",
@@ -288,6 +291,16 @@ _NAME_STRIP_PARTS = [
     ", ebs",
     " cs",
     ", sc",
+    "(dr)",
+    "(dr.)",
+    "(eng)",
+    "(eng.)",
+    "(cpa)",
+    "(cpa.)",
+    "(prof)",
+    "(prof.)",
+    "prof." "(rtd)",
+    "(rtd.)",
 ]
 
 
@@ -309,7 +322,7 @@ def apply_name_parsing(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
         for part in _NAME_STRIP_PARTS:
             result = result.replace(part, " ")
         return re.sub(r"\s+", " ", result).strip().strip(",").strip().title()
-
+    
     df = df.copy()
     for col in columns:
         if col not in df.columns:
@@ -318,3 +331,25 @@ def apply_name_parsing(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
         log.info(f"Parsing names in column '{col}'")
         df[col] = df[col].apply(_clean)
     return df
+
+
+def more_name_parsing_comma_split_rearrange (name: str) -> str:
+    """Handle names in "Last, First" format by splitting on comma and rearranging. 
+    
+    NOTE TO SELF: use after apply_name_parsing, which already handles titles and post-nominals. while merging the senate and assembly members.
+
+    If the name contains a comma, assumes format is "Last, First" and rearranges
+    to "First Last". If no comma is present, returns the name unchanged.
+
+    Args:
+        name: Input name string.
+    Returns:
+        Cleaned name string with "Last, First" rearranged to "First Last".  
+    """
+    if not isinstance(name, str):
+        return name
+    if "," in name:
+        parts = [part.strip() for part in name.split(",")]
+        if len(parts) == 2:
+            return f"{parts[1]} {parts[0]}"
+    return name.strip()

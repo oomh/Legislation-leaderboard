@@ -9,7 +9,10 @@ Steps:
 import pandas as pd
 from loguru import logger as log
 
-from src.transformations.transformation_helpers import apply_name_parsing, strip_cell_punctuation
+from src.transformations.transformation_helpers import (
+    apply_name_parsing,
+    strip_cell_punctuation,
+)
 
 
 def transform_assembly_members(raw_df: pd.DataFrame) -> dict:
@@ -42,7 +45,6 @@ def transform_assembly_members(raw_df: pd.DataFrame) -> dict:
 
         df = apply_name_parsing(raw_df.copy(), ["name"])
         df = strip_cell_punctuation(df)
-
 
         row_count = len(df)
         log.info(f"Assembly members transformation complete: {row_count} rows")

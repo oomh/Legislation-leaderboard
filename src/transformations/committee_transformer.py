@@ -9,7 +9,10 @@ Steps:
 import pandas as pd
 from loguru import logger as log
 
-from src.transformations.transformation_helpers import apply_name_parsing, strip_cell_punctuation
+from src.transformations.transformation_helpers import (
+    apply_name_parsing,
+    strip_cell_punctuation,
+)
 
 
 def transform_committees(raw_df: pd.DataFrame) -> dict:

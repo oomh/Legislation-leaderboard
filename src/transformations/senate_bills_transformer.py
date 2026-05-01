@@ -136,7 +136,7 @@ def transform_senate_bills(raw_df: pd.DataFrame) -> dict:
         df = strip_cell_punctuation(df)
 
         row_count = len(df)
-        
+
         log.info(f"Senate bills transformation complete: {row_count} rows retained")
 
         return {
