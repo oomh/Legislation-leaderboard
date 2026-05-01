@@ -8,6 +8,7 @@ Outputs: Consolidated transformed datasets ready for database
 import streamlit as st
 import pandas as pd
 from loguru import logger as log
+from src.transformations import merge_leadership, merge_members
 
 
 def prepare_transformation_data() -> dict:
@@ -35,6 +36,8 @@ def prepare_transformation_data() -> dict:
             "leadership": prepare_leadership_data(),
             "members": prepare_member_data(),
             "committees": prepare_committee_data(),
+            "merged_leadership": prepare_merged_leadership(),
+            "merged_members": prepare_merged_members(),
         }
 
         # Store consolidated results in session state
@@ -202,6 +205,80 @@ def prepare_committee_data() -> dict:
     except Exception as e:
         log.error(f"Error preparing committee data: {e}")
         return {}
+
+
+def prepare_merged_leadership() -> dict:
+    """Merge transformed senate and assembly leadership into a single table.
+
+    Reads already-transformed results from session state if available, otherwise
+    falls back to the raw leadership data.
+
+    Returns:
+        Dict with merged leadership data from merge_leadership().
+    """
+    try:
+        senate_result = st.session_state.get("transformed_senate_leadership", {})
+        assembly_result = st.session_state.get("transformed_assembly_leadership", {})
+
+        senate_df = (
+            senate_result.get("data")
+            if isinstance(senate_result, dict)
+            else senate_result
+        )
+        assembly_df = (
+            assembly_result.get("data")
+            if isinstance(assembly_result, dict)
+            else assembly_result
+        )
+
+        if not isinstance(senate_df, pd.DataFrame):
+            senate_df = pd.DataFrame()
+        if not isinstance(assembly_df, pd.DataFrame):
+            assembly_df = pd.DataFrame()
+
+        result = merge_leadership(senate_df, assembly_df)
+        st.session_state["merged_leadership"] = result
+        return result
+    except Exception as e:
+        log.error(f"Error preparing merged leadership: {e}")
+        return {"status": "error", "message": str(e)}
+
+
+def prepare_merged_members() -> dict:
+    """Merge transformed senate and assembly members into a single table.
+
+    Reads already-transformed results from session state if available, otherwise
+    falls back to the raw member data.
+
+    Returns:
+        Dict with merged members data from merge_members().
+    """
+    try:
+        senate_result = st.session_state.get("transformed_senate_members", {})
+        assembly_result = st.session_state.get("transformed_assembly_members", {})
+
+        senate_df = (
+            senate_result.get("data")
+            if isinstance(senate_result, dict)
+            else senate_result
+        )
+        assembly_df = (
+            assembly_result.get("data")
+            if isinstance(assembly_result, dict)
+            else assembly_result
+        )
+
+        if not isinstance(senate_df, pd.DataFrame):
+            senate_df = pd.DataFrame()
+        if not isinstance(assembly_df, pd.DataFrame):
+            assembly_df = pd.DataFrame()
+
+        result = merge_members(senate_df, assembly_df)
+        st.session_state["merged_members"] = result
+        return result
+    except Exception as e:
+        log.error(f"Error preparing merged members: {e}")
+        return {"status": "error", "message": str(e)}
 
 
 def run_transformations_step() -> dict:

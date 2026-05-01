@@ -47,7 +47,11 @@ def _extract_member_from_row(
                 return None
 
             name = clean_text(cells[0].get_text(strip=True))
-            county = clean_text(cells[2].get_text(strip=True,))
+            county = clean_text(
+                cells[2].get_text(
+                    strip=True,
+                )
+            )
             party = clean_text(cells[3].get_text(strip=True))
             status = clean_text(cells[4].get_text(strip=True))
             more_link = cells[5].find("a")

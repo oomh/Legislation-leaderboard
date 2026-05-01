@@ -15,6 +15,8 @@ from src.transformations import (
     transform_senate_members,
     transform_assembly_members,
     transform_committees,
+    merge_leadership,
+    merge_members,
 )
 
 
@@ -150,18 +152,18 @@ def page_transformations():
             df = _nested_df("house_leadership", "senate")
             if df is None:
                 df = pd.DataFrame()
-            st.session_state[
-                "transformed_senate_leadership"
-            ] = transform_senate_leadership(df)
+            st.session_state["transformed_senate_leadership"] = (
+                transform_senate_leadership(df)
+            )
 
     with c4:
         if st.button("Assembly Leadership", width="stretch", key="btn_t_asm_lead"):
             df = _nested_df("house_leadership", "assembly")
             if df is None:
                 df = pd.DataFrame()
-            st.session_state[
-                "transformed_assembly_leadership"
-            ] = transform_assembly_leadership(df)
+            st.session_state["transformed_assembly_leadership"] = (
+                transform_assembly_leadership(df)
+            )
 
     with c5:
         if st.button("Senate Members", width="stretch", key="btn_t_sen_mem"):
@@ -177,9 +179,9 @@ def page_transformations():
             df = _nested_df("member_lists", "assembly")
             if df is None:
                 df = pd.DataFrame()
-            st.session_state[
-                "transformed_assembly_members"
-            ] = transform_assembly_members(df)
+            st.session_state["transformed_assembly_members"] = (
+                transform_assembly_members(df)
+            )
 
     with c7:
         if st.button("Committees", width="stretch", key="btn_t_comm"):
@@ -205,6 +207,35 @@ def page_transformations():
 
     st.divider()
 
+    # ── 2b. Merge ─────────────────────────────────────────────────────────────
+    st.markdown("### Merge")
+
+    mc1, mc2 = st.columns(2)
+
+    with mc1:
+        if st.button("Merge Leadership", width="stretch", key="btn_merge_lead"):
+            senate_lead = _df_from_result("transformed_senate_leadership")
+            assembly_lead = _df_from_result("transformed_assembly_leadership")
+            if senate_lead is None:
+                senate_lead = pd.DataFrame()
+            if assembly_lead is None:
+                assembly_lead = pd.DataFrame()
+            st.session_state["merged_leadership"] = merge_leadership(
+                senate_lead, assembly_lead
+            )
+
+    with mc2:
+        if st.button("Merge Members", width="stretch", key="btn_merge_mem"):
+            senate_mem = _df_from_result("transformed_senate_members")
+            assembly_mem = _df_from_result("transformed_assembly_members")
+            if senate_mem is None:
+                senate_mem = pd.DataFrame()
+            if assembly_mem is None:
+                assembly_mem = pd.DataFrame()
+            st.session_state["merged_members"] = merge_members(senate_mem, assembly_mem)
+
+    st.divider()
+
     # ── 3. Transformed Tables ─────────────────────────────────────────────────
     st.markdown("### Transformed Tables")
 
@@ -216,6 +247,8 @@ def page_transformations():
         tab_t_sen_mem,
         tab_t_asm_mem,
         tab_t_comm,
+        tab_t_merged_lead,
+        tab_t_merged_mem,
     ) = st.tabs(
         [
             "Senate Bills",
@@ -225,6 +258,8 @@ def page_transformations():
             "Senate Members",
             "Assembly Members",
             "Committees",
+            "Merged Leadership",
+            "Merged Members",
         ]
     )
 
@@ -248,3 +283,9 @@ def page_transformations():
 
     with tab_t_comm:
         _show_transformed("transformed_committees")
+
+    with tab_t_merged_lead:
+        _show_transformed("merged_leadership")
+
+    with tab_t_merged_mem:
+        _show_transformed("merged_members")
