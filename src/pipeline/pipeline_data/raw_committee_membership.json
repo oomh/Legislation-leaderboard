@@ -1,0 +1,3799 @@
+{
+  "status": "success",
+  "row_count": 758,
+  "data": {
+    "__dataframe__": true,
+    "records": [
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Rt. Hon Moses M. Wetangula, EGH, MP",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Rai, Samuel Gonzi, MGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Muli, Fabian Kyule, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Lekuton, Joseph, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Gitau, Faith Wairimu, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Chumel, Samwel Moroto, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Kiunjuri, Festus Mwangi, EGH, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Ochieng, David Ouma, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Chege, Sabina Wanjiru, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Mishi Mboko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Farah Maalim, EGH, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Mbalu, Jessica Nduku Kiko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Ahmed, Shakeel Ahmed Shabbir, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Maina, Jane Njeri, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE OF POWERS AND PRIVILEGES",
+        "member_name": "The Hon. Mumo, Rose Museo, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. (Dr.) Karani, Stephen Wachira, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Basil, Robert Ngui, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon Salim, Feisal Bader, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon Yegon, Brighton Leonard, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Mwafrika, Augustine Kamande, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Kihara, Jayne Wanjiru Njeri M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Mwangi, Teresia Wanjiru, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Gachagua, George, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Aramat, Lemanken, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Mongina, Jerusha Momanyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Odhiambo, Elisha Ochieng, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Busia, Ruth Adhiambo Odinga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Salasya, Peter Kalerwa, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Abuor, Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON MEMBERS\u2019 SERVICES AND FACILITIES",
+        "member_name": "The Hon. Muhanda, Elsie Busihile, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Kitur, Bernard Kibor, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. William Kamket, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Mbai, Nimrod Mbithuka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. (Dr.) Murumba, John Chikati, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Risa, Sunkuyia George, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Geoffrey, Ekesa Mulanya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon Mukunji, John Gitonga, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Mejjadonk, Benjamin Gathiru, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Abdisirat, Khalif Ali, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Onyiego, Silvanus Osoro, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon Njoroge, Mary Wamaua, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Wamuchomba Gathoni, HSC, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Osero, Patrick Kibagendi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Karitho, Kiili Daniel, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Nabulindo, Peter Oscar, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Aburi, Lawrence Mpuru, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Mohamed, Umulkher Harun",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Mbalu, Jessica Nduku Kiko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Lentoijoni, Jackson Lekumontare, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. (Prof.) Jaldesa, Guyo Waqo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Nguna, Charles Ngusya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "CONSTITUTIONAL IMPLEMENTATION OVERSIGHT COMMITTEE",
+        "member_name": "The Hon. Hamisi, Kakuta Maimai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Nanok, Daniel Epuyo, CBS,M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Chege, John Kiragu, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Korir, Adams Kipsanai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Gachobe, Samuel Kinuthia, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Gakuya, James Mwangi, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Murwithania, Rindikiri Mugambi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Wakili, Edward Muriu Wakili , MP",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Mupe, Anthony Kenga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. (CPA) Rutto, Julius Kipletting, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Waqo, Naomi Jillo, CBS, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon Mwangi, Geoffrey Wandeto, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Nguro, Onesmus Ngogoyo, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Koyi, John Waluke, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Khodhe, Phelix Odiwuor, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Kiamba, Suzanne Ndunge, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Kombe, Harrison Garama, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. (Dr.) Mamwacha, Onchoke Charles, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Ahmed, Shakeel Ahmed Shabbir, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Salasya, Peter Kalerwa, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON PARLIAMENTARY BROADCASTING AND LIBRARY",
+        "member_name": "The Hon. Abubakar, Talib Ahamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Wanjala, Raphael Sauti Bitta, CBS, M.P. -Chairperson",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Mumo, Rose Museo, CBS, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Hamisi, Kakuta Maimai, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Kanchory, Elijah Memusi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Chepkwony, Charity Kathambi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Ngikolong, Nicholas Ngikor Nixon, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Naicca, Johnson Manya, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Chimba, Zamzam Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Njeru, Leo Wa Muthende, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Mwenje, Mark Samuel Muriithi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Mohamed, Mohamed Ali, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Gimose, Charles Gumini, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Siyoi, Lillian Chebet, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Haro, Abdul Ebrahim, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Muge, Cynthia Jepkosgei, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. M\u2019Anaiba, Julius Taitumu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Kosgei, Hilary Kiplangat, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Komingoi, Kibet Kirui, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Chege Njuguna, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Kitilai, Ole Ntutu, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON IMPLEMENTATION",
+        "member_name": "The Hon. Mbalu, Jessica Nduku Kiko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Rt. Hon. Moses M. Wetang'ula, EGH, MP",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Gladys Boss Jepkosgei, MGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Martha Wangari,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. David Ochieng,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Omboko Milemba,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Farah Maalim, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Peter Kaluma,CBS,M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon.(Dr.) Rachel Nyamai,CBS, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Emathe, Joseph Namuar, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. George Gitonga Murugara, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. (Prof.) Bartoo Phylis Jepkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Owen Baya Yaa, CBS, MP.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Kilel Richard Cheruiyot, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Gichohi Kaguchia John Philip, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. John Kiarie Waweru, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Yakub, Adow Kuno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Aburi, Lawrence Mpuru, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Kiaraho, David Njuguna, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Oluoch, Anthony Tom, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. (Dr.) Gogo, Lilian Achieng, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PROCEDURE AND HOUSE RULES COMMITTEE",
+        "member_name": "The Hon. Shimbwa, Omar Mwinyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Karemba, Eric Muchangi Njiru, CBS, M.P",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Sitienei, Janet Jepkemboi, CBS, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Maisori, Marwa Kitayama, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Kandie, Joshua Chepyegon, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Kihungi Peter Irungu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Logova, Sloya Clement, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. (Eng.) Nebart, Bernard Muriuki, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Shake, Peter Mbogho, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Nyenze, Edith Vethi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Bwire, John Okano, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Elachi, Beatrice Kadeveresia, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Kiamba, Suzanne Ndunge, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. King\u2019ola, Patrick Makau, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Beigo, Paul Kibichy, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC PETITIONS COMMITTEE",
+        "member_name": "The Hon. Ntwiga, Patrick Munene, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Mizighi, Lydia Haika Mnene, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Kingara, Simon Ng\u2019ang\u2019a, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Njeru, Pamela Njoki, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Ndindi, Nyoro, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Chepkwony, Charity Kathambi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Saney, Ibrahim Abdi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Chesebe, Fred Kapondi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon Kemei, Justice Kipsang, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Capt. Obo, Ruweida Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Mishi Mboko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Chimba, Zamzam Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Titus, Lotee, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Khodhe, Phelix Odiwuor, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Aburi, Donya Dorice, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DIASPORA AFFAIRS AND MIGRANT WORKERS COMMITTEE",
+        "member_name": "The Hon. Bedzimba, Rashid Juma, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Chepkong\u2019a Kiprono Samuel, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Githinji, Robert Gichimu, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Maj. (Rtd) Abdullahi, Bashir Sheikh, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Mwirigi, John Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon Maj. (Rtd) Dekow, Barrow Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Chepkorir, Linet M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Munyoro, Joseph Kamau, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Kipkoech, Gideon Kimaiyo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Waithaka, John Machua, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Chebor, Paul Kibet, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Lenguris Pauline, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Yakub, Adow Kuno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Robert Mbui, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Kamene, Joyce, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Omondi, Moses Okoth, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Mnyazi, Amina Laura, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Odoyo, Okello Jared, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Sunkuli, Julius Lekakeny Ole, EGH, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Mugabe, Innocent Maino, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. (Dr.) Mamwacha, Onchoke Charles, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON DELEGATED LEGISLATION",
+        "member_name": "The Hon. Oluoch, Anthony Tom, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. (CS) Mayaka Irene Nyakerario, M.P",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Yakub, Farah Salah, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Ochieng, David Ouma, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Mokaya, Nyakundi Japhet, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Gitari, Joseph Gachoki, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Jhanda Zaheer, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Yegon, Richard Kipkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Mutua, Didmus Wekesa Barasa, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Kailemia, Elizabeth Karambu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Muhia Wanjiku, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Kemei Beatrice Chepng\u2019eno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Toroitich, Timothy Kipchumba, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Waqo, Naomi Jillo, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Odanga, Geoffrey Makokha, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Mwakuwona, Danson Mwashako, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Okuome, Andrew Adipo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Masito, Fatuma Hamisi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Koimburi, George Ndung\u2019u, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Wangaya, Christopher Aseka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. Kasiwai, Rael Chepkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON REGIONAL INTEGRATION",
+        "member_name": "The Hon. (Dr.) Mulu, Makali Benson, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Yussuf, Adan Haji, DSM, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Duncan Maina Mathenge, MP",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Hassan, Abdi Yusuf, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Koimburi, George Ndung\u2019u, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Wainaina, Antony Njoroge, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Kamuren Charles, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Oku, Edward Kaunya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Lentojoni, Jackson Lekumantore, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Lomwa, Joseph Samal, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Oron, Joshua Odongo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Owino, Martin Peters, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. (Eng.) Nzengu Paul Musyimi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Wachira, Rahab Mukami, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Pareyio, Agnes Mantaine, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Oyugi, Dick Maungu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Marubu, Monicah Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Ikana, Fredrick Lusuli, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Wainaina Joseph Iraya, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Ndakwa, David Athman, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Orero, Peter Ochieng, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON NATIONAL COHESION AND EQUAL OPPORTUNITY",
+        "member_name": "The Hon. Mugo, Anne Muratha Wanjiku, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Sirma Musa Cherutich, EGH, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Tandaza Kassim Sawa, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Akuja, Protus Ewesit, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Kiprono, Mutai Alfred, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Lelmengit, Josses Kiptoo Kosgey, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Wambilianga, Catherine Nanjala, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Nduyo, Susan Ngugi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Mwalyo, Joshua Mbithi Mutua, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Wainaina, Antony Njoroge, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Maingi, Mary, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Owino, John Walter, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Nyamita, Mark Ogolla, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Machele, Mohamed Soud, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Mukhwana, Titus Khamala, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Oyula, Joseph H. Maero, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. (Dr.) Ochanda, Gideon Ogolla, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Owuor, Joshua Aduma, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Gisairo, Clive Ombane, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Elachi, Beatrice Kadeveresia, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Rt. Hon. (Dr.) Moses M. Wetang'ula, EGH, MP",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Gladys Boss Jepkosgei, , MGH, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Kimani Ichung\u2019wah, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Junet Sheik Nuh Mohamed, CBS, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Owen, Baya Yaa, CBS, MP.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Robert Mbui, CBS, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Odhiambo, Millie Grace Akoth, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Nelson Koech, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Wachira, Rahab Mukami, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Dido, Ali Raso, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Murugara, George Gitonga,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Gikaria David CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Wanyonyi, Ferdinand Kevin, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Otucho, Mary Emaase, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Abdul, Rahim Dawood, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Luyai, Caleb Amisi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Mule, Stephen Mutinda, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Shurie, Abdi Omar, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Lesuuda, Josephine Naisula, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Pkosing, David Losiakou, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "NATIONAL GOVERNMENT CONSTITUENCIES DEVELOPMENT FUND COMMITTEE",
+        "member_name": "The Hon. Mishi Mboko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Kimani Ichung\u2019wah, EGH, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Mohamed, Junet Sheik Nuh, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Onyiego, Silvanus Osoro CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Odhiambo, Millie Grace Akoth, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Wanjira, Martha Wangari, CBS,M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Karemba, Eric Muchangi Njiru, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Waweru, John Kiarie, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Adagala, Beatrice Kahai M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Mbiuki, Japhet Miriti Kareke, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Melly, Julius Kipbiwot, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. (Dr.) Robert Pukose, CBS,M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Sankaire, Leah Sopiato, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Mugo, Anne Muratha Wanjiku, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Ng\u2019elechei,Caroline Jeptoo M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Kalasinga, Joseph Majimbo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Kimilu, Joshua Kivinda, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Jessica Mbalu, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Sunkuli, Julius Lekakeny Ole, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Samuel Arama, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Kiti, Richard Ken Chonga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Nabii, Nabwera Daraja, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Mohamed, Umulkheir Harun, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "COMMITTEE ON SELECTION",
+        "member_name": "The Hon. Guyo, Ali Wario, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Rt. ( Dr.) Hon. Moses M. Wetang'ula, EGH, MP",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Kimani Ichung\u2019wah, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Mohamed, Junet Sheik Nuh, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Onyiego, Silvanus Osoro,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Odhiambo, Millie Grace Akoth, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Omboko Milemba, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Robert Mbui, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Gitau, Faith Wairimu, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Chepkong\u2019a, Samuel Kiprono, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Keynan, Adan Wehliye, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Kajwang\u2019, Tom Joseph Francis, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Korere, Sarah Paulata, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Mwalyo, Joshua Mbithi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "HOUSE BUSINESS COMMITTEE",
+        "member_name": "The Hon. Umul, Ker Kassim Sheikh, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Mwale, Nicholas S. Tindi, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Siyad, Amina Udgoon, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Adow, Mohamed Aden, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Nabii, Nabwera Daraja, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Amollo, Paul Otiende, SC, EBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Oundo, Wilberforce Ojiambo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Mohamed, Junet Sheik Nuh, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Lesuuda, Josephine Naisula, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Kitany, Marianne Jebet, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Kagombe, Gabriel Gathuka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Koech, Victor Kipngetich, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Otucho, Mary Emaase Mary, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Gichuki, Edwin Mugo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Emathe, Joseph Namuar, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Yakub, Adow Kuno, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Wamboka, Nelson Jack Wanami, CBS, M.P",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Ong\u2019ondo, Boyd Were, MP",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Karitho, Kiili Daniel, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Bonaya, Mumina Gollo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Mwenje, Mark Samuel Muriithi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Wamacukuru, James Githua Kamau, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Nzambia, Thuddeus Kithua, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Bisau, Maurice Kakai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. (Dr.) Ithinji Shadrack Mwiti, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Chiforomodo, Mangale Munga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Ondieki, Alfah Miruka M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. (Amb.) Sigei, Francis Kipyegon, EBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Tonui, Joseph Kipkosgei, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Tonkei, Rebecca Noonaishi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON GOVERNANCE AND EDUCATION",
+        "member_name": "The Hon. Kirima, Moses Nguchine, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Pkosing, David Losiakou, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. (Dr.)Namoit John Ariko,M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Katana, Paul Kahindi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. (Dr.) Keynan, Adan Wehliye, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Passaris, Esther Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Farah, Yussuf Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Ongili, Babu Owino Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Korere, Sarah Paulata, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Kiplagat, David, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Maina, Betty Njeri M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Tungule, Charo Kazungu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Mathenge, Duncan Maina, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Adagala, Beatrice Kahai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Kiunjuri, Festus Mwangi, EGH, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON COMMERCIAL AFFAIRS AND ENERGY",
+        "member_name": "The Hon. Karauri, Ronald Kamwiko, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Wangwe, Emmanuel, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Luyai, Caleb Amisi, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Ngikolong, Nicholas Ngikor Nixon, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Nabuin, Paul Ekwom, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Owino, Martin Peters, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Kimilu, Joshua Kivinda, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. (Dr.) Gogo, Lilian Achieng\u2019, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Jehow, Fatuma Abdi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Bishop (Em.) (Dr.) Jackson Kipkemoi Kosgei, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Wainaina, Micheal, Wambugu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. (Amb.) Langat Benjamin Kipkirui, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Wanyonyi, Ferdinand Kevin, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Kururia, Elijah Njore Njoroge, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Hassan, Ahmed Maalim, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC INVESTMENTS COMMITTEE ON SOCIAL SERVICES, ADMINISTRATION AND AGRICULTURE",
+        "member_name": "The Hon. Mule, Caleb Mutiso, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Mohammed Fatuma Zinab, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Abdul, Rahim Dawood, M.P",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Omanyo, Catherine Nakhabi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Oduor, Christine Ombaka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Nguna, Charles Ngusya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Mamwacha, Onchoke Charles, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Odege, Tom Mboya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon Nzioka, Erastus Kivasu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Obara, Eve Akinyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon Eric Wamumbi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Cherorot, Joseph Kimutai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Ngitit, Cecilia Asinyen, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Sankaire, Leah Sopiato, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Kalasinga, Joseph Majimbo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "SPECIAL FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Otucho, Mary Emaase, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. (Dr.) Mulyungi, Gideon Mutemi, CBS, EBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Mwanyanje, Gertrude Mbeyu, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Mogaka, Stephen M, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Oyoo, James Onyango, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Mboni, David Mwalika, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Momanyi, Innocent Obiri, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Lentoijoni, Jackson Lekumontare, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Guyo, Adhe Wario, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Muthoni, Dorothy Ikiara, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Wanyonyi, Martin Pepela, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Kiborek, Reuben, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Ng\u2019elechei, Caroline Jeptoo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Barre, Hussein Abdi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Kahangara, Joseph Mburu, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "DECENTRALIZED FUNDS ACCOUNTS COMMITTEE",
+        "member_name": "The Hon. Kilel, Richard Cheruiyot M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Shurie, Abdi Omar, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Mrembo, Irene Njoki, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Kipkoros, Joseph Makilap, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Abdi, Abdi Ali, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Chege Njuguna M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Omboko, Milemba Jeremiah, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon Letipila, Dominic Eli, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Kirwa, Abraham Kipsang, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. CPA Zuleka, Hulbale Harun, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Barongo, Nolfason Obadiah, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Kwenya, Thuku Zachary, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Kasalu, Irene Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Muiruri, Muthama Stanley, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Dr Manduku, Daniel Ogwoka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Mohamed, Aden Daudi,EBS M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Atandi, Samuel Onunga, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Pukose Robert, CBS, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Robi, Mathias Nyamabe, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Murumba, John Chikati, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Wanjiku, John Njuguna, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Mwirigi, John Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Mutuse, Eckomas Mwengi, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Chumel, Samwel Moroto, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Lekuton, Joseph, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Ochieng, David Ouma, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Sergon, Flowrence Jematiah, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Mokaya, Nyakundi Japheth, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Muchira, Michael Mwangi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Kitilai, Ole Ntutu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Kagiri, Jane Wangechi, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Gichuki, Edwin Mugo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Guyo, Ali Wario, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Wangaya, Christopher Aseka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Keynan, Adan Wehliye, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Busia, Ruth Adhiambo Odinga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Gogo, Lilian Achieng, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Ongili, Babu Owino Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Mulu, Makali Benson, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Mwakuwona, Danson Mwashako, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Lesuuda, Josephine Naisula, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. (Dr.) Masara, Peter Francis, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "PUBLIC DEBT AND PRIVATIZATION COMMITTEE",
+        "member_name": "The Hon. Abdirahman, Mohamed Abdi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Tongoyo, Gabriel Koshal, CBS, MP",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Co. (Rtd.) Dido, Raso Ali, MP",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Kahangara, Joseph Mburu, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Chesebe, Fred Kapondi, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Chepkorir, Liza Chelule, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. (Amb.) Sigei, Francis Kipyegon, EBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Akuja, Protus Ewesit, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Ng\u2019elechei, Caroline Jeptoo, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Korere, Sarah Paulata, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Kaluma, George Peter Opondo, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. (Dr.) Masara, Peter Francis, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Abdirahman, Hussein Weytan Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Oku, Edward Kaunya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Owuor, Joshua Aduma, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "ADMINISTRATION AND INTERNAL SECURITY",
+        "member_name": "The Hon. Buyu, Rozaah Akinyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Mutunga, John Kanyuithia, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Yegon, Brighton Leonard, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon Kemei, Justice Kipsang, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Kagombe, Gabriel Gathuka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon Wanyonyi, Ferdinand Kevin, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Makali, John Okwisia, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon Kiplagat, David, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon Marubu, Monicah Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Farah, Yussuf Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Odanga, Geoffrey Makokha, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Aburi, Lawrence Mpuru, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Osero, Patrick Kibagendi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Busia, Ruth Adhiambo Odinga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Odoyo, Okello Jared, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON AGRICULTURE AND LIVESTOCK",
+        "member_name": "The Hon. Chege, Sabina Wanjiru, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Bowen, David Kongogo, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Kemero, Maisori Marwa Kitayama, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Gachagua George, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon Eric Wamumbi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Ikiara, Dorothy Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Tandaza, Kassim Sawa, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Kamket, Kasait William, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. (Eng.) Muriuki, Nebart Bernard, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Mohamed, Abdikadir Hussein, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Mnyazi, Amina Laura, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Adow, Mohamed Aden, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Osogo, Bensuda, Joyce Atieno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. (Eng.) Nzengu, Paul Musyimi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Buyu, Rozaah Akinyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON BLUE ECONOMY, WATER AND IRRIGATION",
+        "member_name": "The Hon. Muiruri, Muthama Stanley, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. John Kiarie Waweru, CBS, M.P",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Ondiek, Alfah Miruka, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Kitur, Bernard Kibor, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Sergon, Flowrence Jematiah, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Kipkoech, Gideon Kimaiyo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Tonui, Joseph Kipkosgei, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Abdisirat, Khalif Ali, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Njoroge, Antony Wainaina, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Bonaya, Mumina Gollo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Nyamita, Mark Ogolla, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "Hon. Mohamed, Umulkher Harun, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon Nzioka, Erastus Kivasu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Osogo, Bensuda, Joyce Atieno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Ahmed, Shakeel Ahmed Shabbir, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON COMMUNICATION, INFORMATION AND INNOVATION",
+        "member_name": "The Hon. Hamisi, Kakuta Maimai, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Koech Nelson, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Maj. (Rtd.) Abdullahi Bashir Sheikh, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Wanjira, Martha Wangari, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Logova, Sloya Clement, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Ikana, Fredrick Lusuli, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Kirima, Moses Nguchine, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Kandie, Joshua Chepyegon, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Muratha, Anne Wanjiku, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Hassan, Abdi Yusuf, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Kwenya, Thuku Zachary, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Kanchory Elijah Memusi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Odhiambo, Millie Grace Akoth,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Luyai, Caleb Amisi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Dr. Kasalu Irene Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON DEFENCE, INTELLIGENCE AND FOREIGN RELATIONS",
+        "member_name": "The Hon. Mohamed, Abdikadir Hussein, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Kibiwot Julius Melly, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Obara, Eve Akinyi, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Otucho, Mary Emaase, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. (Prof.) Bartoo, Phylis Jepkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. M\u2019Anaiba, Julius Taitumu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Tonkei, Rebecca Noonaishi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Haro, Abdul Ebrahim, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Kururia, Elijah Njore Njoroge, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Kipkoros, Joseph Makilap, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Mongina, Jerusha Momanyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Gisairo, Clive Ombane, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. (Dr) Oduor, Christine Ombaka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Orero, Peter Ochieng, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Nabii, Nabwera Daraja, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON EDUCATION",
+        "member_name": "The Hon. Oyugi Dick Maungu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Gikaria David, CBS, M.P -Chairperson",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Aramat Lemanken, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Ngitit, Cecilia Asinyen, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Gimose, Charles Gumini, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Kingara, Simon Ng\u2019ang\u2019a, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Koech, Victor Kipngetich, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Mulanya, Geoffrey Ekesa, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Rai, Samuel Gonzi, MGH, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Odege, Tom Mboya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Siyad, Amina Udgoon, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Omwera, George Aladwa, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Odhiambo, Elisha Ochieng, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Owino, John Walter, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Barongo, Nolfason Obadiah, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENERGY",
+        "member_name": "The Hon. Mawathe, Julius Musili, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Musau, Vincent Musyoka, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Kamuren, Charles, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Emathe, Joseph Namuar, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Iraya, Joseph Wainaina, OGW, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Kemei, Beatrice Chepng\u2019eno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Salim, Feisal Bader, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Chepkwony, Charity Kathambi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Mohamed, Mohamed Ali, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Njeru, Leo Wa Muthende, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Titus Lotee, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Masito, Fatuma Hamisi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Mbalu, Jessica Nduku Kiko, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Hiribae, Said Buya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Yakub, Adow Kuno, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON ENVIRONMENT, FORESTRY AND MINING",
+        "member_name": "The Hon. Mwanyanje, Gertrude Mbeyu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. (CPA) Kimani, Francis Kuria, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. (Amb.) Langat, Benjamin Kipkirui, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. (CPA) Rutto, Julius Kipletting, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Biego, Paul Kibichy, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Risa, Sunkuyia George, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Umul, Ker Sheikh Kassim, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Maina, Betty Njeri, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Chiforomodo, Mangale Munga, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. (Dr.) Ithinji, Shadrack Mwiti, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. (CPA) Oyula, Joseph H. Maero, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Okuome, Andrew Adipo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Mboni, David Mwalika, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. (Dr.) Namoit, John Ariko, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Machele, Mohamed Soud, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON FINANCE AND NATIONAL PLANNING",
+        "member_name": "The Hon. Kaluma, George Peter Opondo, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. (Dr.) Nyikal, James Wambura, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Ntwiga, Patrick Munene, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Maingi Mary, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Muge, Cynthia Jepkosgei, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Kiborek Reuben, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Wanyonyi, Martin Pepela, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Mathenge, Duncan Maina, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Lenguris Pauline, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. (Dr.) Pukose Robert, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Oron, Joshua Odongo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Owino, Martin Peters, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Kibagendi Antoney, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Julius ole Sunkuli, EGH, EBS M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. (Prof.) Jaldesa, Guyo Waqo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HEALTH",
+        "member_name": "The Hon. Mukhwana, Titus Khamala, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Murwithania, Rindikiri Mugambi, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Mule, Caleb Mutiso, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Kirwa, Abraham Kipsang, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Kagiri, Jane Wangechi,OGW M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Karauri, Ronald Kamwiko, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Wanjiku, John Njuguna, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Cherorot, Joseph Kimutai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Koyi, John Waluke, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. (Dr.) Manduku, Daniel Ogwoka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Bisau, Maurice Kakai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Momanyi, Innocent Obiri, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Hiribae Said Buya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Passaris, Esther Muthoni, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON HOUSING, URBAN PLANNING AND PUBLIC WORKS",
+        "member_name": "The Hon. Kimilu, Joshua Kivinda, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. George Gitonga Murugara, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Mutuse, Eckomas Mwengi, OGW, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Farah Maalim, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Makali, John Okwisia, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Gladys Boss Jepkosgei, MGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon Toroitich, Timothy Kipchumba, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. CPA Zuleka, Hulbale Harun, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Muchira, Michael Mwangi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Onyiego, Silvanus Osoro, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Mogaka, Stephen M., M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Mohamed, Aden Daudi, EBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. (Dr.) Amollo, Paul Otiende, SC, EBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Wetangula, Timothy Wanyonyi, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Kipchumba, Harold Kimuge, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON JUSTICE AND LEGAL AFFAIRS",
+        "member_name": "The Hon. Kajwang\u2019, Tom Joseph Francis, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Kiti, Richard Ken Chonga, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Muli, Fabian Kyule, M.P. -Vice-Chairperson",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Wambilianga, Catherine Nanjala, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Siyoi, Lillian Chebet, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Kihungi, Peter Irungu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon Njoroge, Mary Wamaua, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Kagesi, Kivai Ernest Ogesi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Omboko Milemba, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Wachira, Rahab Mukami, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Lomwa, Joseph Samal, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Oyoo, James Onyango, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Omwera, George Aladwa, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Barasa, Patrick Simiyu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Aburi, Donya Dorice, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LABOUR",
+        "member_name": "The Hon. Amina Dika, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Nyamoko, Joash Nyamache, HSC, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Jehow, Fatuma Abdi, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Mrembo, Irene Njoki, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Lelmengit, Josses Kiptoo Kosgey, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Gitari, Joseph Gachoki, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Sankaire, Leah Sopiato, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Robi, Mathias Nyamabe, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Mupe, Anthony Kenga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon Maj. (Rtd) Dekow, Barrow Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. (Dr.) Ochanda, Gideon Ogolla, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Katana, Paul Kahindi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. (Eng.) Nzambia, Thuddeus Kithua, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Shimbwa, Omar Mwinyi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. (Dr.) Kaki, Rachel Nyamai, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON LANDS",
+        "member_name": "The Hon. Guyo, Ali Wario, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Lochakapong, Peter, CBS, M.P. -Chairperson",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Chelule, Liza Chepkorir M.P. - Vice Chairperson",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Abuor, Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Munyoro, Joseph Kamau, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Njeri, Pamela, Njoki, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Sudi, Oscar Kipchumba M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon Kalasinga, Joseph Majimbo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon Tungule, Charo Kazungu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Wamuchoma Gathoni, HSC, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Basil, Robert Ngui, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Maina, Mwago Amos, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Nabulindo, Peter Oscar, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Abdi, Khamis Chome, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Mawathe, Julius Musili, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON REGIONAL DEVELOPMENT",
+        "member_name": "The Hon. Hassan, Ahmed Maalim, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Ng'ang'a, Alice Wambui,CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Kosgei, Hilary Kiplangat, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Gitau, Faith Wairimu, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Owen Baya Yaa, CBS, MP.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Barre, Hussein Abdi, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Nduyo, Susan Ngugi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Linet Chepkorir, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Chumel, Samwel Moroto, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Pareyio, Agnes Mantaine, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Chimba, Zamzam Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Wetangula, Timothy Wanyonyi, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Amina Dika, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Nyenze, Edith Vethi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Abuor, Paul, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SOCIAL PROTECTION",
+        "member_name": "The Hon. Oyoo, James Onyango, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Sitati, Daniel Wanyama, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Wamacukuru, James Githua Kamau, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Bishop (Em.) (Dr.) Kosgei, Jackson Kipkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Waqo, Naomi Jillo, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon Letipila, Dominic Eli, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Yegon, Richard Kipkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Sitienei, Janet Jepkemboi, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon Ndakwa, David Athman, MP",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Omanyo, Catherine Nakhabi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Basil, Robert Ngui, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Nguna, Charles Ngusya, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Omondi, Caroli, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Mule, Stephen Mutinda, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Nabuin, Paul Ekwom, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON SPORTS AND CULTURE",
+        "member_name": "The Hon. Muhanda, Elsie Busihile, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Mbiuki, Japhet Miriti Kareke, CBS, M.P -Chairperson",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Bedzimba, Rashid Juma, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Kasiwai, Rael Chepkemoi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Kailemia, Elizabeth Karambu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Kilel, Richard Cheruiyot, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. (Dr.) Murumba, John Chikati, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Abdi, Abdi Ali, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Chebor, Paul Kibet, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Yakub, Farah Salah, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Shake, Peter Mbogho, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Mugabe, Innocent Maino, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Abdi, Khamis Chome, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Abubakar, Talib Ahamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. (Capt.) Mohamed, Obo, Ruweida, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TOURISM AND WILDLIFE",
+        "member_name": "The Hon. Makau, Patrick King\u2019ola, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Shinali, Bernard Masaka, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Kitany, Marianne Jebet, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Githinji, Robert Gichimu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Bwire, John Okano, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Kiprono, Alfred Mutai",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Korir, Adams Kipsanai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Adagala, Beatrice Kahai, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Mwalyo, Joshua Mbithi Mutua, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Wainaina, Michael, Wambugu, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Maina, Mwago Amos, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. (Dr.) Oundo, Wilberforce Ojiambo, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Oluoch, Anthony Tom, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Kamene, Joyce, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Sakimba, Parashina Samuel, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRADE, INDUSTRY ANDCOOPERATIVES",
+        "member_name": "The Hon. Guyo, Adhe Wario, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. GK George Macharia Kariuki, CBS, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Mutua, Didmus Wekesa Barasa, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Jhanda, Zaheer, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Komingoi, Kibet Kirui, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Chege, John Kiragu, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Kiunjuri, Festus Mwangi, EGH, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Saney, Ibrahim Abdi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Abdul, Rahim Dawood, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Samuel Arama, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Kiaraho, David Njuguna, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Bady, Bady Twalib, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Abdirahman, Hussein weytan Mohamed, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "1The Hon. Naicca, Johnson Manya, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Muhanda, Elsie Busihile, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "DEPARTMENTAL COMMITTEE ON TRANSPORT AND INFRASTRUCTURE",
+        "member_name": "The Hon. Kajwang\u2019 Tom Joseph Francis, CBS,M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Boss Gladys Jepkosgei, MGH, M.P.",
+        "position": "Chairperson"
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Martha Wangari,CBS, M.P.",
+        "position": "Vice-Chairperson"
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Kimani Ichung\u2019wah, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "Hon. Omboko Milemba,CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "Hon. Joseph Lekuton, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Sirma Musa Cherutich, EGH, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. (Dr.) Karani, Stephen Wachira, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Karemba, Eric Muchangi Njiru, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Nanok, Daniel Epuyo, CBS,M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Wanjala, Raphael Sauti Bitta, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Kagesi, Kivai Ernest Ogesi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Mizighi, Lydia Haika Mnene, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Chepkong\u2019a Kiprono Samuel, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. (CS) Mayaka Irene Nyakerario, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Yussuf, Adan Haji, DSM, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Mwale, Nicholas S. Tindi, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Wamboka, Nelson Jack Wanami, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Pkosing, David Losiakou, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Wangwe, Emmanuel, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Mohammed Fatuma Zinab, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. (Dr.) Mulyungi, Gideon Mutemi, CBS, EBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Shurie, Abdi Omar, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Atandi, Samuel Onunga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Tongoyo Gabriel Koshal, CBS, MP.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Mutunga, John Kanyuithia, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Bowen, David Kongogo, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. John Kiarie Waweru, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Koech Nelson, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Kibiwot Julius Melly, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Gikaria David, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Musau, Vincent Musyoka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. (CPA) Kimani, Francis Kuria, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. (Dr.) Nyikal, James Wambura, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Johana Ng\u2019eno Kipyegon, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. George Gitonga Murugara, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Kiti, Richard Ken Chonga, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Nyamoko, Joash Nyamache, HSC, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Lochakapong, Peter, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Ng'ang'a, Alice Wambui,CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Sitati, Daniel Wanyama, CBS, M.P",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Mbiuki, Japhet Miriti Kareke, CBS, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. Shinali, Bernard Masaka, M.P.",
+        "position": ""
+      },
+      {
+        "committee_name": "LIAISON COMMITEEE",
+        "member_name": "The Hon. GK George Macharia Kariuki, CBS, M.P",
+        "position": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,3265 @@
+{
+  "senate": {
+    "__dataframe__": true,
+    "records": [
+      {
+        "name": "sen. sifuna edwin watenya",
+        "county": "nairobi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-sifuna-edwin-watenya"
+      },
+      {
+        "name": "sen. (dr.) khalwale boni",
+        "county": "kakamega",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-dr-khalwale-boni"
+      },
+      {
+        "name": "sen. (rtd) justice stewart madzayo, cbs, mp",
+        "county": "kilifi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-rtd-justice-stewart-madzayo-cbs-mp"
+      },
+      {
+        "name": "sen. abdalla shakilla mohamed",
+        "county": "nominated",
+        "party": "wdm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-abdalla-shakila-mohamed"
+      },
+      {
+        "name": "sen. beatrice akinyi ogolla",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-beatrice-akinyi-ogolla"
+      },
+      {
+        "name": "sen. beth kalunda syengo",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-beth-kalunda-syengo"
+      },
+      {
+        "name": "sen. betty batuli montet",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-betty-batuli-montet"
+      },
+      {
+        "name": "sen. boy issa juma, cbs",
+        "county": "kwale",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-boy-issa-juma-cbs"
+      },
+      {
+        "name": "sen. catherine muyeka mumma",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-catherine-muyeka-mumma"
+      },
+      {
+        "name": "sen. cheburet kiprono chemitei",
+        "county": "baringo",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-cheburet-kiprono-chemitei"
+      },
+      {
+        "name": "sen. cherarkey samson k",
+        "county": "nandi",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-cherarkey-samson-k"
+      },
+      {
+        "name": "sen. cheruiyot aaron kipkirui",
+        "county": "kericho",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-cheruiyot-aaron-kipkirui-0"
+      },
+      {
+        "name": "sen. chesang allan kiprotich, cbs",
+        "county": "trans nzoia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-chesang-allan-kiprotich-cbs"
+      },
+      {
+        "name": "sen. chimera raphael mwinzago",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-chimera-raphael-mwinzago"
+      },
+      {
+        "name": "sen. chute mohamed said, cbs",
+        "county": "marsabit",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-chute-mohamed-said-cbs"
+      },
+      {
+        "name": "sen. consolata nabwire wakwabubi",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-consolata-nabwire-wakwabubi"
+      },
+      {
+        "name": "sen. crystal asige",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-crystal-asige"
+      },
+      {
+        "name": "sen. david wakoli wafula, cbs",
+        "county": "bungoma county",
+        "party": "(ford k)",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-david-wakoli-wafula-cbs"
+      },
+      {
+        "name": "sen. dullo fatuma adan",
+        "county": "isiolo",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-dullo-fatuma-adan"
+      },
+      {
+        "name": "sen. ekomwa james lomenen",
+        "county": "turkana",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-ekomwa-james-lomenen"
+      },
+      {
+        "name": "sen. essy okenyuri nyaituga anyieni",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-essy-okenyuri-nyaituga-anyieni"
+      },
+      {
+        "name": "sen. faki mohamed mwinyihaji",
+        "county": "mombasa",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-faki-mohamed-mwinyihaji"
+      },
+      {
+        "name": "sen. george mungai mbugua",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-george-mungai-mbugua"
+      },
+      {
+        "name": "sen. haji abdul mohammed",
+        "county": "garissa",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-haji-abdul-mohammed"
+      },
+      {
+        "name": "sen. hamida ali kibwana",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-hamida-ali-kibwana"
+      },
+      {
+        "name": "sen. hezena m. lemaletian",
+        "county": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-hezena-m-lemaletian"
+      },
+      {
+        "name": "sen. joe nyutu",
+        "county": "muranga",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-joe-nyutu"
+      },
+      {
+        "name": "sen. joyce chepkoech korir",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-joyce-chepkoech-korir"
+      },
+      {
+        "name": "sen. kajwang' moses otieno",
+        "county": "homa bay",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-kajwang-moses-otieno-0"
+      },
+      {
+        "name": "sen. kamau joseph githuku",
+        "county": "lamu",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-kamau-joseph-githuku"
+      },
+      {
+        "name": "sen. karungo paul thangwa",
+        "county": "kiambu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-karungo-paul-thangwa"
+      },
+      {
+        "name": "sen. keroche tabitha karanja",
+        "county": "nakuru",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-keroche-tabitha-karanja"
+      },
+      {
+        "name": "sen. kiplagat jackson mandago",
+        "county": "uasin gishu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-kiplagat-jackson-mandago"
+      },
+      {
+        "name": "sen. kisang william kipkemoi, cbs",
+        "county": "elgeyo marakwet",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-kisang-william-kipkemoi-cbs"
+      },
+      {
+        "name": "sen. lelegwe steve ltumbesi",
+        "county": "samburu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-lelegwe-steve-ltumbesi"
+      },
+      {
+        "name": "sen. maanzo daniel kitonga",
+        "county": "makueni",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-maanzo-daniel-kitonga"
+      },
+      {
+        "name": "sen. methu john muhia",
+        "county": "nyandarua",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-methu-john-muhia"
+      },
+      {
+        "name": "sen. miraj abdillahi abdulrahman",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-miraj-abdillahi-abdulrahman"
+      },
+      {
+        "name": "sen. mogeni erick okongo",
+        "county": "nyamira",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-mogeni-erick-okongo"
+      },
+      {
+        "name": "sen. mohamed abass sheikh",
+        "county": "wajir",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-mohamed-abass-sheikh"
+      },
+      {
+        "name": "sen. mungatana danson buya",
+        "county": "tana river",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-mungatana-danson-buya"
+      },
+      {
+        "name": "sen. munyi alexander mundigi",
+        "county": "embu",
+        "party": "dp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-munyi-alexander-mundigi"
+      },
+      {
+        "name": "sen. murango james kamau",
+        "county": "kirinyaga",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-murango-james-kamau"
+      },
+      {
+        "name": "sen. murungi kathuri",
+        "county": "meru",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-murungi-kathuri"
+      },
+      {
+        "name": "sen. muthama agnes kavindu mbuku",
+        "county": "machakos",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-muthama-agnes-kavindu-mbuku"
+      },
+      {
+        "name": "sen. mutinda maureen tabitha, cbs",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-mutinda-maureen-tabitha-cbs"
+      },
+      {
+        "name": "sen. mwaruma johnes m, cbs",
+        "county": "taita taveta",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-mwaruma-johnes-m-cbs"
+      },
+      {
+        "name": "sen. mwenda gataya mo fire",
+        "county": "tharaka nithi",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-mwenda-gataya-mo-fire"
+      },
+      {
+        "name": "sen. nderitu john kinyua",
+        "county": "laikipia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-nderitu-john-kinyua"
+      },
+      {
+        "name": "sen. nyamu karen njeri",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-nyamu-karen-njeri"
+      },
+      {
+        "name": "sen. oginga oburu",
+        "county": "siaya",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-oginga-oburu"
+      },
+      {
+        "name": "sen. oketch eddy gicheru",
+        "county": "migori",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-oketch-eddy-gicheru"
+      },
+      {
+        "name": "sen. okoiti andrew omtatah",
+        "county": "busia",
+        "party": "nra",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-okoiti-andrew-omtatah"
+      },
+      {
+        "name": "sen. olekina ledama",
+        "county": "narok",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-olekina-ledama-0"
+      },
+      {
+        "name": "sen. omar mariam sheikh",
+        "county": "nominated",
+        "party": "udm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-omar-mariam-sheikh"
+      },
+      {
+        "name": "sen. onyonka richard momoima",
+        "county": "kisii",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-onyonka-richard-momoima"
+      },
+      {
+        "name": "sen. osotsi godfrey atieno",
+        "county": "vihiga",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-osotsi-godfrey-atieno"
+      },
+      {
+        "name": "sen. pesi peris tobiko",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-pesi-peris-tobiko"
+      },
+      {
+        "name": "sen. prof. margaret jepkoech kamar",
+        "county": "nominated",
+        "party": "jp",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-prof-margaret-jepkoech-kamar"
+      },
+      {
+        "name": "sen. prof. tom odhiambo ojienda, sc, mp",
+        "county": "kisumu",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-prof-tom-odhiambo-ojienda-sc-mp"
+      },
+      {
+        "name": "sen. recha julius murgor",
+        "county": "west pokot",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-recha-julius-murgor"
+      },
+      {
+        "name": "sen. roba ali ibrahim",
+        "county": "mandera",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-roba-ali-ibrahim"
+      },
+      {
+        "name": "sen. seki lenku ole kanar",
+        "county": "kajiado",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-seki-lenku-ole-kanar"
+      },
+      {
+        "name": "sen. veronica waheti nduati, cbs",
+        "county": "nominated",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-veronica-waheti-nduati-cbs"
+      },
+      {
+        "name": "sen. wakili hillary kiprotich sigei",
+        "county": "bomet",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-wakili-hillary-kiprotich-sigei-cbs-mp"
+      },
+      {
+        "name": "sen. wamatinga wahome, cbs",
+        "county": "nyeri",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-wamatinga-wahome-cbs"
+      },
+      {
+        "name": "sen. wambua enoch kiio",
+        "county": "kitui",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-senate/sen-wambua-enoch-kiio-0"
+      }
+    ]
+  },
+  "assembly": {
+    "__dataframe__": true,
+    "records": [
+      {
+        "name": "hon king'ola patrick makau, cbs",
+        "county": "machakos",
+        "constituency": "mavoko",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kingola-patrick-makau-cbs"
+      },
+      {
+        "name": "hon. mejjadonk, benjamin gathiru",
+        "county": "nairobi",
+        "constituency": "embakasi central",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mejjadonk-benjamin-gathiru"
+      },
+      {
+        "name": "hon. (amb.) langat benjamin kipkirui",
+        "county": "kericho",
+        "constituency": "ainamoi",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-amb-langat-benjamin-kipkirui"
+      },
+      {
+        "name": "hon. (dr.) amollo paul otiende, cs, cbs",
+        "county": "siaya",
+        "constituency": "rarieda",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-amollo-paul-otiende-cs-cbs"
+      },
+      {
+        "name": "hon. (dr.) gichuki edwin mugo",
+        "county": "murang\u00e1",
+        "constituency": "mathioya",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-gichuki-edwin-mugo"
+      },
+      {
+        "name": "hon. (dr.) jackson kipkemoi kosgei",
+        "county": "",
+        "constituency": "",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-jackson-kipkemoi-kosgei"
+      },
+      {
+        "name": "hon. (dr.) mutunga john kanyuithia",
+        "county": "meru",
+        "constituency": "tigania west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-mutunga-john-kanyuithia"
+      },
+      {
+        "name": "hon. (dr.) onchoke charles mamwacha",
+        "county": "kisii",
+        "constituency": "bonchari",
+        "party": "upa",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-onchoke-charles-mamwacha"
+      },
+      {
+        "name": "hon. (dr.) pukose robert",
+        "county": "trans nzoia",
+        "constituency": "endebess",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-pukose-robert"
+      },
+      {
+        "name": "hon. (eng.) nzambia kithua thuddeus",
+        "county": "makueni",
+        "constituency": "kilome",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-eng-nzambia-kithua-thuddeus"
+      },
+      {
+        "name": "hon. (prof.) bartoo phylis jepkemoi",
+        "county": "uasin gishu",
+        "constituency": "moiben",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-prof-bartoo-phylis-jepkemoi"
+      },
+      {
+        "name": "hon. abdi ali abdi",
+        "county": "garissa",
+        "constituency": "ijara",
+        "party": "nap-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdi-ali-abdi"
+      },
+      {
+        "name": "hon. abdi khamis chome",
+        "county": "taita taveta",
+        "constituency": "voi",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdi-khamis-chome"
+      },
+      {
+        "name": "hon. abdi, yusuf hassan",
+        "county": "nairobi",
+        "constituency": "kamkunji",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdi-yusuf-hassan"
+      },
+      {
+        "name": "hon. abdirahman mohamed abdi",
+        "county": "mandera",
+        "constituency": "lafey",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdirahman-mohamed-abdi"
+      },
+      {
+        "name": "hon. abdirahman, husseinweytan mohamed",
+        "county": "mandera",
+        "constituency": "mandera east",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdirahman-hussein-weytan-mohamed"
+      },
+      {
+        "name": "hon. abdullahi amina dika",
+        "county": "tana river",
+        "constituency": "tana river",
+        "party": "kanu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdullahi-amina-dika"
+      },
+      {
+        "name": "hon. abdullaih bashir sheikh",
+        "county": "mandera",
+        "constituency": "mandera north",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abdullaih-bashir-sheikh"
+      },
+      {
+        "name": "hon. abubakar talib ahmed",
+        "county": "",
+        "constituency": "",
+        "party": "wdm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abubakar-talib-ahmed"
+      },
+      {
+        "name": "hon. abuor paul",
+        "county": "migori",
+        "constituency": "rongo",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-abuor-paul-0"
+      },
+      {
+        "name": "hon. aburi donya dorice",
+        "county": "kisii",
+        "constituency": "kisii",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-aburi-donya-dorice"
+      },
+      {
+        "name": "hon. aburi, lawrence mpuru",
+        "county": "meru",
+        "constituency": "tigania east",
+        "party": "nopeu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-aburi-lawrence-mpuru"
+      },
+      {
+        "name": "hon. adagala, beatrice kahai",
+        "county": "vihiga",
+        "constituency": "vihiga",
+        "party": "anc",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-adagala-beatrice-kahai"
+      },
+      {
+        "name": "hon. adhe wario guyo",
+        "county": "marsabit",
+        "constituency": "north horr",
+        "party": "kanu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-adhe-wario-guyo"
+      },
+      {
+        "name": "hon. adow aden mohammed",
+        "county": "wajir",
+        "constituency": "wajir south",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-adow-aden-mohammed"
+      },
+      {
+        "name": "hon. ahmed shakeel ahmed shabbir",
+        "county": "kisumu",
+        "constituency": "kisumu east",
+        "party": "ind.",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ahmed-shakeel-ahmed-shabbir"
+      },
+      {
+        "name": "hon. akujah, protus ewesit",
+        "county": "turkana",
+        "constituency": "loima",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-akujah-protus-ewesit"
+      },
+      {
+        "name": "hon. alfah ondieki miruka, cbs",
+        "county": "kisii",
+        "constituency": "bomachoge chache",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-alfah-ondieki-miruka-cbs"
+      },
+      {
+        "name": "hon. ali abdisirat khalif",
+        "county": "",
+        "constituency": "",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ali-abdisirat-khalif"
+      },
+      {
+        "name": "hon. alio, ahmed maalim hassan",
+        "county": "mandera",
+        "constituency": "banissa",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-alio-ahmed-maalim-hassan"
+      },
+      {
+        "name": "hon. arama samuel",
+        "county": "nakuru",
+        "constituency": "nakuru town west",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-arama-samuel"
+      },
+      {
+        "name": "hon. ariko john namoit",
+        "county": "turkana",
+        "constituency": "turkana south",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ariko-john-namoit"
+      },
+      {
+        "name": "hon. atandi samuel onunga, cbs",
+        "county": "siaya",
+        "constituency": "alego usonga",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-atandi-samuel-onunga-cbs"
+      },
+      {
+        "name": "hon. babu owino paul ongili",
+        "county": "nairobi",
+        "constituency": "embakasi east",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-babu-owino-paul-ongili"
+      },
+      {
+        "name": "hon. bady bady twalib",
+        "county": "mombasa",
+        "constituency": "jomvu",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-bady-bady-twalib-0"
+      },
+      {
+        "name": "hon. barasa patrick simiyu",
+        "county": "trans nzoia",
+        "constituency": "cherangany",
+        "party": "dap-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-barasa-patrick-simiyu"
+      },
+      {
+        "name": "hon. barongo nolfason obadiah",
+        "county": "kisii",
+        "constituency": "bomachoge borabu",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-barongo-nolfason-obadiah"
+      },
+      {
+        "name": "hon. barre hussein abdi",
+        "county": "wajir",
+        "constituency": "tarbaj",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-barre-hussein-abdi"
+      },
+      {
+        "name": "hon. basil robert ngui",
+        "county": "machakos",
+        "constituency": "yatta",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-basil-robert-ngui"
+      },
+      {
+        "name": "hon. baya owen yaa",
+        "county": "kilifi",
+        "constituency": "kilifi north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-baya-owen-yaa"
+      },
+      {
+        "name": "hon. bedzimba rashid juma",
+        "county": "mombasa",
+        "constituency": "kisauni",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-bedzimba-rashid-juma"
+      },
+      {
+        "name": "hon. biego paul kibichiy",
+        "county": "nandi",
+        "constituency": "chesumei",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-biego-paul-kibichiy"
+      },
+      {
+        "name": "hon. bisau, maurice kakai",
+        "county": "trans-nzoia",
+        "constituency": "kiminini",
+        "party": "dap-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-bisau-maurice-kakai"
+      },
+      {
+        "name": "hon. bonaya mumina gollo",
+        "county": "isiolo",
+        "constituency": "isiolo",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-bonaya-mumina-gollo"
+      },
+      {
+        "name": "hon. boss gladys jepkosgei",
+        "county": "uasin gishu",
+        "constituency": "uasin gishu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-boss-gladys-jepkosgei"
+      },
+      {
+        "name": "hon. bowen david kangogo",
+        "county": "elgeyo - marakwet",
+        "constituency": "marakwet east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-bowen-david-kangogo"
+      },
+      {
+        "name": "hon. busia ruth adhiambo odinga",
+        "county": "kisumu",
+        "constituency": "kisumu",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-busia-ruth-adhiambo-odinga"
+      },
+      {
+        "name": "hon. buyu rozaah akinyi, cbs",
+        "county": "kisumu",
+        "constituency": "kisumu west",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-buyu-rozaah-akinyi-cbs"
+      },
+      {
+        "name": "hon. bwire john okano",
+        "county": "taita taveta",
+        "constituency": "taveta",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-bwire-john-okano"
+      },
+      {
+        "name": "hon. chebor, paul kibet",
+        "county": "nakuru",
+        "constituency": "rongai",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chebor-paul-kibet"
+      },
+      {
+        "name": "hon. chege john kiragu",
+        "county": "kiambu",
+        "constituency": "limuru",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chege-john-kiragu"
+      },
+      {
+        "name": "hon. chege njuguna",
+        "county": "murang'a",
+        "constituency": "kandara",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chege-njuguna"
+      },
+      {
+        "name": "hon. chege sabina wanjiru",
+        "county": "",
+        "constituency": "",
+        "party": "jp",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chege-sabina-wanjiru"
+      },
+      {
+        "name": "hon. chelule, liza chepkorir",
+        "county": "nakuru",
+        "constituency": "nakuru",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chelule-liza-chepkorir"
+      },
+      {
+        "name": "hon. chepkonga, samuel kiprono",
+        "county": "uasin gishu",
+        "constituency": "ainabkoi",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chepkonga-samuel-kiprono"
+      },
+      {
+        "name": "hon. chepkorir, linet",
+        "county": "bomet",
+        "constituency": "bomet",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chepkorir-linet"
+      },
+      {
+        "name": "hon. chepkwony charity kathambi",
+        "county": "nakuru",
+        "constituency": "njoro",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chepkwony-charity-kathambi"
+      },
+      {
+        "name": "hon. cherorot joseph kimutai",
+        "county": "kericho",
+        "constituency": "kipkelion east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-cherorot-joseph-kimutai"
+      },
+      {
+        "name": "hon. chesebe fred kapondi, cbs",
+        "county": "bungoma",
+        "constituency": "mt. elgon",
+        "party": "uda",
+        "status": "uda",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chesebe-fred-kapondi-cbs"
+      },
+      {
+        "name": "hon. chiforomodo, mangale munga",
+        "county": "kwale",
+        "constituency": "lunga lunga",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chiforomodo-mangale-munga"
+      },
+      {
+        "name": "hon. chikati john murumba",
+        "county": "bungoma",
+        "constituency": "tongaren",
+        "party": "ford - k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-chikati-john-murumba"
+      },
+      {
+        "name": "hon. chumel, moroto samwel",
+        "county": "west pokot",
+        "constituency": "kapenguria",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-chumel-moroto-samwel"
+      },
+      {
+        "name": "hon. cpa geoffrey wandeto",
+        "county": "nyeri",
+        "constituency": "tetu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-cpa-geoffrey-wandeto"
+      },
+      {
+        "name": "hon. cpa rutto julius kipletting",
+        "county": "uasin gishu",
+        "constituency": "kesses",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-cpa-rutto-julius-kipletting"
+      },
+      {
+        "name": "hon. dawood, abdul rahim, cbs",
+        "county": "meru",
+        "constituency": "north imenti",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dawood-abdul-rahim-cbs"
+      },
+      {
+        "name": "hon. dena joseph hamisi",
+        "county": "",
+        "constituency": "",
+        "party": "anc",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-denar-joseph-hamisi"
+      },
+      {
+        "name": "hon. elachi beatrice kadeveresia",
+        "county": "nairobi",
+        "constituency": "dagoretti north",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-elachi-beatrice-kadeveresia"
+      },
+      {
+        "name": "hon. eric wamumbi",
+        "county": "nyeri",
+        "constituency": "mathira",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-eric-wamumbi"
+      },
+      {
+        "name": "hon. farah salah yakub",
+        "county": "garissa",
+        "constituency": "fafi",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-farah-salah-yakub"
+      },
+      {
+        "name": "hon. farah yussuf mohamed",
+        "county": "wajir",
+        "constituency": "wajir west",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-farah-yussuf-mohamed"
+      },
+      {
+        "name": "hon. gachagua george",
+        "county": "nyandarua",
+        "constituency": "ndaragwa",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gachagua-george"
+      },
+      {
+        "name": "hon. gachobe samuel kinuthia",
+        "county": "nakuru",
+        "constituency": "subukia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gachobe-samuel-kinuthia"
+      },
+      {
+        "name": "hon. gakuya james mwangi",
+        "county": "nairobi",
+        "constituency": "embakassi north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gakuya-james-mwangi"
+      },
+      {
+        "name": "hon. gikaria, david",
+        "county": "nakuru",
+        "constituency": "nakuru town east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gikaria-david"
+      },
+      {
+        "name": "hon. gimose, charles gumini",
+        "county": "vihiga",
+        "constituency": "hamisi",
+        "party": "anc",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gimose-charles-gumini"
+      },
+      {
+        "name": "hon. gisairo clive ombane",
+        "county": "nyamira",
+        "constituency": "kitutu masaba",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gisairo-clive-ombane"
+      },
+      {
+        "name": "hon. gitari, joseph gachoki",
+        "county": "kirinyaga",
+        "constituency": "kirinyaga central",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gitari-joseph-gachoki"
+      },
+      {
+        "name": "hon. gitau faith wairimu",
+        "county": "nyandarua",
+        "constituency": "nyandarua",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gitau-faith-wairimu-0"
+      },
+      {
+        "name": "hon. githinji, robert gichimu, cbs",
+        "county": "kirinyaga",
+        "constituency": "gichugu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-githinji-robert-gichimu-cbs"
+      },
+      {
+        "name": "hon. gogo, lilian achieng",
+        "county": "homa bay",
+        "constituency": "rangwe",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-gogo-lilian-achieng"
+      },
+      {
+        "name": "hon. guyo ali wario",
+        "county": "tana river",
+        "constituency": "garsen",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-guyo-ali-wario"
+      },
+      {
+        "name": "hon. hamisi kakuta maimai",
+        "county": "kajiado",
+        "constituency": "kajiado east",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-hamisi-kakuta-maimai"
+      },
+      {
+        "name": "hon. haro abdul ebrahim",
+        "county": "mandera",
+        "constituency": "mandera south",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-haro-abdul-ebrahim"
+      },
+      {
+        "name": "hon. hiribae said buya",
+        "county": "tana river",
+        "constituency": "galole",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-hiribae-said-buya"
+      },
+      {
+        "name": "hon. ichung\u2019wah antony kimani",
+        "county": "kiambu",
+        "constituency": "kikuyu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ichungwah-antony-kimani"
+      },
+      {
+        "name": "hon. ikana fredrick lusuli",
+        "county": "kakamega",
+        "constituency": "shinyalu",
+        "party": "anc",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ikana-fredrick-lusuli"
+      },
+      {
+        "name": "hon. ikiara, dorothy muthoni",
+        "county": "",
+        "constituency": "",
+        "party": "uda",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ikiara-dorothy-muthoni"
+      },
+      {
+        "name": "hon. ithinji shadrack mwiti",
+        "county": "meru",
+        "constituency": "south imenti",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ithinji-shadrack-mwiti"
+      },
+      {
+        "name": "hon. jaldesa guyo waqo",
+        "county": "marsabit",
+        "constituency": "moyale",
+        "party": "upia",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-jaldesa-guyo-waqo"
+      },
+      {
+        "name": "hon. jehow fatuma abdi",
+        "county": "wajir",
+        "constituency": "wajir",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-jehow-fatuma-abdi"
+      },
+      {
+        "name": "hon. jhanda zaheer",
+        "county": "kisii",
+        "constituency": "nyaribari chache",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-jhanda-zaheer"
+      },
+      {
+        "name": "hon. joseph wainaina iraya",
+        "county": "",
+        "constituency": "",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-joseph-wainaina-iraya"
+      },
+      {
+        "name": "hon. junet sheikh nuh mohamed",
+        "county": "",
+        "constituency": "",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-junet-sheikh-nuh-mohamed"
+      },
+      {
+        "name": "hon. kagesi ernest ogesi kivai",
+        "county": "vihiga",
+        "constituency": "vihiga",
+        "party": "anc",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kagesi-ernest-ogesi-kivai"
+      },
+      {
+        "name": "hon. kagiri jane wangechi",
+        "county": "laikipia",
+        "constituency": "laikipia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kagiri-jane-wangechi"
+      },
+      {
+        "name": "hon. kagombe gabriel gathuka",
+        "county": "kiambu",
+        "constituency": "gatundu south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kagombe-gabriel-gathuka"
+      },
+      {
+        "name": "hon. kaguchia john philip gichohi",
+        "county": "nyeri",
+        "constituency": "mukurweini",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kaguchia-john-philip-gichohi"
+      },
+      {
+        "name": "hon. kahangara joseph mburu",
+        "county": "kiambu",
+        "constituency": "lari",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kahangara-joseph-mburu"
+      },
+      {
+        "name": "hon. kailemia elizabeth karambu",
+        "county": "meru",
+        "constituency": "meru",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kailemia-elizabeth-karambu"
+      },
+      {
+        "name": "hon. kajwang\u2019, francis tom joseph",
+        "county": "",
+        "constituency": "",
+        "party": "odm",
+        "status": "elect",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kajwang-francis-tom-joseph"
+      },
+      {
+        "name": "hon. kaluma george peter opondo",
+        "county": "homa bay",
+        "constituency": "homa bay town",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kaluma-george-peter-opondo"
+      },
+      {
+        "name": "hon. kamene, joyce",
+        "county": "machakos",
+        "constituency": "machakos",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kamene-joyce"
+      },
+      {
+        "name": "hon. kamket kassait william",
+        "county": "baringo",
+        "constituency": "tiaty",
+        "party": "kanu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kamket-kassait-william-cbs"
+      },
+      {
+        "name": "hon. kamuren, charles, cbs",
+        "county": "baringo",
+        "constituency": "baringo south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kamuren-charles-cbs"
+      },
+      {
+        "name": "hon. kanchory, elijah memusi",
+        "county": "kajiado",
+        "constituency": "kajiado central",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kanchory-elijah-memusi"
+      },
+      {
+        "name": "hon. kandie, joshua chepyegon",
+        "county": "baringo",
+        "constituency": "baringo central",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kandie-joshua-chepyegon"
+      },
+      {
+        "name": "hon. karani stephen wachira",
+        "county": "laikipia",
+        "constituency": "laikipia west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-karani-stephen-wachira-cbs"
+      },
+      {
+        "name": "hon. karauri, ronald kamwiko",
+        "county": "nairobi",
+        "constituency": "kasarani",
+        "party": "ind",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-karauri-ronald-kamwiko"
+      },
+      {
+        "name": "hon. kariuki george macharia",
+        "county": "kirinyaga",
+        "constituency": "ndia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kariuki-george-macharia"
+      },
+      {
+        "name": "hon. kasalu, irene muthoni",
+        "county": "kitui",
+        "constituency": "kitui",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kasalu-irene-muthoni"
+      },
+      {
+        "name": "hon. kasiwai rael kasiwai",
+        "county": "west pokot",
+        "constituency": "west pokot",
+        "party": "kup",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kasiwai-rael-kasiwai"
+      },
+      {
+        "name": "hon. katana paul kahindi",
+        "county": "kilifi",
+        "constituency": "kaloleni",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-katana-paul-kahindi"
+      },
+      {
+        "name": "hon. kaunya edward oku",
+        "county": "busia",
+        "constituency": "teso north",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kaunya-edward-oku"
+      },
+      {
+        "name": "hon. kemei justice kipsang",
+        "county": "kericho",
+        "constituency": "sigowet/soin",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kemei-justice-kipsang"
+      },
+      {
+        "name": "hon. kemei, beatrice chepngeno",
+        "county": "kericho",
+        "constituency": "kericho",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kemei-beatrice-chepngeno"
+      },
+      {
+        "name": "hon. keynan, wehliye adan",
+        "county": "wajir",
+        "constituency": "eldas",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-keynan-wehliye-adan"
+      },
+      {
+        "name": "hon. khamisi mboko mishi juma",
+        "county": "mombasa",
+        "constituency": "likoni",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-khamisi-mboko-mishi-juma"
+      },
+      {
+        "name": "hon. khodhe phelix odiwuor",
+        "county": "nairobi",
+        "constituency": "langata",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-khodhe-phelix-odiwuor"
+      },
+      {
+        "name": "hon. kiamba suzanne ndunge",
+        "county": "makueni",
+        "constituency": "makueni",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kiamba-suzanne-ndunge"
+      },
+      {
+        "name": "hon. kibagendi, antoney",
+        "county": "kisii",
+        "constituency": "kitutu chache south",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kibagendi-antoney"
+      },
+      {
+        "name": "hon. kihara, jayne n.w",
+        "county": "nakuru",
+        "constituency": "naivasha",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kihara-jayne-nw"
+      },
+      {
+        "name": "hon. kihungi peter irungu",
+        "county": "muranga",
+        "constituency": "kangema",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kihungi-peter-irungu"
+      },
+      {
+        "name": "hon. kilel, richard cheruiyot",
+        "county": "bomet",
+        "constituency": "bomet central",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kilel-richard-cheruiyot"
+      },
+      {
+        "name": "hon. kimilu, joshua kivinda",
+        "county": "makueni",
+        "constituency": "kaiti",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kimilu-joshua-kivinda"
+      },
+      {
+        "name": "hon. kingara, simon nganga",
+        "county": "kiambu",
+        "constituency": "ruiru",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kingara-simon-nganga"
+      },
+      {
+        "name": "hon. kipchumba harold kimuge",
+        "county": "nominated",
+        "constituency": "nominated",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kipchumba-harold-kimuge"
+      },
+      {
+        "name": "hon. kipkoros, joseph makilap",
+        "county": "baringo",
+        "constituency": "baringo north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kipkoros-joseph-makilap"
+      },
+      {
+        "name": "hon. kiplagat david",
+        "county": "uasin gishu",
+        "constituency": "soy",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kiplagat-david"
+      },
+      {
+        "name": "hon. kirima moses nguchine",
+        "county": "meru",
+        "constituency": "central imenti",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kirima-moses-nguchine"
+      },
+      {
+        "name": "hon. kirwa abraham kipsang",
+        "county": "nandi",
+        "constituency": "mosop",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kirwa-abraham-kipsang"
+      },
+      {
+        "name": "hon. kitany marianne",
+        "county": "nandi",
+        "constituency": "aldai",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kitany-marianne"
+      },
+      {
+        "name": "hon. kiti richard ken chonga",
+        "county": "kilifi",
+        "constituency": "kilifi south",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kiti-richard-ken-chonga"
+      },
+      {
+        "name": "hon. kitur, bernard kibor",
+        "county": "nandi",
+        "constituency": "nandi hills",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kitur-bernard-kibor"
+      },
+      {
+        "name": "hon. kiunjuri, mwangi festus",
+        "county": "laikipia",
+        "constituency": "laikipia east",
+        "party": "tsp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kiunjuri-mwangi-festus"
+      },
+      {
+        "name": "hon. koech kipngetich victor",
+        "county": "bomet",
+        "constituency": "chepalungu",
+        "party": "ccm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-koech-kipngetich-victor"
+      },
+      {
+        "name": "hon. koech, nelson",
+        "county": "kericho",
+        "constituency": "belgut",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-koech-nelson"
+      },
+      {
+        "name": "hon. kombe harrison garama",
+        "county": "kilifi",
+        "constituency": "magarini",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kombe-harrison-garama"
+      },
+      {
+        "name": "hon. komingoi kibet kirui",
+        "county": "kericho",
+        "constituency": "bureti",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-komingoi-kibet-kirui"
+      },
+      {
+        "name": "hon. korere sarah paulata",
+        "county": "laikipia",
+        "constituency": "laikipia north",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-korere-sarah-paulata"
+      },
+      {
+        "name": "hon. korir adams kipsanai",
+        "county": "elgeyo - marakwet",
+        "constituency": "keiyo north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-korir-adams-kipsanai"
+      },
+      {
+        "name": "hon. kosgei hilary kiplang\u2019at",
+        "county": "kericho",
+        "constituency": "kipkelion west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kosgei-hilary-kiplangat-0"
+      },
+      {
+        "name": "hon. koyi john waluke, cbs",
+        "county": "bungoma",
+        "constituency": "sirisia",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-koyi-john-waluke-cbs"
+      },
+      {
+        "name": "hon. kuno yakub adow",
+        "county": "tana river",
+        "constituency": "bura",
+        "party": "upia",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kuno-yakub-adow"
+      },
+      {
+        "name": "hon. kuno, amina udgoon siyad",
+        "county": "garissa",
+        "constituency": "garissa",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kuno-amina-udgoon-siyad"
+      },
+      {
+        "name": "hon. kururia elijah njore njoroge",
+        "county": "kiambu",
+        "constituency": "gatundu north",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-kururia-elijah-njore-njoroge"
+      },
+      {
+        "name": "hon. lekuton joseph, cbs",
+        "county": "marsabit",
+        "constituency": "laisamis",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lekuton-joseph-cbs"
+      },
+      {
+        "name": "hon. lelmengit, josses kiptoo kosgey",
+        "county": "nandi",
+        "constituency": "emgwen",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lelmengit-josses-kiptoo-kosgey"
+      },
+      {
+        "name": "hon. lemanken aramat, cbs",
+        "county": "narok",
+        "constituency": "narok east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lemanken-aramat-cbs"
+      },
+      {
+        "name": "hon. lenguris pauline",
+        "county": "samburu",
+        "constituency": "samburu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lenguris-pauline"
+      },
+      {
+        "name": "hon. lentoijoni, jackson lekumontare",
+        "county": "samburu",
+        "constituency": "samburu east",
+        "party": "kanu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lentoijoni-jackson-lekumontare"
+      },
+      {
+        "name": "hon. lesuuda, naisula, cbs",
+        "county": "samburu",
+        "constituency": "samburu west",
+        "party": "kanu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lesuuda-naisula-cbs"
+      },
+      {
+        "name": "hon. letipila, dominic eli",
+        "county": "samburu",
+        "constituency": "samburu north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-letipila-dominic-eli"
+      },
+      {
+        "name": "hon. lochakapong, peter",
+        "county": "west pokot",
+        "constituency": "sigor",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lochakapong-peter"
+      },
+      {
+        "name": "hon. lomwa joseph samal",
+        "county": "isiolo north",
+        "constituency": "isiolo north",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lomwa-joseph-samal"
+      },
+      {
+        "name": "hon. lotee titus",
+        "county": "west pokot",
+        "constituency": "kacheliba",
+        "party": "kup",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-lotee-titus"
+      },
+      {
+        "name": "hon. luyai, caleb amisi",
+        "county": "trans-nzoia",
+        "constituency": "saboti",
+        "party": "odm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-luyai-caleb-amisi"
+      },
+      {
+        "name": "hon. maalim, farah",
+        "county": "garissa",
+        "constituency": "dadaab",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-maalim-farah"
+      },
+      {
+        "name": "hon. machele mohamed soud",
+        "county": "mombasa",
+        "constituency": "mvita",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-machele-mohamed-soud"
+      },
+      {
+        "name": "hon. maina jane njeri",
+        "county": "kirinyaga",
+        "constituency": "kirinyaga",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-maina-jane-njeri"
+      },
+      {
+        "name": "hon. maina, betty njeri",
+        "county": "murang\u2019a",
+        "constituency": "murang\u2019a",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-maina-betty-njeri"
+      },
+      {
+        "name": "hon. maingi mary",
+        "county": "kirinyaga",
+        "constituency": "mwea",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-maingi-mary"
+      },
+      {
+        "name": "hon. maisori marwa kemero kitayama cbs",
+        "county": "migori",
+        "constituency": "kuria east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-maisori-marwa-kemero-kitayama-cbs"
+      },
+      {
+        "name": "hon. majimbo, joseph kalasinga",
+        "county": "bungoma",
+        "constituency": "kabuchai",
+        "party": "ford-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-majimbo-joseph-kalasinga-0"
+      },
+      {
+        "name": "hon. makali john okwisia",
+        "county": "bungoma",
+        "constituency": "kanduyi",
+        "party": "ford-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-makali-john-okwisia"
+      },
+      {
+        "name": "hon. manduku, daniel ogwoka",
+        "county": "kisii",
+        "constituency": "nyaribari masaba",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-manduku-daniel-ogwoka"
+      },
+      {
+        "name": "hon. marubu muthoni monicah",
+        "county": "lamu",
+        "constituency": "lamu",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-marubu-muthoni-monicah"
+      },
+      {
+        "name": "hon. masara peter francis",
+        "county": "migori",
+        "constituency": "suna west",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-masara-peter-francis-0"
+      },
+      {
+        "name": "hon. masito, fatuma hamisi",
+        "county": "kwale",
+        "constituency": "kwale",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-masito-fatuma-hamisi"
+      },
+      {
+        "name": "hon. mathenge duncan maina",
+        "county": "nyeri",
+        "constituency": "nyeri town",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mathenge-duncan-maina"
+      },
+      {
+        "name": "hon. mawathe julius musili",
+        "county": "",
+        "constituency": "",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mawathe-julius-musili"
+      },
+      {
+        "name": "hon. mayaka irene nyakerario",
+        "county": "",
+        "constituency": "",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mayaka-irene-nyakerario"
+      },
+      {
+        "name": "hon. mbai, nimrod mbithuka",
+        "county": "kitui",
+        "constituency": "kitui east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mbai-nimrod-mbithuka-0"
+      },
+      {
+        "name": "hon. mbalu jessica nduku kiko",
+        "county": "makueni",
+        "constituency": "kibwezi east",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mbalu-jessica-nduku-kiko"
+      },
+      {
+        "name": "hon. mboni, david mwalika",
+        "county": "kitui",
+        "constituency": "kitui rural",
+        "party": "wdm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mboni-david-mwalika"
+      },
+      {
+        "name": "hon. mbui, robert",
+        "county": "machakos",
+        "constituency": "kathiani",
+        "party": "wdm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mbui-robert"
+      },
+      {
+        "name": "hon. meli, julius kipbirwot",
+        "county": "nandi",
+        "constituency": "tinderet",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-melly-julius-kipbiwott"
+      },
+      {
+        "name": "hon. mizighi lydia haika",
+        "county": "taita taveta",
+        "constituency": "taita taveta",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mizighi-lydia-haika"
+      },
+      {
+        "name": "hon. mnyazi amina laura",
+        "county": "kilifi",
+        "constituency": "malindi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mnyazi-amina-laura"
+      },
+      {
+        "name": "hon. mogaka stephen",
+        "county": "nyamira",
+        "constituency": "west mugirango",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mogaka-stephen"
+      },
+      {
+        "name": "hon. mohamed abdikadir hussein",
+        "county": "garissa",
+        "constituency": "lagdera",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mohamed-abdikadir-hussein"
+      },
+      {
+        "name": "hon. mohamed aden daudi",
+        "county": "wajir",
+        "constituency": "wajir east",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mohamed-aden-daudi"
+      },
+      {
+        "name": "hon. mohamed mohamed ali",
+        "county": "mombasa",
+        "constituency": "nyali",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mohamed-mohamed-ali-0"
+      },
+      {
+        "name": "hon. mohamed umulkher harun",
+        "county": "",
+        "constituency": "",
+        "party": "odm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mohamed-umulkher-harun"
+      },
+      {
+        "name": "hon. mohammed fatuma zainab",
+        "county": "migori",
+        "constituency": "migori",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mohammed-fatuma-zainab"
+      },
+      {
+        "name": "hon. mohammed zamzam chimba",
+        "county": "mombasa",
+        "constituency": "mombasa",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mohammed-zamzam-chimba"
+      },
+      {
+        "name": "hon. mongina jerusha momanyi",
+        "county": "nyamira",
+        "constituency": "nyamira",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mongina-jerusha-momanyi"
+      },
+      {
+        "name": "hon. mrembo irene njoki",
+        "county": "nakuru",
+        "constituency": "bahati",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mrembo-irene-njoki"
+      },
+      {
+        "name": "hon. muchangi karemba, cbs",
+        "county": "embu",
+        "constituency": "runyenjes",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muchangi-karemba-cbs"
+      },
+      {
+        "name": "hon. muchira, michael mwangi",
+        "county": "nyandarua",
+        "constituency": "ol jorok",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muchira-michael-mwangi"
+      },
+      {
+        "name": "hon. mugabe innocent maino",
+        "county": "kakamega",
+        "constituency": "likuyani",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mugabe-innocent-maino-0"
+      },
+      {
+        "name": "hon. muge cynthia jepkosgei",
+        "county": "nandi",
+        "constituency": "nandi",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muge-cynthia-jepkosgei"
+      },
+      {
+        "name": "hon. muhanda elsie busihile",
+        "county": "kakamega",
+        "constituency": "kakamega",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muhanda-elsie-busihile"
+      },
+      {
+        "name": "hon. muhia wanjiku",
+        "county": "nyandarua",
+        "constituency": "kipipiri",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muhia-wanjiku"
+      },
+      {
+        "name": "hon. mukhwana titus khamala",
+        "county": "kakamega",
+        "constituency": "lurambi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mukhwana-titus-khamala"
+      },
+      {
+        "name": "hon. mukunji john gitonga mwaniki",
+        "county": "embu",
+        "constituency": "manyatta",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mukunji-john-gitonga-mwaniki"
+      },
+      {
+        "name": "hon. mulanya ekesa geoffrey",
+        "county": "busia",
+        "constituency": "nambale",
+        "party": "ind.",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mulanya-ekesa-geoffrey"
+      },
+      {
+        "name": "hon. mule caleb mutiso",
+        "county": "machakos",
+        "constituency": "machakos town",
+        "party": "mccp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mule-caleb-mutiso"
+      },
+      {
+        "name": "hon. mule stephen mutinda",
+        "county": "machakos",
+        "constituency": "matungulu",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mule-stephen-mutinda"
+      },
+      {
+        "name": "hon. muli fabian kyule, cbs",
+        "county": "machakos",
+        "constituency": "kangundo",
+        "party": "gddp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muli-fabian-kyule-cbs"
+      },
+      {
+        "name": "hon. mulu makali",
+        "county": "kitui",
+        "constituency": "kitui central",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mulu-makali"
+      },
+      {
+        "name": "hon. mulyungi, gideon mutemi",
+        "county": "mwingi",
+        "constituency": "mwingi central",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mulyungi-gideon-mutemi"
+      },
+      {
+        "name": "hon. mumo, rose museo",
+        "county": "makueni",
+        "constituency": "makueni",
+        "party": "wdm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mumo-rose-museo"
+      },
+      {
+        "name": "hon. munyoro joseph kamau",
+        "county": "murang'a",
+        "constituency": "kigumo",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-munyoro-joseph-kamau"
+      },
+      {
+        "name": "hon. mupe anthony kenga",
+        "county": "kilifi",
+        "constituency": "rabai",
+        "party": "paa",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mupe-anthony-kenga"
+      },
+      {
+        "name": "hon. muratha anne wanjiku mugo",
+        "county": "kiambu",
+        "constituency": "kiambu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muratha-anne-wanjiku-mugo"
+      },
+      {
+        "name": "hon. muriu wakili edward",
+        "county": "murang'a",
+        "constituency": "gatanga",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muriu-wakili-edward"
+      },
+      {
+        "name": "hon. muriuki nebart bernard",
+        "county": "embu",
+        "constituency": "mbeere south",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muriuki-nebart-bernard"
+      },
+      {
+        "name": "hon. murugara george gitonga",
+        "county": "tharaka-nithi",
+        "constituency": "tharaka",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-murugara-george-gitonga"
+      },
+      {
+        "name": "hon. musau, vincent musyoka",
+        "county": "machakos",
+        "constituency": "mwala",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-musau-vincent-musyoka"
+      },
+      {
+        "name": "hon. mutai kipronoh alfred",
+        "county": "nakuru",
+        "constituency": "kuresoi north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mutai-kipronoh-alfred"
+      },
+      {
+        "name": "hon. muthama stanley muiruri",
+        "county": "lamu",
+        "constituency": "lamu west",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-muthama-stanley-muiruri"
+      },
+      {
+        "name": "hon. mutua, didmus wekesa barasa, cbs",
+        "county": "bungoma",
+        "constituency": "kimilili",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mutua-didmus-wekesa-barasa-cbs"
+      },
+      {
+        "name": "hon. mutuse eckomas mwengi",
+        "county": "makueni",
+        "constituency": "kibwezi west",
+        "party": "mccp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mutuse-eckomas-mwengi"
+      },
+      {
+        "name": "hon. mwafrika augustine kamande",
+        "county": "nairobi",
+        "constituency": "roysambu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwafrika-augustine-kamande"
+      },
+      {
+        "name": "hon. mwago amos maina",
+        "county": "nairobi",
+        "constituency": "starehe",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwago-amos-maina"
+      },
+      {
+        "name": "hon. mwakuwona danson mwashako",
+        "county": "taita taveta",
+        "constituency": "wundanyi",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwakuwona-danson-mwashako"
+      },
+      {
+        "name": "hon. mwale nicholas scott tindi, cbs",
+        "county": "kakamega",
+        "constituency": "butere",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwale-nicholas-scott-tindi-cbs"
+      },
+      {
+        "name": "hon. mwalyo, joshua mbithi",
+        "county": "machakos",
+        "constituency": "masinga",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwalyo-joshua-mbithi"
+      },
+      {
+        "name": "hon. mwangi teresia wanjiru",
+        "county": "",
+        "constituency": "",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwangi-teresia-wanjiru"
+      },
+      {
+        "name": "hon. mwanyanje gertrude mbeyu, cbs",
+        "county": "kilifi",
+        "constituency": "kilifi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwanyanje-gertrude-mbeyu-cbs"
+      },
+      {
+        "name": "hon. mwenje mark samuel , cbs",
+        "county": "nairobi",
+        "constituency": "embakasi west",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwenje-mark-samuel-cbs"
+      },
+      {
+        "name": "hon. mwirigi john paul",
+        "county": "meru",
+        "constituency": "igembe south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-mwirigi-john-paul"
+      },
+      {
+        "name": "hon. nabii nabwera daraja",
+        "county": "kakamega",
+        "constituency": "lugari",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nabii-nabwera-daraja"
+      },
+      {
+        "name": "hon. nabuin, paul ekwom",
+        "county": "turkana",
+        "constituency": "turkana north",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nabuin-paul-ekwom"
+      },
+      {
+        "name": "hon. nabulindo, peter oscar",
+        "county": "kakamega",
+        "constituency": "matungu",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nabulindo-peter-oscar"
+      },
+      {
+        "name": "hon. naicca johnson manya, cbs",
+        "county": "kakamega",
+        "constituency": "mumias west",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-naicca-johnson-manya-cbs"
+      },
+      {
+        "name": "hon. namuar joseph emathe",
+        "county": "turkana",
+        "constituency": "turkana central",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-namuar-joseph-emathe"
+      },
+      {
+        "name": "hon. nanok, daniel epuyo",
+        "county": "turkana",
+        "constituency": "turkana west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nanok-daniel-epuyo"
+      },
+      {
+        "name": "hon. ndakwa david athman",
+        "county": "kakamega",
+        "constituency": "malava",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ndakwa-david-athman"
+      },
+      {
+        "name": "hon. ndung\u2019u, george koimburi",
+        "county": "kiambu",
+        "constituency": "juja",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ndungu-george-koimburi"
+      },
+      {
+        "name": "hon. nduyo susan ngugi",
+        "county": "tharaka nithi",
+        "constituency": "tharaka nithi",
+        "party": "tsp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nduyo-susan-ngugi"
+      },
+      {
+        "name": "hon. nganga alice wambui",
+        "county": "kiambu",
+        "constituency": "thika town",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nganga-alice-wambui"
+      },
+      {
+        "name": "hon. ngikolong nicholas ngikor nixon",
+        "county": "turkana",
+        "constituency": "turkana east",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ngikolong-nicholas-ngikor-nixon"
+      },
+      {
+        "name": "hon. ngitit, cecilia asinyen",
+        "county": "turkana",
+        "constituency": "turkana",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ngitit-cecilia-asinyen"
+      },
+      {
+        "name": "hon. nguna, ngusya charles",
+        "county": "kitui",
+        "constituency": "mwingi west",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nguna-ngusya-charles"
+      },
+      {
+        "name": "hon. nguro onesmus ngogoyo",
+        "county": "kajiado",
+        "constituency": "kajiado north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nguro-onesmus-ngogoyo"
+      },
+      {
+        "name": "hon. ng\u2019elechei caroline jeptoo",
+        "county": "elgeyo marakwet",
+        "constituency": "elgeyo marakwet",
+        "party": "ind.",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ngelechei-caroline-jeptoo"
+      },
+      {
+        "name": "hon. njeru pamela njoki",
+        "county": "embu",
+        "constituency": "embu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-njeru-pamela-njoki"
+      },
+      {
+        "name": "hon. njeru, leo wa muthende",
+        "county": "embu",
+        "constituency": "mbeere north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-njeru-leo-wa-muthende"
+      },
+      {
+        "name": "hon. njoroge mary wamaua waithira",
+        "county": "murang'a",
+        "constituency": "maragwa",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-njoroge-mary-wamaua-waithira"
+      },
+      {
+        "name": "hon. ntutu kitilai ole",
+        "county": "narok",
+        "constituency": "narok south",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ntutu-kitilai-ole"
+      },
+      {
+        "name": "hon. ntwiga patrick munene",
+        "county": "tharaka - nithi",
+        "constituency": "chuka igambang'ombe",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ntwiga-patrick-munene"
+      },
+      {
+        "name": "hon. nyakundi japheth mokaya",
+        "county": "kisii",
+        "constituency": "kitutu chache north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyakundi-japheth-mokaya"
+      },
+      {
+        "name": "hon. nyamai rachael kaki",
+        "county": "kitui",
+        "constituency": "kitui south",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyamai-rachael-kaki-0"
+      },
+      {
+        "name": "hon. nyamita mark ogolla",
+        "county": "migori",
+        "constituency": "uriri",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyamita-mark-ogolla-0"
+      },
+      {
+        "name": "hon. nyamoko, joash nyamache",
+        "county": "nyamira",
+        "constituency": "north mugirango",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyamoko-joash-nyamache-0"
+      },
+      {
+        "name": "hon. nyenze edith vethi",
+        "county": "kitui",
+        "constituency": "kitui west",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyenze-edith-vethi"
+      },
+      {
+        "name": "hon. nyikal wambura james",
+        "county": "kisumu",
+        "constituency": "seme",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyikal-wambura-james"
+      },
+      {
+        "name": "hon. nyoro, samson ndindi",
+        "county": "murang\u2019a",
+        "constituency": "kiharu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nyoro-samson-ndindi"
+      },
+      {
+        "name": "hon. nzengu, paul musyimi",
+        "county": "mwingi",
+        "constituency": "mwingi north",
+        "party": "wdm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nzengu-paul-musyimi"
+      },
+      {
+        "name": "hon. nzioka erastus kivasu",
+        "county": "makueni",
+        "constituency": "mbooni",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-nzioka-erastus-kivasu"
+      },
+      {
+        "name": "hon. obara eve akinyi, cbs",
+        "county": "homa bay",
+        "constituency": "kabondo kasipul",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-obara-eve-akinyi-cbs"
+      },
+      {
+        "name": "hon. obiri, innocent momanyi",
+        "county": "kisii",
+        "constituency": "bobasi",
+        "party": "wdm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-obiri-innocent-momanyi"
+      },
+      {
+        "name": "hon. obo ruweida mohamed",
+        "county": "lamu",
+        "constituency": "lamu east",
+        "party": "jp",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-obo-ruweida-mohamed"
+      },
+      {
+        "name": "hon. ochieng david ouma",
+        "county": "siaya",
+        "constituency": "ugenya",
+        "party": "mdg",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ochieng-david-ouma"
+      },
+      {
+        "name": "hon. odanga, geoffrey makokha",
+        "county": "busia",
+        "constituency": "matayos",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-odanga-geoffrey-makokha-0"
+      },
+      {
+        "name": "hon. odege tom mboya",
+        "county": "migori",
+        "constituency": "nyatike",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-odege-tom-mboya-0"
+      },
+      {
+        "name": "hon. odhiambo, elisha ochieng",
+        "county": "siaya",
+        "constituency": "gem",
+        "party": "odm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-odhiambo-elisha-ochieng-0"
+      },
+      {
+        "name": "hon. odhiambo, millie grace akoth",
+        "county": "homa bay",
+        "constituency": "suba north",
+        "party": "",
+        "status": "odm",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-odhiambo-millie-grace-akoth-0"
+      },
+      {
+        "name": "hon. ogolla. gideon ochanda",
+        "county": "siaya",
+        "constituency": "bondo",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-ogolla-gideon-ochanda"
+      },
+      {
+        "name": "hon. okelo, jared odoyo",
+        "county": "kisumu",
+        "constituency": "nyando",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-okello-jared-odoyo"
+      },
+      {
+        "name": "hon. okuome adipo andrew",
+        "county": "homa bay",
+        "constituency": "karachuonyo",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-okuome-adipo-andrew"
+      },
+      {
+        "name": "hon. oluoch, anthony tom",
+        "county": "nairobi",
+        "constituency": "mathare",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-oluoch-anthony-tom-0"
+      },
+      {
+        "name": "hon. omanyo, catherine nakhabi",
+        "county": "busia",
+        "constituency": "busia",
+        "party": "odm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-omanyo-catherine-nakhabi"
+      },
+      {
+        "name": "hon. ombaka oduor christine, cbs",
+        "county": "siaya",
+        "constituency": "siaya",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ombaka-oduor-christine-cbs"
+      },
+      {
+        "name": "hon. omboko milemba",
+        "county": "vihiga",
+        "constituency": "emuhaya",
+        "party": "",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-omboko-milemba"
+      },
+      {
+        "name": "hon. omondi caroli",
+        "county": "homa bay",
+        "constituency": "suba south",
+        "party": "odm | azimio la umoja one kenya coalition",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-omondi-caroli"
+      },
+      {
+        "name": "hon. omondi, moses okoth",
+        "county": "siaya",
+        "constituency": "ugunja",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-omondi-moses-okoth"
+      },
+      {
+        "name": "hon. omwera george aldwa",
+        "county": "nairobi",
+        "constituency": "makadara",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-omwera-george-aladwa-1"
+      },
+      {
+        "name": "hon. ong\u2019ondo, boyd were",
+        "county": "homa bay",
+        "constituency": "kasipul",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-ongondo-boyd-were"
+      },
+      {
+        "name": "hon. onyiego, silvanus osoro",
+        "county": "kisii",
+        "constituency": "south mugirango",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-onyiego-silvanus-osoro-0"
+      },
+      {
+        "name": "hon. orero, peter ochieng",
+        "county": "nairobi",
+        "constituency": "kibra",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-orero-peter-ochieng"
+      },
+      {
+        "name": "hon. oron joshua odongo",
+        "county": "kisumu",
+        "constituency": "kisumu central",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-oron-joshua-odongo"
+      },
+      {
+        "name": "hon. osero patrick",
+        "county": "nyamira county",
+        "constituency": "borabu",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-osero-patrick"
+      },
+      {
+        "name": "hon. osogo joyce atieno bensuda",
+        "county": "homa bay",
+        "constituency": "homa bay",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-osogo-joyce-atieno-bensuda"
+      },
+      {
+        "name": "hon. otucho, mary emaase",
+        "county": "busia",
+        "constituency": "teso south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-otucho-mary-emaase"
+      },
+      {
+        "name": "hon. oundo, wilberforce ojiambo",
+        "county": "busia",
+        "constituency": "funyula",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-dr-oundo-wilberforce-ojiambo"
+      },
+      {
+        "name": "hon. owino john walter",
+        "county": "migori",
+        "constituency": "awendo",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-owino-john-walter-0"
+      },
+      {
+        "name": "hon. owino, martin peters",
+        "county": "homa bay",
+        "constituency": "ndhiwa",
+        "party": "odm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-owino-martin-peters-0"
+      },
+      {
+        "name": "hon. owuor, joshua aduma",
+        "county": "kisumu",
+        "constituency": "nyakach",
+        "party": "odm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-owuor-joshua-aduma-0"
+      },
+      {
+        "name": "hon. oyoo, james onyango",
+        "county": "kisumu",
+        "constituency": "muhoroni",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-oyoo-james-onyango-0"
+      },
+      {
+        "name": "hon. oyugi, dick maungu",
+        "county": "vihiga",
+        "constituency": "luanda",
+        "party": "dap-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-oyugi-dick-maungu"
+      },
+      {
+        "name": "hon. oyula, joseph h. maero",
+        "county": "bungoma",
+        "constituency": "butula",
+        "party": "odm",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-oyula-joseph-h-maero-0"
+      },
+      {
+        "name": "hon. parashina samuel sakimba",
+        "county": "kajiado",
+        "constituency": "kajiado south",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-parashina-samuel-sakimba"
+      },
+      {
+        "name": "hon. pareyio mantaine agnes",
+        "county": "narok",
+        "constituency": "narok north",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-pareyio-mantaine-agnes"
+      },
+      {
+        "name": "hon. passaris esther muthoni",
+        "county": "nairobi",
+        "constituency": "nairobi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-passaris-esther-muthoni"
+      },
+      {
+        "name": "hon. pkosing, david",
+        "county": "pokot",
+        "constituency": "pokot south",
+        "party": "kup",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-pkosing-david-losiakou-0"
+      },
+      {
+        "name": "hon. rai samuel gonzi",
+        "county": "kwale",
+        "constituency": "kinango",
+        "party": "paa",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-rai-samuel-gonzi"
+      },
+      {
+        "name": "hon. raso, dido ali",
+        "county": "",
+        "constituency": "saku",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-raso-dido-ali-0"
+      },
+      {
+        "name": "hon. rasso, col (rtd) dido ali. cbs",
+        "county": "marsabit",
+        "constituency": "saku",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-rasso-col-rtd-dido-ali-cbs"
+      },
+      {
+        "name": "hon. reuben kiborek",
+        "county": "",
+        "constituency": "mogotio",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-reuben-kiborek"
+      },
+      {
+        "name": "hon. robi, mathias nyamabe",
+        "county": "migori",
+        "constituency": "kuria west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-robi-mathias-nyamabe-0"
+      },
+      {
+        "name": "hon. salasya peter kalerwa",
+        "county": "kakamega",
+        "constituency": "mumias east",
+        "party": "dap-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa"
+      },
+      {
+        "name": "hon. salim feisal abdallah bader",
+        "county": "kwale",
+        "constituency": "msambweni",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-salim-feisal-abdallah-bader"
+      },
+      {
+        "name": "hon. saney ibrahim adbi",
+        "county": "wajir",
+        "constituency": "wajir north",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-saney-ibrahim-adbi"
+      },
+      {
+        "name": "hon. sankaire leah sopiato",
+        "county": "kajiado",
+        "constituency": "kajiado",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sankaire-leah-sopiato"
+      },
+      {
+        "name": "hon. sergon, jematiah flowrence",
+        "county": "baringo",
+        "constituency": "baringo",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sergon-jematiah-flowrence"
+      },
+      {
+        "name": "hon. shake mbogho peter",
+        "county": "taita taveta",
+        "constituency": "mwatate",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-shake-mbogho-peter"
+      },
+      {
+        "name": "hon. sheikh umul ker kassim",
+        "county": "mandera",
+        "constituency": "mandera",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sheikh-umul-ker-kassim"
+      },
+      {
+        "name": "hon. shimbwa omar mwinyi",
+        "county": "mombasa",
+        "constituency": "changamwe",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-shimbwa-omar-mwinyi-0"
+      },
+      {
+        "name": "hon. shinali bernard masaka, cbs",
+        "county": "kakamega",
+        "constituency": "ikolomani",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-shinali-bernard-masaka-cbs"
+      },
+      {
+        "name": "hon. shurie abdi omar",
+        "county": "garissa",
+        "constituency": "balambala",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-shurie-abdi-omar-0"
+      },
+      {
+        "name": "hon. sigei, francis kipyegon arap",
+        "county": "bomet",
+        "constituency": "sotik",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sigei-francis-kipyegon-arap"
+      },
+      {
+        "name": "hon. sirma, musa cherutich",
+        "county": "baringo",
+        "constituency": "eldama ravine",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sirma-musa-cherutich"
+      },
+      {
+        "name": "hon. sitati daniel wanyama",
+        "county": "bungoma",
+        "constituency": "webuye west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sitati-daniel-wanyama-0"
+      },
+      {
+        "name": "hon. sitienei, janet jepkemboi",
+        "county": "uasin gishu",
+        "constituency": "turbo",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sitienei-janet-jepkemboi-0"
+      },
+      {
+        "name": "hon. siyoi lillian chebet",
+        "county": "trans nzoia",
+        "constituency": "trans nzoia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-siyoi-lillian-chebet"
+      },
+      {
+        "name": "hon. sloya clement logova",
+        "county": "vihiga",
+        "constituency": "sabatia",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sloya-clement-logova"
+      },
+      {
+        "name": "hon. sudi oscar kipchumba",
+        "county": "uasin gishu",
+        "constituency": "kapseret",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sudi-oscar-kipchumba-0"
+      },
+      {
+        "name": "hon. suleka hulbale harun",
+        "county": "",
+        "constituency": "",
+        "party": "udm",
+        "status": "nominated",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-suleka-hulbale-harun"
+      },
+      {
+        "name": "hon. sunkuiya, george risa",
+        "county": "kajiado",
+        "constituency": "kajiado west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sunkuyia-george-risa-0"
+      },
+      {
+        "name": "hon. sunkuli, julius lekakeny",
+        "county": "narok",
+        "constituency": "kilgoris",
+        "party": "kanu",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-sunkuli-julius-lekakeny"
+      },
+      {
+        "name": "hon. taitamu julius m\u00e1naiba",
+        "county": "meru",
+        "constituency": "igembe north",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-taitumu-julius-manaiba"
+      },
+      {
+        "name": "hon. tandaza kassim sawa, cbs",
+        "county": "kwale",
+        "constituency": "matuga",
+        "party": "anc",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-tandaza-kassim-sawa-cbs"
+      },
+      {
+        "name": "hon. thuku zachary kwenya",
+        "county": "nyandarua",
+        "constituency": "kinangop",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-thuku-zachary-kwenya-0"
+      },
+      {
+        "name": "hon. tongoyo, gabriel koshal",
+        "county": "narok",
+        "constituency": "narok west",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-tongoyo-gabriel-koshal-0"
+      },
+      {
+        "name": "hon. tonkei rebecca noonaishi",
+        "county": "narok",
+        "constituency": "narok",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-tonkei-rebecca-noonaishi"
+      },
+      {
+        "name": "hon. tonui joseph kipkosgei, cbs",
+        "county": "nakuru",
+        "constituency": "kuresoi south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-tonui-joseph-kipkosgei-cbs"
+      },
+      {
+        "name": "hon. toroitich timothy kipchumba",
+        "county": "elgeyo marakwet",
+        "constituency": "marakwet west",
+        "party": "ind",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-toroitich-timothy-kipchumba"
+      },
+      {
+        "name": "hon. tungule charo kenneth kazungu",
+        "county": "kilifi",
+        "constituency": "ganze",
+        "party": "paa",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-tungule-charo-kenneth-kazungu"
+      },
+      {
+        "name": "hon. wachira, rahab mukami",
+        "county": "nyeri",
+        "constituency": "nyeri",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wachira-rahab-mukami-0"
+      },
+      {
+        "name": "hon. wainaina anthony njoroge",
+        "county": "nyeri",
+        "constituency": "kieni",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wainaina-anthony-njoroge"
+      },
+      {
+        "name": "hon. wainaina, michael wambugu",
+        "county": "nyeri",
+        "constituency": "othaya",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wainaina-michael-wambugu"
+      },
+      {
+        "name": "hon. waithaka john machua",
+        "county": "kiambu",
+        "constituency": "kiambu",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-waithaka-john-machua"
+      },
+      {
+        "name": "hon. wamacukuru james githua kamau, cbs",
+        "county": "kiambu",
+        "constituency": "kabete",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wamacukuru-james-githua-kamau-cbs"
+      },
+      {
+        "name": "hon. wambilianga catherine nanjala",
+        "county": "bungoma",
+        "constituency": "bungoma",
+        "party": "ford - k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wambilianga-catherine-nanjala-0"
+      },
+      {
+        "name": "hon. wamboka wanami jack nelson",
+        "county": "bungoma",
+        "constituency": "bumula",
+        "party": "dap-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wamboka-wanami-jack-nelson"
+      },
+      {
+        "name": "hon. wamuchomba, gathoni",
+        "county": "kiambu",
+        "constituency": "githunguri",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wamuchomba-gathoni-0"
+      },
+      {
+        "name": "hon. wangaya christopher aseka",
+        "county": "kakamega",
+        "constituency": "khwisero",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wangaya-christopher-aseka-0"
+      },
+      {
+        "name": "hon. wangwe, emmanuel",
+        "county": "kakamega",
+        "constituency": "navakholo",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wangwe-emmanuel-0"
+      },
+      {
+        "name": "hon. wanjala raphael bitta sauti, cbs",
+        "county": "busia",
+        "constituency": "budalangi",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wanjala-raphael-bitta-sauti-cbs"
+      },
+      {
+        "name": "hon. wanjiku john njuguna",
+        "county": "kiambu",
+        "constituency": "kiambaa",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wanjiku-john-njuguna-0"
+      },
+      {
+        "name": "hon. wanjira, martha wangari, cbs",
+        "county": "nakuru",
+        "constituency": "gilgil",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wanjira-martha-wangari-cbs"
+      },
+      {
+        "name": "hon. wanyonyi kevin ferdinand",
+        "county": "trans nzoia",
+        "constituency": "kwanza",
+        "party": "ford - k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wanyonyi-kevin-ferdinand"
+      },
+      {
+        "name": "hon. wanyonyi martin pepela",
+        "county": "bungoma",
+        "constituency": "webuye east",
+        "party": "ford-k",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wanyonyi-martin-pepela"
+      },
+      {
+        "name": "hon. waqo naomi jillo",
+        "county": "marsabit",
+        "constituency": "marsabit",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-waqo-naomi-jillo"
+      },
+      {
+        "name": "hon. waweru, john kiarie",
+        "county": "nairobi",
+        "constituency": "dagoretti south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-waweru-john-kiarie-0"
+      },
+      {
+        "name": "hon. wetangula timothy wanyonyi",
+        "county": "nairobi",
+        "constituency": "westlands",
+        "party": "odm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-wetangula-timothy-wanyonyi-0"
+      },
+      {
+        "name": "hon. yegon brighton leonard",
+        "county": "bomet",
+        "constituency": "konoin",
+        "party": "uda",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-yegon-brighton-leonard"
+      },
+      {
+        "name": "hon. yegon, richard kipkemoi",
+        "county": "bomet",
+        "constituency": "bomet east",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-yegon-richard-kipkemoi"
+      },
+      {
+        "name": "hon. yussuf, adan haji",
+        "county": "mandera",
+        "constituency": "mandera west",
+        "party": "udm",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hon-yussuf-adan-haji-0"
+      },
+      {
+        "name": "hon.(cpa) kimani francis kuria",
+        "county": "nakuru",
+        "constituency": "molo",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/honcpa-kimani-francis-kuria"
+      },
+      {
+        "name": "hon.(dr.) gideon kimaiyo",
+        "county": "elgeyo - marakwet",
+        "constituency": "keiyo south",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/hondr-gideon-kimaiyo"
+      },
+      {
+        "name": "hon.karitho kiili daniel",
+        "county": "meru",
+        "constituency": "igembe central",
+        "party": "jp",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/honkaritho-kiili-daniel"
+      },
+      {
+        "name": "hon.mbiuki japhet miriti kareke",
+        "county": "tharaka nithi",
+        "constituency": "maara",
+        "party": "uda",
+        "status": "elected",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/honmbiuki-japhet-miriti-kareke"
+      },
+      {
+        "name": "rt. hon. (dr.) moses f.m. wetang'ula, egh",
+        "county": "",
+        "constituency": "",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/rt-hon-dr-moses-fm-wetangula-egh"
+      },
+      {
+        "name": "vacant",
+        "county": "garissa",
+        "constituency": "garissa township",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/vacant"
+      },
+      {
+        "name": "vacant",
+        "county": "muranga",
+        "constituency": "kandara",
+        "party": "",
+        "status": "",
+        "profile_url": "https://www.parliament.go.ke/the-national-assembly/vacant-0"
+      }
+    ]
+  }
+}

@@ -299,7 +299,8 @@ _NAME_STRIP_PARTS = [
     "(cpa.)",
     "(prof)",
     "(prof.)",
-    "prof." "(rtd)",
+    "prof.",
+    "(rtd)",
     "(rtd.)",
 ]
 

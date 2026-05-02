@@ -5,8 +5,8 @@ Inputs: mineru_extraction_results
 Outputs: raw_senate_bills, raw_assembly_bills, raw_committee_membership
 """
 
-import streamlit as st
 from loguru import logger as log
+from src.pipeline.store import PipelineStore
 from src.table_builders.assembly_bills_builder import build_assembly_bills
 from src.table_builders.senate_bills_builder import build_senate_bills
 from src.table_builders.committee_leadership_builder import (
@@ -14,16 +14,18 @@ from src.table_builders.committee_leadership_builder import (
 )
 
 
-def run_table_building_step() -> dict:
+def run_table_building_step(store: PipelineStore | None = None) -> dict:
     """Orchestrate table building step.
 
     Returns:
         Dict with status and build results
     """
     log.info("Starting Step 3: Table Building")
+    if store is None:
+        store = PipelineStore()
 
     # Check for required inputs
-    has_mineru_results = bool(st.session_state.get("mineru_extraction_results"))
+    has_mineru_results = bool(store.mineru_extraction_results)
 
     if not has_mineru_results:
         log.warning("MinerU extraction results not found")
@@ -32,7 +34,7 @@ def run_table_building_step() -> dict:
             "message": "Run MinerU extraction first to build tables",
         }
 
-    results = st.session_state.mineru_extraction_results
+    results = store.mineru_extraction_results
 
     # Check if all extractions were successful
     all_success = all(r.get("status") == "success" for r in results.values())
@@ -78,13 +80,12 @@ def run_table_building_step() -> dict:
             "committee_leadership": committee_result,
         }
 
-        # Store results in both table_builder_results (for backward compatibility)
-        # and individual raw_* states (for transformations step)
-        st.session_state.table_builder_results = table_results
+        # Store results
+        store.table_builder_results = table_results
 
-        st.session_state.raw_senate_bills = senate_result
-        st.session_state.raw_assembly_bills = assembly_result
-        st.session_state.raw_committee_membership = committee_result
+        store.raw_senate_bills = senate_result
+        store.raw_assembly_bills = assembly_result
+        store.raw_committee_membership = committee_result
 
         # Count successful builders
         success_count = sum(

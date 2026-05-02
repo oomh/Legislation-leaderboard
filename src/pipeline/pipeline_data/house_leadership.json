@@ -1,0 +1,68 @@
+{
+  "senate": {
+    "__dataframe__": true,
+    "records": [
+      {
+        "office": "Speaker of the Senate",
+        "person": "Rt. Hon. Amason Jeffah Kingi, EGH, MP."
+      },
+      {
+        "office": "Deputy Speaker of the Senate",
+        "person": "Sen. Kathuri Murungi, MGH, MP."
+      },
+      {
+        "office": "The Senate Majority Leader",
+        "person": "Sen. Cheruiyot Aaron Kipkirui, EGH, MP."
+      },
+      {
+        "office": "The Senate Minority Leader",
+        "person": "Sen. Justice (Rtd.) Madzayo Stewart Mwachiru, EGH, MP."
+      },
+      {
+        "office": "The Senate Majority Whip",
+        "person": "Sen. David Wakoli Wafula, MP."
+      },
+      {
+        "office": "The Senate Minority Whip",
+        "person": "Sen. Olekina Ledama, MP."
+      },
+      {
+        "office": "Clerk of the Senate",
+        "person": "Mr. Jeremiah M Nyegenye, CBS"
+      }
+    ]
+  },
+  "assembly": {
+    "__dataframe__": true,
+    "records": [
+      {
+        "office": "Speaker of the National Assembly",
+        "person": "Rt. Hon. (Dr.) Moses M. Wetang'ula, EGH, MP"
+      },
+      {
+        "office": "Deputy Speaker of the National Assembly",
+        "person": "Hon. Boss Gladys Jepkosgei"
+      },
+      {
+        "office": "Leader of the Majority Party",
+        "person": "Hon. Kimani Ichung\u2019wah, EGH, MP"
+      },
+      {
+        "office": "Leader of the Minority Party",
+        "person": "Hon. Junet Mohamed, CBS, MP"
+      },
+      {
+        "office": "Majority Party Whip",
+        "person": "Hon. Silvanus O. Osoro, CBS, MP"
+      },
+      {
+        "office": "Minority Party Whip",
+        "person": "Hon. Millie Odhiambo, MP"
+      },
+      {
+        "office": "Clerk of the National Assembly",
+        "person": "Mr. Samuel Njoroge, CBS"
+      }
+    ]
+  }
+}

@@ -5,23 +5,25 @@ Inputs: house_leadership, member_lists (Step 1) + raw_senate_bills, raw_assembly
 Outputs: Consolidated transformed datasets ready for database
 """
 
-import streamlit as st
 import pandas as pd
 from loguru import logger as log
+from src.pipeline.store import PipelineStore
 from src.transformations import merge_leadership, merge_members
 
 
-def prepare_transformation_data() -> dict:
+def prepare_transformation_data(store: PipelineStore | None = None) -> dict:
     """Prepare and consolidate data for final transformation.
 
     Returns:
         Dict with all consolidated datasets ready for output
     """
     log.info("Starting Step 4: Transformations")
+    if store is None:
+        store = PipelineStore()
 
     try:
         # Check for table builder results
-        has_tables = bool(st.session_state.get("table_builder_results"))
+        has_tables = bool(store.table_builder_results)
 
         if not has_tables:
             log.warning("Table builder results not found")
@@ -32,16 +34,16 @@ def prepare_transformation_data() -> dict:
 
         # Prepare consolidated data
         transformed_data = {
-            "bill_trackers": prepare_bill_trackers(),
-            "leadership": prepare_leadership_data(),
-            "members": prepare_member_data(),
-            "committees": prepare_committee_data(),
-            "merged_leadership": prepare_merged_leadership(),
-            "merged_members": prepare_merged_members(),
+            "bill_trackers": prepare_bill_trackers(store),
+            "leadership": prepare_leadership_data(store),
+            "members": prepare_member_data(store),
+            "committees": prepare_committee_data(store),
+            "merged_leadership": prepare_merged_leadership(store),
+            "merged_members": prepare_merged_members(store),
         }
 
-        # Store consolidated results in session state
-        st.session_state.transformed_data = transformed_data
+        # Store consolidated results
+        store.transformed_data = transformed_data
 
         log.info("Step 4 Complete: Data consolidated and ready for output")
 
@@ -57,15 +59,15 @@ def prepare_transformation_data() -> dict:
         }
 
 
-def prepare_bill_trackers() -> dict:
+def prepare_bill_trackers(store: PipelineStore) -> dict:
     """Prepare consolidated bill tracker data.
 
     Returns:
         Dict with senate and assembly bills
     """
     try:
-        senate_bills = st.session_state.get("raw_senate_bills", {})
-        assembly_bills = st.session_state.get("raw_assembly_bills", {})
+        senate_bills = store.raw_senate_bills or {}
+        assembly_bills = store.raw_assembly_bills or {}
 
         return {
             "senate": {
@@ -106,14 +108,14 @@ def prepare_bill_trackers() -> dict:
         return {"senate": {}, "assembly": {}}
 
 
-def prepare_leadership_data() -> dict:
+def prepare_leadership_data(store: PipelineStore) -> dict:
     """Prepare consolidated house leadership data.
 
     Returns:
         Dict with senate and assembly leadership
     """
     try:
-        house_leadership = st.session_state.get("house_leadership", {})
+        house_leadership = store.house_leadership or {}
 
         senate_leadership = house_leadership.get("senate", pd.DataFrame())
         assembly_leadership = house_leadership.get("assembly", pd.DataFrame())
@@ -141,14 +143,14 @@ def prepare_leadership_data() -> dict:
         return {"senate": {}, "assembly": {}}
 
 
-def prepare_member_data() -> dict:
+def prepare_member_data(store: PipelineStore) -> dict:
     """Prepare consolidated member lists data.
 
     Returns:
         Dict with senate and assembly members
     """
     try:
-        member_lists = st.session_state.get("member_lists", {})
+        member_lists = store.member_lists or {}
 
         senate_members = member_lists.get("senate", pd.DataFrame())
         assembly_members = member_lists.get("assembly", pd.DataFrame())
@@ -176,14 +178,14 @@ def prepare_member_data() -> dict:
         return {"senate": {}, "assembly": {}}
 
 
-def prepare_committee_data() -> dict:
+def prepare_committee_data(store: PipelineStore) -> dict:
     """Prepare consolidated committee data.
 
     Returns:
         Dict with committee membership
     """
     try:
-        committee_result = st.session_state.get("raw_committee_membership", {})
+        committee_result = store.raw_committee_membership or {}
 
         if isinstance(committee_result, dict):
             committee_data = committee_result.get("data", pd.DataFrame())
@@ -207,7 +209,7 @@ def prepare_committee_data() -> dict:
         return {}
 
 
-def prepare_merged_leadership() -> dict:
+def prepare_merged_leadership(store: PipelineStore) -> dict:
     """Merge transformed senate and assembly leadership into a single table.
 
     Reads already-transformed results from session state if available, otherwise
@@ -217,8 +219,8 @@ def prepare_merged_leadership() -> dict:
         Dict with merged leadership data from merge_leadership().
     """
     try:
-        senate_result = st.session_state.get("transformed_senate_leadership", {})
-        assembly_result = st.session_state.get("transformed_assembly_leadership", {})
+        senate_result = (store.transformed_data or {}).get("leadership", {}).get("senate", {})
+        assembly_result = (store.transformed_data or {}).get("leadership", {}).get("assembly", {})
 
         senate_df = (
             senate_result.get("data")
@@ -237,14 +239,13 @@ def prepare_merged_leadership() -> dict:
             assembly_df = pd.DataFrame()
 
         result = merge_leadership(senate_df, assembly_df)
-        st.session_state["merged_leadership"] = result
         return result
     except Exception as e:
         log.error(f"Error preparing merged leadership: {e}")
         return {"status": "error", "message": str(e)}
 
 
-def prepare_merged_members() -> dict:
+def prepare_merged_members(store: PipelineStore) -> dict:
     """Merge transformed senate and assembly members into a single table.
 
     Reads already-transformed results from session state if available, otherwise
@@ -254,8 +255,8 @@ def prepare_merged_members() -> dict:
         Dict with merged members data from merge_members().
     """
     try:
-        senate_result = st.session_state.get("transformed_senate_members", {})
-        assembly_result = st.session_state.get("transformed_assembly_members", {})
+        senate_result = (store.transformed_data or {}).get("members", {}).get("senate", {})
+        assembly_result = (store.transformed_data or {}).get("members", {}).get("assembly", {})
 
         senate_df = (
             senate_result.get("data")
@@ -274,17 +275,16 @@ def prepare_merged_members() -> dict:
             assembly_df = pd.DataFrame()
 
         result = merge_members(senate_df, assembly_df)
-        st.session_state["merged_members"] = result
         return result
     except Exception as e:
         log.error(f"Error preparing merged members: {e}")
         return {"status": "error", "message": str(e)}
 
 
-def run_transformations_step() -> dict:
+def run_transformations_step(store: PipelineStore | None = None) -> dict:
     """Orchestrate complete transformations step.
 
     Returns:
         Dict with transformation status and consolidated data
     """
-    return prepare_transformation_data()
+    return prepare_transformation_data(store)

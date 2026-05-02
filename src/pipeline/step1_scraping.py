@@ -4,9 +4,9 @@ Orchestrates all scraping operations and stores results in session state.
 Outputs: bill_tracker_urls, house_leadership, member_lists, committee_leadership
 """
 
-import streamlit as st
 import pandas as pd
 from loguru import logger as log
+from src.pipeline.store import PipelineStore
 from src.scrapers.scrape_bill_trackers import (
     scrape_bill_tracker_senate,
     scrape_bill_tracker_national_assembly,
@@ -22,7 +22,7 @@ from src.scrapers.scrape_members import (
 from src.scrapers.scrape_committee_members_pdf import scrape_committee_leadership
 
 
-def run_bill_trackers_scraping(page_only: bool = True) -> dict:
+def run_bill_trackers_scraping(page_only: bool = True, store: PipelineStore | None = None) -> dict:
     """Run bill tracker scrapers.
 
     Args:
@@ -32,12 +32,14 @@ def run_bill_trackers_scraping(page_only: bool = True) -> dict:
         Dict with status and counts
     """
     log.info("Starting bill tracker scrapers")
+    if store is None:
+        store = PipelineStore()
 
     try:
         senate_pdfs = scrape_bill_tracker_senate(page_only=page_only)
         assembly_pdfs = scrape_bill_tracker_national_assembly(page_only=page_only)
 
-        st.session_state.bill_tracker_urls = {
+        store.bill_tracker_urls = {
             "senate": senate_pdfs,
             "assembly": assembly_pdfs,
         }
@@ -59,20 +61,22 @@ def run_bill_trackers_scraping(page_only: bool = True) -> dict:
         }
 
 
-def run_house_leadership_scraping() -> dict:
+def run_house_leadership_scraping(store: PipelineStore | None = None) -> dict:
     """Run house leadership scrapers.
 
     Returns:
         Dict with status and counts
     """
     log.info("Starting house leadership scrapers")
+    if store is None:
+        store = PipelineStore()
 
     try:
         senate_leadership = scrape_house_leadership_senate()
         assembly_leadership = scrape_house_leadership_national_assembly()
 
         # Convert to DataFrames for consistency
-        st.session_state.house_leadership = {
+        store.house_leadership = {
             "senate": (
                 pd.DataFrame(senate_leadership) if senate_leadership else pd.DataFrame()
             ),
@@ -100,7 +104,7 @@ def run_house_leadership_scraping() -> dict:
         }
 
 
-def run_member_lists_scraping(page_only: bool = False) -> dict:
+def run_member_lists_scraping(page_only: bool = False, store: PipelineStore | None = None) -> dict:
     """Run member list scrapers.
 
     Args:
@@ -110,13 +114,15 @@ def run_member_lists_scraping(page_only: bool = False) -> dict:
         Dict with status and counts
     """
     log.info("Starting member list scrapers")
+    if store is None:
+        store = PipelineStore()
 
     try:
         senate_members = scrape_senate_members(page_only=page_only)
         assembly_members = scrape_national_assembly_members(page_only=page_only)
 
         # Convert to DataFrames for consistency
-        st.session_state.member_lists = {
+        store.member_lists = {
             "senate": (
                 pd.DataFrame(senate_members) if senate_members else pd.DataFrame()
             ),
@@ -142,18 +148,20 @@ def run_member_lists_scraping(page_only: bool = False) -> dict:
         }
 
 
-def run_committee_leadership_scraping() -> dict:
+def run_committee_leadership_scraping(store: PipelineStore | None = None) -> dict:
     """Run committee leadership scraper.
 
     Returns:
         Dict with status and count
     """
     log.info("Starting committee leadership scraper")
+    if store is None:
+        store = PipelineStore()
 
     try:
         committee_docs = scrape_committee_leadership()
 
-        st.session_state.committee_leadership = committee_docs
+        store.committee_leadership = committee_docs
 
         log.info(
             f"Committee leadership scraping complete: {len(committee_docs)} documents"
@@ -176,6 +184,7 @@ def run_scraping_step(
     run_leadership: bool = True,
     run_members: bool = True,
     run_committee: bool = True,
+    store: PipelineStore | None = None,
 ) -> dict:
     """Orchestrate complete scraping step.
 
@@ -189,6 +198,8 @@ def run_scraping_step(
         Dict with overall status and individual results
     """
     log.info("Starting Step 1: Scraping")
+    if store is None:
+        store = PipelineStore()
 
     results = {
         "bill_trackers": None,
@@ -198,16 +209,16 @@ def run_scraping_step(
     }
 
     if run_bill_trackers:
-        results["bill_trackers"] = run_bill_trackers_scraping()
+        results["bill_trackers"] = run_bill_trackers_scraping(store=store)
 
     if run_leadership:
-        results["leadership"] = run_house_leadership_scraping()
+        results["leadership"] = run_house_leadership_scraping(store=store)
 
     if run_members:
-        results["members"] = run_member_lists_scraping()
+        results["members"] = run_member_lists_scraping(store=store)
 
     if run_committee:
-        results["committee"] = run_committee_leadership_scraping()
+        results["committee"] = run_committee_leadership_scraping(store=store)
 
     # Check overall success
     all_success = all(
