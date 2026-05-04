@@ -9,6 +9,7 @@ import streamlit as st
 from loguru import logger as log
 
 from src.pipeline import PipelineStore, run_full_pipeline
+from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
 from src.transformations import (
     transform_senate_bills,
     transform_assembly_bills,
@@ -91,6 +92,13 @@ def run_app():
 
     _show_merged(store)
 
+    st.divider()
+
+    # ── Step 5: Sponsor Normalisation ─────────────────────────────────────────
+    st.header("Step 5: Sponsor Normalisation")
+
+    _show_step5(store)
+
 
 # ── Display helpers ────────────────────────────────────────────────────────────
 
@@ -122,10 +130,15 @@ def _show_df(df: pd.DataFrame) -> None:
 
 def _show_scraping(store: PipelineStore) -> None:
     tabs = st.tabs(
-        ["Bill Tracker URLs (Senate)", "Bill Tracker URLs (Assembly)",
-        "House Leadership (Senate)", "House Leadership (Assembly)",
-        "Members (Senate)", "Members (Assembly)",
-        "Committee Leadership"]
+        [
+            "Bill Tracker URLs (Senate)",
+            "Bill Tracker URLs (Assembly)",
+            "House Leadership (Senate)",
+            "House Leadership (Assembly)",
+            "Members (Senate)",
+            "Members (Assembly)",
+            "Committee Leadership",
+        ]
     )
 
     senate_urls = store.bill_tracker_urls.get("senate", [])
@@ -166,7 +179,11 @@ def _show_scraping(store: PipelineStore) -> None:
         st.caption(_row_badge(assembly_mem))
         _show_df(assembly_mem)
 
-    committee = pd.DataFrame(store.committee_leadership) if store.committee_leadership else pd.DataFrame()
+    committee = (
+        pd.DataFrame(store.committee_leadership)
+        if store.committee_leadership
+        else pd.DataFrame()
+    )
     with tabs[6]:
         st.caption(_row_badge(committee))
         _show_df(committee)
@@ -181,8 +198,14 @@ def _show_mineru(store: PipelineStore) -> None:
     tabs = st.tabs(list(results.keys()))
     for tab, (key, val) in zip(tabs, results.items()):
         with tab:
-            status = val.get("status", "unknown") if isinstance(val, dict) else "unknown"
-            st.caption(f"Status: **{status}** | Dir: `{val.get('extract_dir', '')}` " if isinstance(val, dict) else "")
+            status = (
+                val.get("status", "unknown") if isinstance(val, dict) else "unknown"
+            )
+            st.caption(
+                f"Status: **{status}** | Dir: `{val.get('extract_dir', '')}` "
+                if isinstance(val, dict)
+                else ""
+            )
 
 
 def _show_table_building(store: PipelineStore) -> None:
@@ -218,11 +241,17 @@ def _show_raw_tables(store: PipelineStore) -> None:
         st.info("No raw tables yet — run the pipeline first.")
         return
 
-    tabs = st.tabs([
-        "Senate Bills", "Assembly Bills", "Committee Leadership",
-        "Senate Leadership", "Assembly Leadership",
-        "Senate Members", "Assembly Members",
-    ])
+    tabs = st.tabs(
+        [
+            "Senate Bills",
+            "Assembly Bills",
+            "Committee Leadership",
+            "Senate Leadership",
+            "Assembly Leadership",
+            "Senate Members",
+            "Assembly Members",
+        ]
+    )
 
     with tabs[0]:
         df = _df(tb.get("bill_tracker_senate", {}))
@@ -282,11 +311,17 @@ def _show_transformed_tables(store: PipelineStore) -> None:
             return pd.DataFrame(val)
         return pd.DataFrame()
 
-    tabs = st.tabs([
-        "Senate Bills", "Assembly Bills", "Committee",
-        "Senate Leadership", "Assembly Leadership",
-        "Senate Members", "Assembly Members",
-    ])
+    tabs = st.tabs(
+        [
+            "Senate Bills",
+            "Assembly Bills",
+            "Committee",
+            "Senate Leadership",
+            "Assembly Leadership",
+            "Senate Members",
+            "Assembly Members",
+        ]
+    )
 
     with tabs[0]:
         result = transform_senate_bills(_raw_df(tb.get("bill_tracker_senate", {})))
@@ -349,7 +384,9 @@ def _show_merged(store: PipelineStore) -> None:
 
     with tab_lead:
         senate_lead_df = _df(transform_senate_leadership(_to_df(hl.get("senate"))))
-        assembly_lead_df = _df(transform_assembly_leadership(_to_df(hl.get("assembly"))))
+        assembly_lead_df = _df(
+            transform_assembly_leadership(_to_df(hl.get("assembly")))
+        )
         result = merge_leadership(senate_lead_df, assembly_lead_df)
         df = _df(result)
         st.caption(_row_badge(df))
@@ -368,3 +405,45 @@ def _show_transformations(store: PipelineStore) -> None:
     """Legacy — kept for compatibility. New layout uses _show_raw_tables / _show_transformed_tables / _show_merged."""
     _show_merged(store)
 
+
+def _show_step5(store: PipelineStore) -> None:
+    assembly_result = getattr(store, "normalised_assembly_bills", None)
+    senate_result = getattr(store, "normalised_senate_bills", None)
+
+    col_run, col_status = st.columns([1, 4])
+    with col_run:
+        if st.button("Run Step 5", key="run_step5"):
+            with st.spinner("Normalising bill sponsors..."):
+                result = run_sponsor_normalisation_step(store=store)
+                assembly_result = store.normalised_assembly_bills
+                senate_result = store.normalised_senate_bills
+                st.session_state.store = store
+            if result.get("status") in ("success", "partial"):
+                store.save()
+                st.success(result["message"])
+                st.rerun()
+            else:
+                st.error(result.get("message", "Step 5 failed"))
+
+    with col_status:
+        parts = []
+        if assembly_result:
+            parts.append(f"Assembly: **{assembly_result.get('status')}** ({assembly_result.get('row_count', 0)} rows)")
+        if senate_result:
+            parts.append(f"Senate: **{senate_result.get('status')}** ({senate_result.get('row_count', 0)} rows)")
+        if parts:
+            st.caption(" | ".join(parts))
+        else:
+            st.caption("Not run yet — click Run Step 5 or run the full pipeline.")
+
+    tab_assembly, tab_senate = st.tabs(["Assembly Bills", "Senate Bills"])
+
+    with tab_assembly:
+        df = _df(assembly_result) if assembly_result else pd.DataFrame()
+        st.caption(_row_badge(df))
+        _show_df(df)
+
+    with tab_senate:
+        df = _df(senate_result) if senate_result else pd.DataFrame()
+        st.caption(_row_badge(df))
+        _show_df(df)
