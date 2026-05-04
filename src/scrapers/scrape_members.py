@@ -152,9 +152,9 @@ def scrape_senate_members(delay: float = 0.5, page_only: bool = False) -> list[d
                     )
                     if member:
                         all_members.append(member)
-                        log.info(
-                            f"Added Senator: {member['name']} ({member['county']})"
-                        )
+                        # log.info(
+                        #     f"Added Senator: {member['name']} ({member['county']})"
+                        # )
 
                 tbody_found = True
                 break
@@ -225,7 +225,7 @@ def scrape_national_assembly_members(
                     )
                     if member:
                         all_members.append(member)
-                        log.debug(f"Added MP: {member['name']} ({member['county']})")
+                        # log.debug(f"Added MP: {member['name']} ({member['county']})")
 
                 tbody_found = True
                 break
