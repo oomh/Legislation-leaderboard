@@ -14,6 +14,7 @@ from loguru import logger as log
 # ── Constants ──────────────────────────────────────────────────────────────────
 
 MINERU_API_URL = "https://mineru.net/api/v4/extract/task"
+MINERU_MODEL_VERSION = "vlm"
 
 # ── Helper Functions ──────────────────────────────────────────────────────────
 
@@ -30,7 +31,12 @@ def parse_by_url(pdf_url: str, api_key: str):
         Task ID string for polling status
     """
     headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
-    data = {"url": pdf_url, "model_version": "vlm"}
+    data = {
+        "url": pdf_url,
+        "model_version": MINERU_MODEL_VERSION,
+        "language": "en",
+        "enable_table": True,
+    }
 
     res = requests.post(MINERU_API_URL, headers=headers, json=data)
     res.raise_for_status()
@@ -93,7 +99,7 @@ def get_task_status(
     return None
 
 
-def get_parsed_zip(task_id: str, api_key: str, extract_to: str = None):
+def get_parsed_zip(task_id: str, api_key: str, extract_to: str):
     """
     Download and optionally extract the parsed ZIP file from MinerU.
 
@@ -149,7 +155,7 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str = None):
 # ── Core Functions ────────────────────────────────────────────────────────────
 
 
-def mineru_workflow(pdf_url: str, api_key: str, extract_dir: str = None):
+def mineru_workflow(pdf_url: str, api_key: str, extract_dir: str):
     """
     Complete MinerU workflow: create task → wait for completion → download.
 
