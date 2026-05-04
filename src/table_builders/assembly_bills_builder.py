@@ -55,7 +55,7 @@ def build_assembly_bills(
             }
 
         # Step 2: Convert HTML tables to DataFrames
-        dataframes = convert_html_tables_to_dataframes(tables)
+        dataframes = convert_html_tables_to_dataframes(tables, min_columns=11)
 
         if not dataframes:
             warning_msg = "No DataFrames created from HTML conversion"

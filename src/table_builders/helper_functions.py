@@ -95,6 +95,7 @@ def extract_tables_from_json(json_file_path: str) -> List[Dict[str, Any]]:
 
 def convert_html_tables_to_dataframes(
     table_objects: List[Dict[str, Any]],
+    min_columns: int | None = None,
 ) -> List[pd.DataFrame]:
     """
     Convert HTML content from table objects to pandas DataFrames.
@@ -105,6 +106,9 @@ def convert_html_tables_to_dataframes(
     Args:
         table_objects (List[Dict[str, Any]]): List of table objects containing HTML content.
             Each object should have a 'content' key with an 'html' key containing the HTML string.
+        min_columns (int | None): If provided, DataFrames with fewer columns than this
+            value are discarded. Useful for filtering out spurious small tables that
+            MinerU extracts alongside the main bill tracker table.
 
     Returns:
         List[pd.DataFrame]: List of DataFrames converted from the HTML tables.
@@ -113,7 +117,7 @@ def convert_html_tables_to_dataframes(
 
     Example:
         >>> tables = extract_tables_from_json('data/mineru_output_bill_tracker_senate/content_list_v2.json')
-        >>> dataframes = convert_html_tables_to_dataframes(tables)
+        >>> dataframes = convert_html_tables_to_dataframes(tables, min_columns=11)
         >>> print(f"Converted {len(dataframes)} dataframes from {len(tables)} HTML tables")
     """
     dataframes = []
@@ -130,14 +134,26 @@ def convert_html_tables_to_dataframes(
             # Use StringIO to pass HTML string to pd.read_html
             dfs = pd.read_html(StringIO(html_content))
 
-            if dfs:
-                dataframes.extend(dfs)
+            kept = [
+                df
+                for df in dfs
+                if min_columns is None or len(df.columns) >= min_columns
+            ]
+            for df in dfs:
+                if min_columns is not None and len(df.columns) < min_columns:
+                    logger.info(
+                        f"Table {i+1}: Skipping DataFrame with {len(df.columns)} columns "
+                        f"(min_columns={min_columns})"
+                    )
+
+            if kept:
+                dataframes.extend(kept)
                 logger.info(
-                    f"Table {i+1}: Successfully converted {len(dfs)} DataFrame(s) "
-                    f"with shapes: {[df.shape for df in dfs]}"
+                    f"Table {i+1}: Kept {len(kept)}/{len(dfs)} DataFrame(s) "
+                    f"with shapes: {[df.shape for df in kept]}"
                 )
             else:
-                logger.warning(f"Table {i+1}: No tables found in HTML content")
+                logger.warning(f"Table {i+1}: No tables passed column filter")
 
         except Exception as e:
             error_msg = str(e)[:100]
