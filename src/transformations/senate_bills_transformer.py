@@ -14,6 +14,7 @@ from loguru import logger as log
 from src.transformations.transformation_helpers import (
     apply_mask_to_dataframe,
     create_mask_for_strings,
+    fix_shifted_serial_rows,
     merge_spill_rows,
     merge_duplicate_serial_rows,
     strip_cell_punctuation,
@@ -127,6 +128,7 @@ def transform_senate_bills(raw_df: pd.DataFrame) -> dict:
 
         df = rename_senate_bill_columns(raw_df.copy())
         df = remove_header_rows(df)
+        df = fix_shifted_serial_rows(df, serial_col="no.")
         df = merge_spill_rows(
             df,
             serial_col="no.",

@@ -6,7 +6,9 @@ Combines senate and assembly transformed DataFrames into unified tables.
 import pandas as pd
 from loguru import logger as log
 
-from src.transformations.transformation_helpers import more_name_parsing_comma_split_rearrange
+from src.transformations.transformation_helpers import (
+    more_name_parsing_comma_split_rearrange,
+)
 
 
 def merge_leadership(senate_df: pd.DataFrame, assembly_df: pd.DataFrame) -> dict:
@@ -116,11 +118,10 @@ def merge_members(senate_df: pd.DataFrame, assembly_df: pd.DataFrame) -> dict:
             }
 
         merged = pd.concat(frames, ignore_index=True)
-        merged['name'] = merged['name'].apply(more_name_parsing_comma_split_rearrange)
+        merged["name"] = merged["name"].apply(more_name_parsing_comma_split_rearrange)
 
         row_count = len(merged)
         log.info(f"Members merge complete: {row_count} rows")
-        
 
         return {
             "status": "success",

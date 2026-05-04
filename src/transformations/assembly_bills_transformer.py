@@ -14,6 +14,7 @@ from loguru import logger as log
 from src.transformations.transformation_helpers import (
     apply_mask_to_dataframe,
     create_mask_for_strings,
+    fix_shifted_serial_rows,
     merge_spill_rows,
     merge_duplicate_serial_rows,
     apply_name_parsing,
@@ -61,7 +62,12 @@ def rename_assembly_bill_columns(df: pd.DataFrame) -> pd.DataFrame:
     n_cols = len(df.columns)
     col_map = {old: new for old, new in zip(df.columns, ASSEMBLY_BILL_COLUMNS[:n_cols])}
     log.info(f"Renaming {n_cols} assembly bill columns")
-    return df.rename(columns=col_map)
+    df = df.rename(columns=col_map)
+    # Drop any columns that were not mapped (i.e., still have integer names)
+    extra_cols = [c for c in df.columns if isinstance(c, int)]
+    if extra_cols:
+        df = df.drop(columns=extra_cols)
+    return df
 
 
 def remove_header_rows(df: pd.DataFrame) -> pd.DataFrame:
@@ -122,6 +128,7 @@ def transform_assembly_bills(raw_df: pd.DataFrame) -> dict:
 
         log.debug(f"columns at this stage: {df.columns.tolist()}")
 
+        df = fix_shifted_serial_rows(df, serial_col="s/no.")
         df = merge_duplicate_serial_rows(df, serial_col="s/no.")
         df = merge_spill_rows(df, serial_col="s/no.")
 

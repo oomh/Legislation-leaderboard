@@ -30,6 +30,15 @@ from src.transformations.merge_transformer import (
     merge_leadership,
     merge_members,
 )
+from src.transformations.assembly_bills_sponsor_splitter import (
+    partition_assembly_bills,
+    extract_office_sponsored_bills,
+    extract_multi_sponsored_bills,
+    extract_residue_bills,
+    split_office_sponsors,
+    split_multi_sponsors,
+    rebuild_assembly_bills,
+)
 
 __all__ = [
     "transform_senate_bills",
@@ -43,4 +52,11 @@ __all__ = [
     "transform_committees",
     "merge_leadership",
     "merge_members",
+    "partition_assembly_bills",
+    "extract_office_sponsored_bills",
+    "extract_multi_sponsored_bills",
+    "extract_residue_bills",
+    "split_office_sponsors",
+    "split_multi_sponsors",
+    "rebuild_assembly_bills",
 ]

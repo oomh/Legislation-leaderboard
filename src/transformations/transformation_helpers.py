@@ -135,6 +135,60 @@ def remove_duplicate_header_rows(
     return apply_mask_to_dataframe(df, mask)
 
 
+def fix_shifted_serial_rows(
+    df: pd.DataFrame, serial_col: str = "s/no."
+) -> pd.DataFrame:
+    """Fix rows where a leading empty cell has shifted the serial number one column right.
+
+    Occurs when the PDF/HTML produces a spurious empty leading cell, so the serial number
+    lands in the BILL column and every subsequent value is one position off.
+
+    This must run after column renaming and before merge_spill_rows, because
+    merge_spill_rows would incorrectly treat the empty serial column as a spill row.
+
+    Args:
+        df: DataFrame with columns already renamed to canonical names.
+        serial_col: Column name that should contain serial numbers.
+
+    Returns:
+        DataFrame with shifted rows corrected.
+    """
+    if serial_col not in df.columns:
+        log.warning(
+            f"fix_shifted_serial_rows: column '{serial_col}' not found, skipping"
+        )
+        return df
+
+    cols = list(df.columns)
+    serial_idx = cols.index(serial_col)
+    if serial_idx + 1 >= len(cols):
+        return df
+
+    next_col = cols[serial_idx + 1]
+    df = df.copy()
+
+    serial_empty = df[serial_col].isna() | (
+        df[serial_col].astype(str).str.strip() == ""
+    )
+    next_is_serial = df[next_col].astype(str).str.strip().str.fullmatch(r"\d+\.?\s*")
+    shifted_mask = serial_empty & next_is_serial
+
+    count = int(shifted_mask.sum())
+    if count == 0:
+        return df
+
+    log.info(f"Fixing {count} shifted serial row(s) in column '{serial_col}'")
+
+    segment = cols[serial_idx:]
+    for idx in df[shifted_mask].index:
+        vals = df.loc[idx, segment].tolist()
+        new_vals = vals[1:] + [""]
+        for col, val in zip(segment, new_vals):
+            df.loc[idx, col] = val
+
+    return df
+
+
 def merge_spill_rows(df, serial_col="s/no/"):
     """
     Merge rows that spilled into next row (no serial number).
@@ -282,6 +336,7 @@ _NAME_STRIP_PARTS = [
     "m.p.",
     ", m.p.",
     " m.p",
+    " mp,",
     " mp",
     " cbs",
     ", cbs",
@@ -302,6 +357,12 @@ _NAME_STRIP_PARTS = [
     "prof.",
     "(rtd)",
     "(rtd.)",
+    "(co-sponsor)",
+    "co-sponsor",
+    "(",
+    ")",
+    ";",
+    ":"
 ]
 
 
@@ -323,7 +384,7 @@ def apply_name_parsing(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
         for part in _NAME_STRIP_PARTS:
             result = result.replace(part, " ")
         return re.sub(r"\s+", " ", result).strip().strip(",").strip().title()
-    
+
     df = df.copy()
     for col in columns:
         if col not in df.columns:
@@ -334,9 +395,9 @@ def apply_name_parsing(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
     return df
 
 
-def more_name_parsing_comma_split_rearrange (name: str) -> str:
-    """Handle names in "Last, First" format by splitting on comma and rearranging. 
-    
+def more_name_parsing_comma_split_rearrange(name: str) -> str:
+    """Handle names in "Last, First" format by splitting on comma and rearranging.
+
     NOTE TO SELF: use after apply_name_parsing, which already handles titles and post-nominals. while merging the senate and assembly members.
 
     If the name contains a comma, assumes format is "Last, First" and rearranges
@@ -345,7 +406,7 @@ def more_name_parsing_comma_split_rearrange (name: str) -> str:
     Args:
         name: Input name string.
     Returns:
-        Cleaned name string with "Last, First" rearranged to "First Last".  
+        Cleaned name string with "Last, First" rearranged to "First Last".
     """
     if not isinstance(name, str):
         return name
