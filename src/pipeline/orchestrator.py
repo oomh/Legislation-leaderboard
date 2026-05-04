@@ -9,6 +9,7 @@ from src.pipeline.step1_scraping import run_scraping_step
 from src.pipeline.step2_mineru_extraction import run_mineru_extraction_step
 from src.pipeline.step3_table_building import run_table_building_step
 from src.pipeline.step4_transformations import run_transformations_step
+from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
 from loguru import logger as log
 
 
@@ -58,6 +59,15 @@ def run_full_pipeline(store: PipelineStore | None = None) -> PipelineStore:
         store.save()
     else:
         log.error(f"Step 4 failed: {step4.get('message')}")
+        return store
+
+    # Step 5: Sponsor Normalisation
+    log.info("Orchestrator: running Step 5 — Sponsor Normalisation")
+    step5 = run_sponsor_normalisation_step(store=store)
+    if step5.get("status") == "success":
+        store.save()
+    else:
+        log.error(f"Step 5 failed: {step5.get('message')}")
 
     log.info("Orchestrator: pipeline complete")
     return store

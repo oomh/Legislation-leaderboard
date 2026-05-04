@@ -1,10 +1,11 @@
 """Pipeline Orchestration
 
-4-step legislative data pipeline:
+5-step legislative data pipeline:
 1. Scraping - Gather URLs and member data
 2. MinerU Extraction - Process documents with MinerU
 3. Table Building - Extract structured data
 4. Transformations - Prepare final datasets
+5. Sponsor Normalisation - One sponsor per assembly bill row
 """
 
 from src.pipeline.store import PipelineStore
@@ -19,6 +20,7 @@ from src.pipeline.step1_scraping import (
 from src.pipeline.step2_mineru_extraction import run_mineru_extraction_step
 from src.pipeline.step3_table_building import run_table_building_step
 from src.pipeline.step4_transformations import run_transformations_step
+from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
 
 __all__ = [
     "PipelineStore",
@@ -31,4 +33,5 @@ __all__ = [
     "run_mineru_extraction_step",
     "run_table_building_step",
     "run_transformations_step",
+    "run_sponsor_normalisation_step",
 ]

@@ -8,7 +8,7 @@ Outputs: Consolidated transformed datasets ready for database
 import pandas as pd
 from loguru import logger as log
 from src.pipeline.store import PipelineStore
-from src.transformations import merge_leadership, merge_members
+from src.transformations import merge_leadership, merge_members, transform_senate_bills, transform_assembly_bills
 
 
 def prepare_transformation_data(store: PipelineStore | None = None) -> dict:
@@ -60,48 +60,31 @@ def prepare_transformation_data(store: PipelineStore | None = None) -> dict:
 
 
 def prepare_bill_trackers(store: PipelineStore) -> dict:
-    """Prepare consolidated bill tracker data.
+    """Transform and store senate and assembly bills.
+
+    Runs the bill transformers so downstream steps (e.g. Step 5) can read
+    already-transformed DataFrames from ``store.transformed_data`` without
+    re-running the transformation.
 
     Returns:
-        Dict with senate and assembly bills
+        Dict with senate and assembly transformed bills.
     """
     try:
-        senate_bills = store.raw_senate_bills or {}
-        assembly_bills = store.raw_assembly_bills or {}
+        senate_raw = store.raw_senate_bills or {}
+        assembly_raw = store.raw_assembly_bills or {}
+
+        senate_raw_df = senate_raw.get("data") if isinstance(senate_raw, dict) else senate_raw
+        assembly_raw_df = assembly_raw.get("data") if isinstance(assembly_raw, dict) else assembly_raw
+
+        senate_result = transform_senate_bills(senate_raw_df) if isinstance(senate_raw_df, pd.DataFrame) else {}
+        assembly_result = transform_assembly_bills(assembly_raw_df) if isinstance(assembly_raw_df, pd.DataFrame) else {}
+
+        senate_df = senate_result.get("data", pd.DataFrame()) if isinstance(senate_result, dict) else pd.DataFrame()
+        assembly_df = assembly_result.get("data", pd.DataFrame()) if isinstance(assembly_result, dict) else pd.DataFrame()
 
         return {
-            "senate": {
-                "data": (
-                    senate_bills.get("data")
-                    if isinstance(senate_bills, dict)
-                    else senate_bills
-                ),
-                "row_count": (
-                    len(senate_bills.get("data", []))
-                    if isinstance(senate_bills, dict)
-                    else (
-                        len(senate_bills)
-                        if isinstance(senate_bills, pd.DataFrame)
-                        else 0
-                    )
-                ),
-            },
-            "assembly": {
-                "data": (
-                    assembly_bills.get("data")
-                    if isinstance(assembly_bills, dict)
-                    else assembly_bills
-                ),
-                "row_count": (
-                    len(assembly_bills.get("data", []))
-                    if isinstance(assembly_bills, dict)
-                    else (
-                        len(assembly_bills)
-                        if isinstance(assembly_bills, pd.DataFrame)
-                        else 0
-                    )
-                ),
-            },
+            "senate": {"data": senate_df, "row_count": len(senate_df)},
+            "assembly": {"data": assembly_df, "row_count": len(assembly_df)},
         }
     except Exception as e:
         log.error(f"Error preparing bill trackers: {e}")
