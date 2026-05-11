@@ -76,9 +76,9 @@ def run_app():
     # ── Step 3: Table Building ─────────────────────────────────────────────────
     st.header("Step 3: Table Building")
 
-    _show_table_building(store)
+    # _show_table_building(store)
 
-    st.divider()
+    # st.divider()
 
     # ── Raw tables (before transformation) ────────────────────────────────────
     st.header("Raw Tables")
@@ -87,22 +87,20 @@ def run_app():
 
     st.divider()
 
+    # ── Step 4: Transformations ───────────────────────────────────────────────
+    st.header("Step 4: Transformations")
+    
     # ── Transformed tables ─────────────────────────────────────────────────────
     st.header("Transformed Tables")
 
+    _show_step4(store)
+    
     _show_transformed_tables(store)
 
     st.divider()
 
-    # ── Step 4: Transformations ───────────────────────────────────────────────
-    st.header("Step 4: Transformations")
-
-    _show_step4(store)
-
-    st.divider()
-
     # ── Step 5: Sponsor Normalisation ─────────────────────────────────────────
-    st.header("Step 5: Sponsor Normalisation")
+    st.header("Step 5: Sponsor Normalization (name explosion)")
 
     _show_step5(store)
 
