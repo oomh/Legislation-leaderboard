@@ -21,20 +21,18 @@ BASE_URL = config["base_url"]
 headers = config["scrape_headers"]
 excluded_titles = config["excluded_titles"]
 
-log.info(f"Base URL: {BASE_URL}")
-log.info(f"Excluded titles: {excluded_titles}")
-log.info(f"Headers configured: {bool(headers)}")
-log.info(f"User agent: {headers.get('User-Agent', 'Not set')}")
-
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 
 def create_session() -> requests.Session:
     """Create a requests session with default headers."""
+    log.info(f"Base URL: {BASE_URL}")
+    log.info(f"Excluded titles: {excluded_titles}")
+    log.info(f"Headers configured: {bool(headers)}")
+    log.info(f"User agent: {headers.get('User-Agent', 'Not set')}")
     session = requests.Session()
     session.headers.update(headers)
     return session
-
 
 def clean_text(text: str) -> str:
     """Clean and normalize text by removing extra whitespace."""
@@ -178,7 +176,6 @@ def extract_pdf_links(soup: BeautifulSoup, page_url: str) -> list[dict]:
 
         # Only keep titles that start with "bill tracker"
         if not raw_title.lower().startswith("bills tracker"):
-            log.info(f"Filtered out (not bill tracker): {raw_title}")
             continue
 
         # Filter: must be a PDF or a /sites/default/files/ document
