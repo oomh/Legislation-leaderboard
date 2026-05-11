@@ -237,7 +237,7 @@ def _show_step_5_5(store: PipelineStore) -> None:
         with st.expander("Applied corrections log", expanded=True):
             applied = results.get("applied", [])
             if applied:
-                st.dataframe(pd.DataFrame(applied), use_container_width=True)
+                st.dataframe(pd.DataFrame(applied), width="stretch")
             else:
                 st.caption(results.get("message", "No corrections were applied."))
 
@@ -254,7 +254,10 @@ def run_app() -> None:
 
     store: PipelineStore = st.session_state.store
     
-    st.button("Run Full Pipeline", on_click=run_full_pipeline, args=(store,), type="primary")
+    def _run_full_pipeline():
+        run_full_pipeline(store)
+    
+    st.button("Run Full Pipeline", on_click=_run_full_pipeline, type="primary")
 
     _show_step(1, "Scraping", run_scraping_step, "step1_results", store)
     st.divider()
