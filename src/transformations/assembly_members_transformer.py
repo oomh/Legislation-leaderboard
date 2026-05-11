@@ -11,6 +11,7 @@ from loguru import logger as log
 
 from src.transformations.transformation_helpers import (
     apply_name_parsing,
+    more_name_parsing_comma_split_rearrange,
     strip_cell_punctuation,
 )
 
@@ -45,6 +46,8 @@ def transform_assembly_members(raw_df: pd.DataFrame) -> dict:
 
         df = apply_name_parsing(raw_df.copy(), ["name"])
         df = strip_cell_punctuation(df)
+        df["name"] = df["name"].apply(more_name_parsing_comma_split_rearrange)
+
 
         row_count = len(df)
         log.info(f"Assembly members transformation complete: {row_count} rows")
