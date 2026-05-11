@@ -1,6 +1,6 @@
 """Pipeline Orchestrator
 
-Runs all 4 pipeline steps in sequence using a PipelineStore.
+Runs all pipeline steps in sequence using a PipelineStore.
 Can be used standalone from notebooks, scripts, or Streamlit.
 """
 
@@ -10,11 +10,12 @@ from src.pipeline.step2_mineru_extraction import run_mineru_extraction_step
 from src.pipeline.step3_table_building import run_table_building_step
 from src.pipeline.step4_transformations import run_transformations_step
 from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
+from src.pipeline.step6_merging import run_merging_step
 from loguru import logger as log
 
 
 def run_full_pipeline(store: PipelineStore | None = None) -> PipelineStore:
-    """Run all 4 pipeline steps in sequence.
+    """Run all pipeline steps in sequence.
 
     Args:
         store: Existing PipelineStore to populate. Creates a new one if not provided.
@@ -68,6 +69,15 @@ def run_full_pipeline(store: PipelineStore | None = None) -> PipelineStore:
         store.save()
     else:
         log.error(f"Step 5 failed: {step5.get('message')}")
+        return store
+
+    # Step 6: Merging
+    log.info("Orchestrator: running Step 6 — Merging")
+    step6 = run_merging_step(store=store)
+    if step6.get("status") == "success":
+        store.save()
+    else:
+        log.error(f"Step 6 failed: {step6.get('message')}")
 
     log.info("Orchestrator: pipeline complete")
     return store
