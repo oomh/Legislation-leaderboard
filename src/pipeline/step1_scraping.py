@@ -39,10 +39,9 @@ def run_bill_trackers_scraping(page_only: bool = True, store: PipelineStore | No
         senate_pdfs = scrape_bill_tracker_senate(page_only=page_only)
         assembly_pdfs = scrape_bill_tracker_national_assembly(page_only=page_only)
 
-        store.bill_tracker_urls = {
-            "senate": senate_pdfs,
-            "assembly": assembly_pdfs,
-        }
+        step1 = store.step1_results or {}
+        step1["bill_tracker_urls"] = {"senate": senate_pdfs, "assembly": assembly_pdfs}
+        store.step1_results = step1
 
         log.info(
             f"Bill tracker scraping complete: Senate={len(senate_pdfs)}, Assembly={len(assembly_pdfs)}"
@@ -76,16 +75,18 @@ def run_house_leadership_scraping(store: PipelineStore | None = None) -> dict:
         assembly_leadership = scrape_house_leadership_national_assembly()
 
         # Convert to DataFrames for consistency
-        store.house_leadership = {
+        step1 = store.step1_results or {}
+        step1["house_leadership"] = {
             "senate": (
-                pd.DataFrame(senate_leadership) if senate_leadership else pd.DataFrame()
+                pd.DataFrame(senate_leadership).to_dict(orient="records") if senate_leadership else []
             ),
             "assembly": (
-                pd.DataFrame(assembly_leadership)
+                pd.DataFrame(assembly_leadership).to_dict(orient="records")
                 if assembly_leadership
-                else pd.DataFrame()
+                else []
             ),
         }
+        store.step1_results = step1
 
         log.info(
             f"House leadership scraping complete: Senate={len(senate_leadership)}, Assembly={len(assembly_leadership)}"
@@ -122,14 +123,16 @@ def run_member_lists_scraping(page_only: bool = False, store: PipelineStore | No
         assembly_members = scrape_national_assembly_members(page_only=page_only)
 
         # Convert to DataFrames for consistency
-        store.member_lists = {
+        step1 = store.step1_results or {}
+        step1["member_lists"] = {
             "senate": (
-                pd.DataFrame(senate_members) if senate_members else pd.DataFrame()
+                pd.DataFrame(senate_members).to_dict(orient="records") if senate_members else []
             ),
             "assembly": (
-                pd.DataFrame(assembly_members) if assembly_members else pd.DataFrame()
+                pd.DataFrame(assembly_members).to_dict(orient="records") if assembly_members else []
             ),
         }
+        store.step1_results = step1
 
         log.info(
             f"Member list scraping complete: Senate={len(senate_members)}, Assembly={len(assembly_members)}"
@@ -161,7 +164,9 @@ def run_committee_leadership_scraping(store: PipelineStore | None = None) -> dic
     try:
         committee_docs = scrape_committee_leadership()
 
-        store.committee_leadership = committee_docs
+        step1 = store.step1_results or {}
+        step1["committee_leadership"] = committee_docs
+        store.step1_results = step1
 
         log.info(
             f"Committee leadership scraping complete: {len(committee_docs)} documents"

@@ -22,9 +22,13 @@ def run_mineru_extraction_step(store: PipelineStore | None = None) -> dict:
         store = PipelineStore()
 
     # Check for required inputs
-    has_bill_tracker_senate = bool(store.bill_tracker_urls.get("senate"))
-    has_bill_tracker_assembly = bool(store.bill_tracker_urls.get("assembly"))
-    has_committee_leadership = bool(store.committee_leadership)
+    step1 = store.step1_results or {}
+    bill_tracker_urls = step1.get("bill_tracker_urls", {})
+    committee_leadership = step1.get("committee_leadership", [])
+
+    has_bill_tracker_senate = bool(bill_tracker_urls.get("senate"))
+    has_bill_tracker_assembly = bool(bill_tracker_urls.get("assembly"))
+    has_committee_leadership = bool(committee_leadership)
 
     if not (
         has_bill_tracker_senate
@@ -47,20 +51,20 @@ def run_mineru_extraction_step(store: PipelineStore | None = None) -> dict:
         }
 
     try:
-        # Get URLs from store (0th index)
+        # Get URLs from step1 results (0th index)
         senate_bill_url = (
-            store.bill_tracker_urls["senate"][0].get("url")
-            if store.bill_tracker_urls["senate"]
+            bill_tracker_urls["senate"][0].get("url")
+            if bill_tracker_urls.get("senate")
             else None
         )
         assembly_bill_url = (
-            store.bill_tracker_urls["assembly"][0].get("url")
-            if store.bill_tracker_urls["assembly"]
+            bill_tracker_urls["assembly"][0].get("url")
+            if bill_tracker_urls.get("assembly")
             else None
         )
         committee_url = (
-            store.committee_leadership[0].get("url")
-            if store.committee_leadership
+            committee_leadership[0].get("url")
+            if committee_leadership
             else None
         )
 
@@ -82,7 +86,7 @@ def run_mineru_extraction_step(store: PipelineStore | None = None) -> dict:
         )
 
         # Store results
-        store.mineru_extraction_results = results
+        store.step2_results = {"mineru_extraction_results": results}
 
         # Count successes
         success_count = sum(1 for r in results.values() if r.get("status") == "success")

@@ -13,16 +13,14 @@ import pandas as pd
 from loguru import logger as log
 
 from src.pipeline.store import PipelineStore
-from src.transformations.assembly_bills_sponsor_splitter import (
+from src.transformations.bills import (
     partition_assembly_bills,
     split_office_sponsors as split_assembly_office_sponsors,
     split_multi_sponsors as split_assembly_multi_sponsors,
     rebuild_assembly_bills,
-)
-from src.transformations.senate_bills_sponsor_splitter import (
     partition_senate_bills,
-    split_office_sponsors as split_senate_office_sponsors,
-    split_multi_sponsors as split_senate_multi_sponsors,
+    split_senate_office_sponsors,
+    split_senate_multi_sponsors,
     rebuild_senate_bills,
 )
 
@@ -45,7 +43,7 @@ def run_sponsor_normalisation_step(store: PipelineStore | None = None) -> dict:
     if store is None:
         store = PipelineStore()
 
-    transformed = store.transformed_data
+    transformed = (store.step4_results or {}).get("transformed_data")
     if not transformed:
         msg = "No transformed data found — run Step 4 first"
         log.error(msg)
@@ -61,8 +59,8 @@ def run_sponsor_normalisation_step(store: PipelineStore | None = None) -> dict:
     results: dict = {}
 
     for chamber, store_attr in [
-        ("assembly", "normalised_assembly_bills"),
-        ("senate", "normalised_senate_bills"),
+        ("assembly", None),
+        ("senate", None),
     ]:
         chamber_entry = bill_trackers.get(chamber, {})
         bills = chamber_entry.get("data") if isinstance(chamber_entry, dict) else None
@@ -72,7 +70,6 @@ def run_sponsor_normalisation_step(store: PipelineStore | None = None) -> dict:
             log.error(msg)
             chamber_result = {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": msg}
             results[chamber] = chamber_result
-            setattr(store, store_attr, chamber_result)
             overall_status = "partial"
             continue
 
@@ -98,7 +95,9 @@ def run_sponsor_normalisation_step(store: PipelineStore | None = None) -> dict:
 
             for col in ("s/no.", "no."):
                 if col in normalized.columns:
-                    normalized[col] = normalized[col].astype(int)
+                    numeric = pd.to_numeric(normalized[col], errors="coerce")
+                    normalized = normalized[numeric.notna()].copy()
+                    normalized[col] = pd.to_numeric(normalized[col], errors="coerce").astype(int)
                     break
 
             row_count = len(normalized)
@@ -107,14 +106,17 @@ def run_sponsor_normalisation_step(store: PipelineStore | None = None) -> dict:
 
             chamber_result = {"status": "success", "data": normalized, "row_count": row_count, "message": msg}
             results[chamber] = chamber_result
-            setattr(store, store_attr, chamber_result)
 
         except Exception as e:
             log.error(f"Step 5 {chamber} normalisation failed: {e}")
             chamber_result = {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
             results[chamber] = chamber_result
-            setattr(store, store_attr, chamber_result)
             overall_status = "partial"
+
+    store.step5_results = {
+        "assembly": results.get("assembly", {}),
+        "senate": results.get("senate", {}),
+    }
 
     total = sum(r.get("row_count", 0) for r in results.values())
     return {

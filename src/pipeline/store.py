@@ -2,6 +2,18 @@
 
 Plain Python data store for the legislation pipeline.
 Replaces st.session_state so pipeline steps can run outside Streamlit.
+
+Each pipeline step reads from and writes to its own ``stepN_results`` dict.
+All dicts are persisted as individual JSON files in pipeline_data/.
+
+    step1_results          — bill_tracker_urls, house_leadership, member_lists, committee_leadership
+    step2_results          — mineru_extraction_results
+    step3_results          — senate_bills, assembly_bills, committee_membership
+    step4_results          — bill_trackers, leadership, members, committees (individual transforms)
+    step5_results          — assembly, senate (normalised bills per sponsor)
+    step6_results          — merged_leadership, merged_members
+    sponsor_name_corrections — user-supplied manual name overrides; persisted independently
+                            of step results so corrections survive pipeline re-runs
 """
 
 from __future__ import annotations
@@ -14,85 +26,56 @@ from loguru import logger as log
 
 _PIPELINE_DATA_DIR = Path(__file__).parent / "pipeline_data"
 
-# Keys whose values are plain dicts/lists (serialised as JSON)
-_JSON_KEYS = {
-    "bill_tracker_urls",
-    "bill_trackers_processed",
-    "house_leadership",
-    "member_lists",
-    "committee_leadership",
-    "mineru_extraction_results",
-    "table_builder_results",
-    "raw_senate_bills",
-    "raw_assembly_bills",
-    "raw_committee_membership",
-    "normalised_assembly_bills",
-    "normalised_senate_bills",
+_STEP_KEYS = [
+    "step1_results",
+    "step2_results",
+    "step3_results",
+    "step4_results",
+    "step5_results",
+    "step6_results",
     "sponsor_name_corrections",
-}
-
-# Keys that may contain nested DataFrames inside a result dict
-_RESULT_DICT_KEYS = {
-    "table_builder_results",
-    "raw_senate_bills",
-    "raw_assembly_bills",
-    "raw_committee_membership",
-}
+]
 
 
 class PipelineStore:
-    """Plain Python data store mirroring all st.session_state pipeline keys."""
+    """Plain Python data store with one dict per pipeline step."""
 
     def __init__(self) -> None:
-        self.bill_tracker_urls: dict = {"senate": [], "assembly": []}
-        self.bill_trackers_processed: dict = {"senate": [], "assembly": []}
-        self.house_leadership: dict = {"senate": [], "assembly": []}
-        self.member_lists: dict = {"senate": [], "assembly": []}
-        self.committee_leadership: list = []
-        self.mineru_extraction_results: dict | None = None
-        self.table_builder_results: dict | None = None
-        self.raw_senate_bills: dict | None = None
-        self.raw_assembly_bills: dict | None = None
-        self.raw_committee_membership: dict | None = None
-        self.transformed_data: dict | None = None
-        self.normalised_assembly_bills: dict | None = None
-        self.normalised_senate_bills: dict | None = None
+        self.step1_results: dict = {}
+        self.step2_results: dict = {}
+        self.step3_results: dict = {}
+        self.step4_results: dict = {}
+        self.step5_results: dict = {}
+        self.step6_results: dict = {}
         self.sponsor_name_corrections: dict = {}
 
     # ── Persistence ────────────────────────────────────────────────────────────
 
     def save(self) -> None:
-        """Persist all store data to src/pipeline/pipeline_data/."""
+        """Persist all step results to src/pipeline/pipeline_data/."""
         _PIPELINE_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-        for key in _JSON_KEYS:
+        for key in _STEP_KEYS:
             val = getattr(self, key, None)
-            if val is None:
+            if not val:
                 continue
             try:
                 _save_json(val, _PIPELINE_DATA_DIR / f"{key}.json")
             except Exception as e:
-                log.warning(f"Could not save {key} as JSON: {e}")
-
-        # transformed_data may contain nested DataFrames — save separately
-        if self.transformed_data is not None:
-            try:
-                _save_transformed_data(self.transformed_data, _PIPELINE_DATA_DIR)
-            except Exception as e:
-                log.warning(f"Could not save transformed_data: {e}")
+                log.warning(f"Could not save {key}: {e}")
 
         log.info(f"PipelineStore saved to {_PIPELINE_DATA_DIR}")
 
     @classmethod
     def from_disk(cls) -> "PipelineStore":
-        """Reconstruct store from any previously saved files in pipeline_data/."""
+        """Reconstruct store from any previously saved step result files."""
         store = cls()
 
         if not _PIPELINE_DATA_DIR.exists():
             log.info("No pipeline_data directory found — returning empty store")
             return store
 
-        for key in _JSON_KEYS:
+        for key in _STEP_KEYS:
             path = _PIPELINE_DATA_DIR / f"{key}.json"
             if path.exists():
                 try:
@@ -100,15 +83,6 @@ class PipelineStore:
                     log.debug(f"Loaded {key} from disk")
                 except Exception as e:
                     log.warning(f"Could not load {key}: {e}")
-
-        # Restore transformed_data with DataFrames from parquet
-        transformed_path = _PIPELINE_DATA_DIR / "transformed_data"
-        if transformed_path.exists():
-            try:
-                store.transformed_data = _load_transformed_data(transformed_path)
-                log.debug("Loaded transformed_data from disk")
-            except Exception as e:
-                log.warning(f"Could not load transformed_data: {e}")
 
         log.info(f"PipelineStore loaded from {_PIPELINE_DATA_DIR}")
         return store
@@ -164,21 +138,5 @@ def _save_json(val, path: Path) -> None:
 
 def _load_json(path: Path):
     with open(path, encoding="utf-8") as f:
-        raw = json.load(f)
-    return _deserialise_result_dict(raw)
-
-
-def _save_transformed_data(data: dict, base: Path) -> None:
-    """Save transformed_data — nested dicts with DataFrames — as parquet + JSON."""
-    td_dir = base / "transformed_data"
-    td_dir.mkdir(exist_ok=True)
-    serialised = _serialise_result_dict(data)
-    with open(td_dir / "transformed_data.json", "w", encoding="utf-8") as f:
-        json.dump(serialised, f, indent=2, default=str)
-
-
-def _load_transformed_data(path: Path) -> dict:
-    json_path = path / "transformed_data.json"
-    with open(json_path, encoding="utf-8") as f:
         raw = json.load(f)
     return _deserialise_result_dict(raw)
