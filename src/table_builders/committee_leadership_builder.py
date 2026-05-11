@@ -66,8 +66,9 @@ def parse_committee_leadership_markdown(markdown_content: str) -> List[Committee
             # Extract position (Chairperson, Vice-Chairperson) marked with dash
             position = ""
             position_match = re.search(
-                r"\s*[-–]\s+(Chairperson|Vice-Chairperson|Chair|Vice-Chair)(?:\s|$)",
+                r"\s*[-–]\s*(Chairperson|Vice-Chairperson|Chair|Vice-Chair)(?:\s|$)",
                 member_text,
+                re.IGNORECASE,
             )
             if position_match:
                 position = position_match.group(1).strip()

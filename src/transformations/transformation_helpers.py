@@ -334,7 +334,8 @@ _NAME_STRIP_PARTS = [
     "sen. ",
     "sen.",
     "m.p.",
-    ", m.p.",
+    ", m.p.",    
+    ",m.p",
     " m.p",
     " mp,",
     " mp",
@@ -364,7 +365,9 @@ _NAME_STRIP_PARTS = [
     "(",
     ")",
     ";",
-    ":"
+    ":",
+    ", ogw",
+    ",ogw",
 ]
 
 
