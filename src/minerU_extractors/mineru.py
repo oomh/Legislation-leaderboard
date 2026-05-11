@@ -7,6 +7,7 @@ and extracts structured data from the PDFs.
 
 import requests
 import time
+from pathlib import Path
 from zipfile import ZipFile
 from io import BytesIO
 from loguru import logger as log
@@ -38,7 +39,7 @@ def parse_by_url(pdf_url: str, api_key: str):
         "enable_table": True,
     }
 
-    res = requests.post(MINERU_API_URL, headers=headers, json=data)
+    res = requests.post(MINERU_API_URL, headers=headers, json=data, timeout=30)
     res.raise_for_status()
 
     task_id = res.json()["data"]["task_id"]
@@ -69,7 +70,7 @@ def get_task_status(
     start_time = time.time()
 
     while time.time() - start_time < max_wait:
-        res = requests.get(url, headers=headers)
+        res = requests.get(url, headers=headers, timeout=30)
         res.raise_for_status()
 
         status = res.json()["data"]["state"]
@@ -114,7 +115,7 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str):
     headers = {"Authorization": f"Bearer {api_key}"}
     url = f"{MINERU_API_URL}/{task_id}"
 
-    res = requests.get(url, headers=headers)
+    res = requests.get(url, headers=headers, timeout=30)
     res.raise_for_status()
 
     data = res.json()["data"]
@@ -124,7 +125,7 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str):
 
     # Download ZIP in memory
     log.info("Downloading MinerU parsed ZIP...")
-    zip_response = requests.get(full_zip_url, headers=headers, stream=True)
+    zip_response = requests.get(full_zip_url, headers=headers, stream=True, timeout=120)
     zip_response.raise_for_status()
 
     zip_buffer = BytesIO()
@@ -142,6 +143,11 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str):
             import os
 
             os.makedirs(extract_to, exist_ok=True)
+            resolved_base = Path(extract_to).resolve()
+            for member in zip_file.infolist():
+                member_path = (resolved_base / member.filename).resolve()
+                if not member_path.is_relative_to(resolved_base):
+                    raise ValueError(f"Path traversal detected in ZIP: {member.filename}")
             zip_file.extractall(extract_to)
             log.info(f"MinerU files extracted to: {extract_to}")
 
