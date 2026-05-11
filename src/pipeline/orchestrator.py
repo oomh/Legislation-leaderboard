@@ -10,6 +10,7 @@ from src.pipeline.step2_mineru_extraction import run_mineru_extraction_step
 from src.pipeline.step3_table_building import run_table_building_step
 from src.pipeline.step4_transformations import run_transformations_step
 from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
+from src.pipeline.step5_5_manual_corrections import run_manual_corrections_step
 from src.pipeline.step6_merging import run_merging_step
 from loguru import logger as log
 
@@ -69,6 +70,15 @@ def run_full_pipeline(store: PipelineStore | None = None) -> PipelineStore:
         store.save()
     else:
         log.error(f"Step 5 failed: {step5.get('message')}")
+        return store
+
+    # Step 5.5: Manual Corrections
+    log.info("Orchestrator: running Step 5.5 — Manual Corrections")
+    step5_5 = run_manual_corrections_step(store=store)
+    if step5_5.get("status") in ("success", "skipped", "partial"):
+        store.save()
+    else:
+        log.error(f"Step 5.5 failed: {step5_5.get('message')}")
         return store
 
     # Step 6: Merging

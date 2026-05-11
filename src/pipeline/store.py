@@ -32,6 +32,7 @@ _STEP_KEYS = [
     "step3_results",
     "step4_results",
     "step5_results",
+    "step5_5_results",
     "step6_results",
     "sponsor_name_corrections",
 ]
@@ -46,6 +47,7 @@ class PipelineStore:
         self.step3_results: dict = {}
         self.step4_results: dict = {}
         self.step5_results: dict = {}
+        self.step5_5_results: dict = {}
         self.step6_results: dict = {}
         self.sponsor_name_corrections: dict = {}
 
