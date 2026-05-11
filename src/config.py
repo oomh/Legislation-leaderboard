@@ -5,23 +5,35 @@ Loads settings from Streamlit secrets or environment variables.
 """
 
 import json
+import os
 import streamlit as st
 from loguru import logger as log
 
 
+def _secret(key: str, default=None):
+    """Read a value from Streamlit secrets, falling back to os.environ."""
+    try:
+        value = st.secrets.get(key, None)
+    except Exception:
+        value = None
+    if value is None:
+        value = os.environ.get(key, default)
+    return value
+
+
 def get_config():
     """
-    Load configuration from Streamlit secrets.
+    Load configuration from Streamlit secrets or environment variables.
 
     Returns:
         dict: Configuration dictionary with BASE_URL, SCRAPE_HEADERS, EXCLUDED_TITLES
     """
     config = {
-        "base_url": st.secrets.get("BASE_URL", "https://www.parliament.go.ke"),
-        "scrape_headers": _parse_headers(st.secrets.get("SCRAPE_HEADERS", "")),
-        "excluded_titles": st.secrets.get("EXCLUDED_TITLES", []),
-        "neon_database_url": st.secrets.get("NEON_DATABASE_URL"),
-        "mineru_api_key": st.secrets.get("MINERU_API_KEY"),
+        "base_url": _secret("BASE_URL", "https://www.parliament.go.ke"),
+        "scrape_headers": _parse_headers(_secret("SCRAPE_HEADERS", "")),
+        "excluded_titles": _secret("EXCLUDED_TITLES", []),
+        "neon_database_url": _secret("NEON_DATABASE_URL"),
+        "mineru_api_key": _secret("MINERU_API_KEY"),
     }
     return config
 
