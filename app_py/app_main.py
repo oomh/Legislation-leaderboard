@@ -519,9 +519,9 @@ def _show_step5_5(store: PipelineStore) -> None:
         st.info("No normalised bill data yet — run Step 5 first.")
         return
 
-    # Persist the replacement queue across reruns
+    # Persist the replacement queue across reruns; seed from store on first load
     if "sponsor_replacements" not in st.session_state:
-        st.session_state["sponsor_replacements"] = {}
+        st.session_state["sponsor_replacements"] = dict(getattr(store, "sponsor_name_corrections", {}) or {})
 
     replacements: dict = st.session_state["sponsor_replacements"]
 
@@ -573,13 +573,16 @@ def _show_step5_5(store: PipelineStore) -> None:
 
                 store.normalised_assembly_bills = _apply_to_result(assembly_result)
                 store.normalised_senate_bills = _apply_to_result(senate_result)
+                store.sponsor_name_corrections = dict(replacements)
                 store.save()
                 st.session_state.store = store
-                st.session_state["sponsor_replacements"] = {}
                 st.success(f"Applied {len(replacements)} replacement(s) and saved.")
                 st.rerun()
         with col_clear:
             if st.button("Clear all", key="sponsor_clear"):
+                store.sponsor_name_corrections = {}
+                store.save()
+                st.session_state.store = store
                 st.session_state["sponsor_replacements"] = {}
                 st.rerun()
     else:

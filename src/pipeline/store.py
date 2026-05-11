@@ -28,6 +28,7 @@ _JSON_KEYS = {
     "raw_committee_membership",
     "normalised_assembly_bills",
     "normalised_senate_bills",
+    "sponsor_name_corrections",
 }
 
 # Keys that may contain nested DataFrames inside a result dict
@@ -56,6 +57,7 @@ class PipelineStore:
         self.transformed_data: dict | None = None
         self.normalised_assembly_bills: dict | None = None
         self.normalised_senate_bills: dict | None = None
+        self.sponsor_name_corrections: dict = {}
 
     # ── Persistence ────────────────────────────────────────────────────────────
 
