@@ -3,14 +3,18 @@
 import pandas as pd
 import pytest
 
-from src.transformations.assembly_bills_sponsor_splitter import (
+from src.transformations.bills import (
     _has_multiple_names,
-    _is_office_sponsor,
+    _ASSEMBLY_OFFICE_PATTERN,
     extract_multi_sponsored_bills,
     extract_office_sponsored_bills,
     extract_residue_bills,
     partition_assembly_bills,
 )
+
+
+def _is_office_sponsor(sponsor: str) -> bool:
+    return bool(_ASSEMBLY_OFFICE_PATTERN.search(str(sponsor)))
 
 
 def _df(sponsors):
