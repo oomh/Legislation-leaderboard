@@ -8,8 +8,15 @@ import pandas as pd
 import streamlit as st
 from loguru import logger as log
 
-from src.pipeline import PipelineStore, run_full_pipeline
-from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
+from src.pipeline import (
+    PipelineStore,
+    run_full_pipeline,
+    run_scraping_step,
+    run_mineru_extraction_step,
+    run_table_building_step,
+    run_transformations_step,
+    run_sponsor_normalisation_step,
+)
 from src.transformations import (
     transform_senate_bills,
     transform_assembly_bills,
@@ -87,10 +94,10 @@ def run_app():
 
     st.divider()
 
-    # ── Step 4: Merged results ─────────────────────────────────────────────────
-    st.header("Step 4: Merged Results")
+    # ── Step 4: Transformations ───────────────────────────────────────────────
+    st.header("Step 4: Transformations")
 
-    _show_merged(store)
+    _show_step4(store)
 
     st.divider()
 
@@ -98,6 +105,13 @@ def run_app():
     st.header("Step 5: Sponsor Normalisation")
 
     _show_step5(store)
+
+    st.divider()
+
+    # ── Step 5.5: Manual Sponsor Name Corrections ─────────────────────────────
+    st.header("Step 5.5: Manual Sponsor Name Corrections (optional)")
+
+    _show_step5_5(store)
 
 
 # ── Display helpers ────────────────────────────────────────────────────────────
@@ -128,7 +142,31 @@ def _show_df(df: pd.DataFrame) -> None:
         st.info("No data available")
 
 
+def _has_data(d: dict) -> bool:
+    """Return True if any value in the dict is a non-empty DataFrame or truthy value."""
+    return any(
+        (not v.empty) if isinstance(v, pd.DataFrame) else bool(v)
+        for v in d.values()
+    )
+
+
 def _show_scraping(store: PipelineStore) -> None:
+    col_run, col_status = st.columns([1, 4])
+    with col_run:
+        if st.button("Run Step 1", key="run_step1"):
+            with st.spinner("Scraping data…"):
+                result = run_scraping_step(store=store)
+                st.session_state.store = store
+            if result.get("status") in ("success", "partial"):
+                store.save()
+                st.success(result.get("message", "Step 1 complete"))
+                st.rerun()
+            else:
+                st.error(result.get("message", "Step 1 failed"))
+    with col_status:
+        has_data = bool(store.bill_tracker_urls or store.house_leadership or store.member_lists)
+        st.caption("Data loaded" if has_data else "Not run yet — click Run Step 1 or run the full pipeline.")
+
     tabs = st.tabs(
         [
             "Bill Tracker URLs (Senate)",
@@ -190,9 +228,28 @@ def _show_scraping(store: PipelineStore) -> None:
 
 
 def _show_mineru(store: PipelineStore) -> None:
+    col_run, col_status = st.columns([1, 4])
+    with col_run:
+        if st.button("Run Step 2", key="run_step2"):
+            with st.spinner("Running MinerU extraction…"):
+                result = run_mineru_extraction_step(store=store)
+                st.session_state.store = store
+            if result.get("status") in ("success", "partial"):
+                store.save()
+                st.success(result.get("message", "Step 2 complete"))
+                st.rerun()
+            else:
+                st.error(result.get("message", "Step 2 failed"))
+    with col_status:
+        results = store.mineru_extraction_results or {}
+        if results:
+            statuses = ", ".join(f"{k}: **{v.get('status', '?')}**" for k, v in results.items() if isinstance(v, dict))
+            st.caption(statuses)
+        else:
+            st.caption("Not run yet — click Run Step 2 or run the full pipeline.")
+
     results = store.mineru_extraction_results or {}
     if not results:
-        st.info("No MinerU extraction results — run the pipeline first.")
         return
 
     tabs = st.tabs(list(results.keys()))
@@ -209,9 +266,28 @@ def _show_mineru(store: PipelineStore) -> None:
 
 
 def _show_table_building(store: PipelineStore) -> None:
+    col_run, col_status = st.columns([1, 4])
+    with col_run:
+        if st.button("Run Step 3", key="run_step3"):
+            with st.spinner("Building tables…"):
+                result = run_table_building_step(store=store)
+                st.session_state.store = store
+            if result.get("status") in ("success", "partial"):
+                store.save()
+                st.success(result.get("message", "Step 3 complete"))
+                st.rerun()
+            else:
+                st.error(result.get("message", "Step 3 failed"))
+    with col_status:
+        tb = store.table_builder_results or {}
+        if tb:
+            statuses = ", ".join(f"{k}: **{v.get('status', '?')}**" for k, v in tb.items() if isinstance(v, dict))
+            st.caption(statuses)
+        else:
+            st.caption("Not run yet — click Run Step 3 or run the full pipeline.")
+
     tb = store.table_builder_results or {}
     if not tb:
-        st.info("No table building results — run the pipeline first.")
         return
 
     tab_senate, tab_assembly, tab_committee = st.tabs(
@@ -237,8 +313,8 @@ def _show_raw_tables(store: PipelineStore) -> None:
     hl = store.house_leadership or {}
     ml = store.member_lists or {}
 
-    if not tb and not any(hl.values()) and not any(ml.values()):
-        st.info("No raw tables yet — run the pipeline first.")
+    if not tb and not _has_data(hl) and not _has_data(ml):
+        st.warning("No raw tables loaded yet — run the pipeline first.")
         return
 
     tabs = st.tabs(
@@ -360,12 +436,40 @@ def _show_transformed_tables(store: PipelineStore) -> None:
         _show_df(df)
 
 
+def _show_step4(store: PipelineStore) -> None:
+    col_run, col_status = st.columns([1, 4])
+    with col_run:
+        if st.button("Run Step 4", key="run_step4"):
+            with st.spinner("Running transformations…"):
+                result = run_transformations_step(store=store)
+                st.session_state.store = store
+            if result.get("status") in ("success", "partial"):
+                store.save()
+                st.success(result.get("message", "Step 4 complete"))
+                st.rerun()
+            else:
+                st.error(result.get("message", "Step 4 failed"))
+    with col_status:
+        td = store.transformed_data or {}
+        if td:
+            bt = td.get("bill_trackers", {})
+            parts = []
+            for k, v in bt.items():
+                if isinstance(v, dict):
+                    parts.append(f"{k}: **{v.get('status', '?')}** ({v.get('row_count', 0)} rows)")
+            st.caption(" | ".join(parts) if parts else "Data available")
+        else:
+            st.caption("Not run yet — click Run Step 4 or run the full pipeline.")
+
+    _show_merged(store)
+
+
 def _show_merged(store: PipelineStore) -> None:
     tb = store.table_builder_results or {}
     hl = store.house_leadership or {}
     ml = store.member_lists or {}
 
-    has_data = tb or any(hl.values()) or any(ml.values())
+    has_data = bool(tb) or _has_data(hl) or _has_data(ml)
     if not has_data:
         st.info("No data to merge — run the pipeline first.")
         return
@@ -404,6 +508,82 @@ def _show_merged(store: PipelineStore) -> None:
 def _show_transformations(store: PipelineStore) -> None:
     """Legacy — kept for compatibility. New layout uses _show_raw_tables / _show_transformed_tables / _show_merged."""
     _show_merged(store)
+
+
+def _show_step5_5(store: PipelineStore) -> None:
+    """Optional step: manually correct sponsor names in normalised bill data."""
+    assembly_result = getattr(store, "normalised_assembly_bills", None)
+    senate_result = getattr(store, "normalised_senate_bills", None)
+
+    if not assembly_result and not senate_result:
+        st.info("No normalised bill data yet — run Step 5 first.")
+        return
+
+    # Persist the replacement queue across reruns
+    if "sponsor_replacements" not in st.session_state:
+        st.session_state["sponsor_replacements"] = {}
+
+    replacements: dict = st.session_state["sponsor_replacements"]
+
+    st.caption(
+        "Add one or more sponsor name corrections below, then click **Apply**. Leave both fields empty to skip this step. Since this is mostly used to clean up naming structure, Copy Paste the current name and the updated name directly from the bill tables to ensure an exact match."
+    )
+
+    col_from, col_to, col_add = st.columns([3, 3, 1])
+    with col_from:
+        current_name = st.text_input("Current sponsor name", key="sponsor_current", label_visibility="collapsed", placeholder="Current sponsor name")
+    with col_to:
+        new_name = st.text_input("Replacement name", key="sponsor_new", label_visibility="collapsed", placeholder="Replacement name")
+    with col_add:
+        if st.button("Add", key="sponsor_add"):
+            if current_name.strip() and new_name.strip():
+                replacements[current_name.strip()] = new_name.strip()
+                st.session_state["sponsor_replacements"] = replacements
+                st.rerun()
+            else:
+                st.warning("Both fields must be filled to add a replacement.")
+
+    if replacements:
+        st.write("**Pending replacements:**")
+        st.dataframe(
+            pd.DataFrame(
+                [{"Current": k, "Replace with": v} for k, v in replacements.items()]
+            ),
+            width="stretch",
+            hide_index=True,
+        )
+
+        col_apply, col_clear = st.columns([1, 1])
+        with col_apply:
+            if st.button("Apply Replacements", key="sponsor_apply", type="primary"):
+                sponsor_cols = ["sponsor", "sponsor_normalised", "bill_sponsor"]
+
+                def _apply_to_result(result):
+                    if not result:
+                        return result
+                    df = _df(result)
+                    if df.empty:
+                        return result
+                    cols_present = [c for c in sponsor_cols if c in df.columns]
+                    for col in cols_present:
+                        df[col] = df[col].replace(replacements)
+                    updated = dict(result)
+                    updated["data"] = df
+                    return updated
+
+                store.normalised_assembly_bills = _apply_to_result(assembly_result)
+                store.normalised_senate_bills = _apply_to_result(senate_result)
+                store.save()
+                st.session_state.store = store
+                st.session_state["sponsor_replacements"] = {}
+                st.success(f"Applied {len(replacements)} replacement(s) and saved.")
+                st.rerun()
+        with col_clear:
+            if st.button("Clear all", key="sponsor_clear"):
+                st.session_state["sponsor_replacements"] = {}
+                st.rerun()
+    else:
+        st.caption("_No pending replacements — step will be skipped._")
 
 
 def _show_step5(store: PipelineStore) -> None:
