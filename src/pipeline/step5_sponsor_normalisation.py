@@ -15,9 +15,15 @@ from loguru import logger as log
 from src.pipeline.store import PipelineStore
 from src.transformations.assembly_bills_sponsor_splitter import (
     partition_assembly_bills,
-    split_office_sponsors,
-    split_multi_sponsors,
+    split_office_sponsors as split_assembly_office_sponsors,
+    split_multi_sponsors as split_assembly_multi_sponsors,
     rebuild_assembly_bills,
+)
+from src.transformations.senate_bills_sponsor_splitter import (
+    partition_senate_bills,
+    split_office_sponsors as split_senate_office_sponsors,
+    split_multi_sponsors as split_senate_multi_sponsors,
+    rebuild_senate_bills,
 )
 
 
@@ -73,13 +79,22 @@ def run_sponsor_normalisation_step(store: PipelineStore | None = None) -> dict:
         try:
             log.info(f"{chamber.title()} bills from Step 4: {len(bills)} rows")
 
-            office, multi, residue = partition_assembly_bills(bills)
-            office_split = split_office_sponsors(office)
-            multi_split = split_multi_sponsors(multi)
-            normalized = rebuild_assembly_bills(
-                office_split, multi_split, residue,
-                include_office=True, include_multi=True, include_residue=True,
-            )
+            if chamber == "assembly":
+                office, multi, residue = partition_assembly_bills(bills)
+                office_split = split_assembly_office_sponsors(office)
+                multi_split = split_assembly_multi_sponsors(multi)
+                normalized = rebuild_assembly_bills(
+                    office_split, multi_split, residue,
+                    include_office=True, include_multi=True, include_residue=True,
+                )
+            else:
+                office, multi, residue = partition_senate_bills(bills)
+                office_split = split_senate_office_sponsors(office)
+                multi_split = split_senate_multi_sponsors(multi)
+                normalized = rebuild_senate_bills(
+                    office_split, multi_split, residue,
+                    include_office=True, include_multi=True, include_residue=True,
+                )
 
             for col in ("s/no.", "no."):
                 if col in normalized.columns:

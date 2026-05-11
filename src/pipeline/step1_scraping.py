@@ -227,7 +227,11 @@ def run_scraping_step(
 
     log.info(f"Step 1 Complete: {'Success' if all_success else 'Partial failures'}")
 
+    run_count = sum(1 for r in results.values() if r is not None)
+    success_count = sum(1 for r in results.values() if r is not None and r.get("status") == "success")
+
     return {
         "status": "success" if all_success else "partial",
+        "message": f"Scraping complete: {success_count}/{run_count} scrapers succeeded",
         "results": results,
     }

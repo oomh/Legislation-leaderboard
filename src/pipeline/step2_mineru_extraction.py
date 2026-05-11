@@ -94,6 +94,7 @@ def run_mineru_extraction_step(store: PipelineStore | None = None) -> dict:
 
         return {
             "status": "success",
+            "message": f"MinerU extraction complete: {success_count}/{total_count} successful",
             "successful": success_count,
             "total": total_count,
             "results": results,

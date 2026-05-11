@@ -97,6 +97,7 @@ def run_table_building_step(store: PipelineStore | None = None) -> dict:
 
         return {
             "status": "success",
+            "message": f"Table building complete: {success_count}/{total_count} successful",
             "successful": success_count,
             "total": total_count,
             "results": table_results,

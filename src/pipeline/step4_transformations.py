@@ -49,6 +49,7 @@ def prepare_transformation_data(store: PipelineStore | None = None) -> dict:
 
         return {
             "status": "success",
+            "message": "Transformations complete",
             "data": transformed_data,
         }
     except Exception as e:
