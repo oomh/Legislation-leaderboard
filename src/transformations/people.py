@@ -44,9 +44,11 @@ def _strip_role_from_member_name(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     before = df["member_name"].copy()
     df["member_name"] = df["member_name"].apply(
-        lambda v: _ROLE_SUFFIX_RE.sub("", v).strip().strip(",").strip()
-        if isinstance(v, str)
-        else v
+        lambda v: (
+            _ROLE_SUFFIX_RE.sub("", v).strip().strip(",").strip()
+            if isinstance(v, str)
+            else v
+        )
     )
     changed = (df["member_name"] != before).sum()
     if changed:
@@ -85,7 +87,12 @@ def transform_senate_leadership(raw_df: pd.DataFrame) -> dict:
         }
     except Exception as e:
         log.error(f"Senate leadership transformation failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
 
 
 def transform_assembly_leadership(raw_df: pd.DataFrame) -> dict:
@@ -116,7 +123,12 @@ def transform_assembly_leadership(raw_df: pd.DataFrame) -> dict:
         }
     except Exception as e:
         log.error(f"Assembly leadership transformation failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
 
 
 def transform_senate_members(raw_df: pd.DataFrame) -> dict:
@@ -147,7 +159,12 @@ def transform_senate_members(raw_df: pd.DataFrame) -> dict:
         }
     except Exception as e:
         log.error(f"Senate members transformation failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
 
 
 def transform_assembly_members(raw_df: pd.DataFrame) -> dict:
@@ -179,7 +196,12 @@ def transform_assembly_members(raw_df: pd.DataFrame) -> dict:
         }
     except Exception as e:
         log.error(f"Assembly members transformation failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
 
 
 def transform_committees(raw_df: pd.DataFrame) -> dict:
@@ -200,7 +222,9 @@ def transform_committees(raw_df: pd.DataFrame) -> dict:
         log.info(f"Transforming committees: {len(raw_df)} rows")
         df = apply_name_parsing(raw_df.copy(), ["member_name"])
         df = _strip_role_from_member_name(df)
-        df["member_name"] = df["member_name"].apply(more_name_parsing_comma_split_rearrange)
+        df["member_name"] = df["member_name"].apply(
+            more_name_parsing_comma_split_rearrange
+        )
         df = strip_cell_punctuation(df)
         row_count = len(df)
         log.info(f"Committee transformation complete: {row_count} rows")
@@ -212,7 +236,12 @@ def transform_committees(raw_df: pd.DataFrame) -> dict:
         }
     except Exception as e:
         log.error(f"Committee transformation failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
 
 
 # ── Mergers ────────────────────────────────────────────────────────────────────
@@ -261,7 +290,12 @@ def merge_leadership(senate_df: pd.DataFrame, assembly_df: pd.DataFrame) -> dict
         }
     except Exception as e:
         log.error(f"Leadership merge failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
 
 
 def merge_members(senate_df: pd.DataFrame, assembly_df: pd.DataFrame) -> dict:
@@ -308,4 +342,9 @@ def merge_members(senate_df: pd.DataFrame, assembly_df: pd.DataFrame) -> dict:
         }
     except Exception as e:
         log.error(f"Members merge failed: {e}")
-        return {"status": "error", "data": pd.DataFrame(), "row_count": 0, "message": str(e)}
+        return {
+            "status": "error",
+            "data": pd.DataFrame(),
+            "row_count": 0,
+            "message": str(e),
+        }
