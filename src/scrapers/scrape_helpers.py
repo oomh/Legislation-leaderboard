@@ -34,6 +34,7 @@ def create_session() -> requests.Session:
     session.headers.update(headers)
     return session
 
+
 def clean_text(text: str) -> str:
     """Clean and normalize text by removing extra whitespace."""
     if not text:

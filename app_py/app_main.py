@@ -19,6 +19,7 @@ from src.pipeline.step5_5_manual_corrections import (
     save_manual_corrections,
 )
 from src.pipeline.step6_merging import run_merging_step
+from src.pipeline.step7_database import run_neon_push
 from src.pipeline.orchestrator import run_full_pipeline
 
 
@@ -135,7 +136,9 @@ def _show_step_5_5(store: PipelineStore) -> None:
     with col_status:
         if results:
             total = results.get("total_corrections", 0)
-            st.caption(f"{total} correction(s) applied — status: {results.get('status', '')}")
+            st.caption(
+                f"{total} correction(s) applied — status: {results.get('status', '')}"
+            )
         else:
             st.caption("Not run yet")
 
@@ -182,10 +185,14 @@ def _show_step_5_5(store: PipelineStore) -> None:
     if not dataset_options:
         dataset_options = ["assembly", "senate"]
 
-    selected_dataset = st.selectbox("Dataset", options=dataset_options, key="form_dataset")
+    selected_dataset = st.selectbox(
+        "Dataset", options=dataset_options, key="form_dataset"
+    )
 
     col_options: list[str] = []
-    step5_entry = store.step5_results.get(selected_dataset) if store.step5_results else None
+    step5_entry = (
+        store.step5_results.get(selected_dataset) if store.step5_results else None
+    )
     if isinstance(step5_entry, dict):
         df_preview = step5_entry.get("data")
         if isinstance(df_preview, pd.DataFrame) and not df_preview.empty:
@@ -201,9 +208,7 @@ def _show_step_5_5(store: PipelineStore) -> None:
     if col_options and selected_column in col_options:
         df_col = store.step5_results[selected_dataset]["data"][selected_column]
         val_options = sorted(
-            str(v)
-            for v in df_col.dropna().unique()
-            if str(v) not in ("", "nan")
+            str(v) for v in df_col.dropna().unique() if str(v) not in ("", "nan")
         )
 
     current_value = st.selectbox(
@@ -223,8 +228,12 @@ def _show_step_5_5(store: PipelineStore) -> None:
             elif not val_options or current_value == "(no values available)":
                 st.warning("No valid current value selected.")
             else:
-                corrections.setdefault(selected_dataset, {}).setdefault(selected_column, {})
-                corrections[selected_dataset][selected_column][current_value] = new_value.strip()
+                corrections.setdefault(selected_dataset, {}).setdefault(
+                    selected_column, {}
+                )
+                corrections[selected_dataset][selected_column][
+                    current_value
+                ] = new_value.strip()
                 save_manual_corrections(corrections)
                 st.success(
                     f"Correction added: [{selected_dataset}].{selected_column}: "
@@ -241,6 +250,46 @@ def _show_step_5_5(store: PipelineStore) -> None:
             else:
                 st.caption(results.get("message", "No corrections were applied."))
 
+def _show_step_7(store: PipelineStore) -> None:
+    """Render the Step 7 Neon database push section."""
+    st.subheader("Step 7: Neon Database Push")
+
+    results: dict = getattr(store, "step7_results", None) or {}
+
+    col_btn, col_status = st.columns([1, 5])
+    with col_btn:
+        if st.button("Run Step 7", key="run_step7"):
+            with st.spinner("Running Step 7: Neon Database Push..."):
+                result = run_neon_push(store)
+            store.step7_results = result
+            store.save()
+            st.session_state.store = store
+            status = result.get("status", "unknown")
+            msg = result.get("message", "")
+            if status in ("success", "partial"):
+                st.success(msg or "Step 7 complete")
+            else:
+                st.error(msg or "Step 7 failed")
+            st.rerun()
+    with col_status:
+        if results:
+            st.caption(results.get("message", ""))
+        else:
+            st.caption("Not run yet")
+
+    if results:
+        tables: dict = results.get("tables", {})
+        if tables:
+            summary_rows = [
+                {
+                    "table": table,
+                    "status": r.get("status", ""),
+                    "rows pushed": r.get("row_count", 0),
+                    "message": r.get("message", ""),
+                }
+                for table, r in tables.items()
+            ]
+            st.dataframe(pd.DataFrame(summary_rows), width="stretch")
 
 # ── App entry point ────────────────────────────────────────────────────────────
 
@@ -253,22 +302,32 @@ def run_app() -> None:
         st.session_state.store = PipelineStore.from_disk()
 
     store: PipelineStore = st.session_state.store
-    
+
     def _run_full_pipeline():
         run_full_pipeline(store)
-    
+
     st.button("Run Full Pipeline", on_click=_run_full_pipeline, type="primary")
 
     _show_step(1, "Scraping", run_scraping_step, "step1_results", store)
     st.divider()
-    _show_step(2, "MinerU Extraction", run_mineru_extraction_step, "step2_results", store)
+    _show_step(
+        2, "MinerU Extraction", run_mineru_extraction_step, "step2_results", store
+    )
     st.divider()
     _show_step(3, "Table Building", run_table_building_step, "step3_results", store)
     st.divider()
     _show_step(4, "Transformations", run_transformations_step, "step4_results", store)
     st.divider()
-    _show_step(5, "Sponsor Normalisation", run_sponsor_normalisation_step, "step5_results", store)
+    _show_step(
+        5,
+        "Sponsor Normalisation",
+        run_sponsor_normalisation_step,
+        "step5_results",
+        store,
+    )
     st.divider()
     _show_step_5_5(store)
     st.divider()
     _show_step(6, "Merging", run_merging_step, "step6_results", store)
+    st.divider()
+    _show_step_7(store)
