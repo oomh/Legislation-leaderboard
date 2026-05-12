@@ -103,7 +103,9 @@ def run_manual_corrections_step(store: PipelineStore | None = None) -> dict:
             errors.append(f"Dataset '{dataset}' not found in step5_results — skipped")
             continue
 
-        df: pd.DataFrame = step5_entry.get("data") if isinstance(step5_entry, dict) else None
+        df: pd.DataFrame = (
+            step5_entry.get("data") if isinstance(step5_entry, dict) else None
+        )
         if not isinstance(df, pd.DataFrame):
             errors.append(f"Dataset '{dataset}' has no 'data' DataFrame — skipped")
             continue

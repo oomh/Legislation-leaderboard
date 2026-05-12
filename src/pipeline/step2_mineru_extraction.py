@@ -63,9 +63,7 @@ def run_mineru_extraction_step(store: PipelineStore | None = None) -> dict:
             else None
         )
         committee_url = (
-            committee_leadership[0].get("url")
-            if committee_leadership
-            else None
+            committee_leadership[0].get("url") if committee_leadership else None
         )
 
         if not (senate_bill_url and assembly_bill_url and committee_url):

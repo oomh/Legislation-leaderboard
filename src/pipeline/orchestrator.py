@@ -12,6 +12,7 @@ from src.pipeline.step4_transformations import run_transformations_step
 from src.pipeline.step5_sponsor_normalisation import run_sponsor_normalisation_step
 from src.pipeline.step5_5_manual_corrections import run_manual_corrections_step
 from src.pipeline.step6_merging import run_merging_step
+from src.pipeline.step7_database import run_neon_push
 from loguru import logger as log
 
 
@@ -88,6 +89,16 @@ def run_full_pipeline(store: PipelineStore | None = None) -> PipelineStore:
         store.save()
     else:
         log.error(f"Step 6 failed: {step6.get('message')}")
+        return store
+
+    # Step 7: Neon Database Push
+    log.info("Orchestrator: running Step 7 — Neon Database Push")
+    step7 = run_neon_push(store)
+    store.step7_results = step7
+    if step7.get("status") in ("success", "partial"):
+        store.save()
+    else:
+        log.error(f"Step 7 failed: {step7.get('message')}")
 
     log.info("Orchestrator: pipeline complete")
     return store

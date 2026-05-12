@@ -104,14 +104,34 @@ def prepare_bill_trackers(store: PipelineStore) -> dict:
         senate_raw = step3.get("senate_bills", {})
         assembly_raw = step3.get("assembly_bills", {})
 
-        senate_raw_df = senate_raw.get("data") if isinstance(senate_raw, dict) else senate_raw
-        assembly_raw_df = assembly_raw.get("data") if isinstance(assembly_raw, dict) else assembly_raw
+        senate_raw_df = (
+            senate_raw.get("data") if isinstance(senate_raw, dict) else senate_raw
+        )
+        assembly_raw_df = (
+            assembly_raw.get("data") if isinstance(assembly_raw, dict) else assembly_raw
+        )
 
-        senate_result = transform_senate_bills(senate_raw_df) if isinstance(senate_raw_df, pd.DataFrame) else {}
-        assembly_result = transform_assembly_bills(assembly_raw_df) if isinstance(assembly_raw_df, pd.DataFrame) else {}
+        senate_result = (
+            transform_senate_bills(senate_raw_df)
+            if isinstance(senate_raw_df, pd.DataFrame)
+            else {}
+        )
+        assembly_result = (
+            transform_assembly_bills(assembly_raw_df)
+            if isinstance(assembly_raw_df, pd.DataFrame)
+            else {}
+        )
 
-        senate_df = senate_result.get("data", pd.DataFrame()) if isinstance(senate_result, dict) else pd.DataFrame()
-        assembly_df = assembly_result.get("data", pd.DataFrame()) if isinstance(assembly_result, dict) else pd.DataFrame()
+        senate_df = (
+            senate_result.get("data", pd.DataFrame())
+            if isinstance(senate_result, dict)
+            else pd.DataFrame()
+        )
+        assembly_df = (
+            assembly_result.get("data", pd.DataFrame())
+            if isinstance(assembly_result, dict)
+            else pd.DataFrame()
+        )
 
         return {
             "senate": {"data": senate_df, "row_count": len(senate_df)},
@@ -191,7 +211,11 @@ def prepare_committee_data(store: PipelineStore) -> dict:
         if isinstance(committee_result, dict):
             raw_df = committee_result.get("data", pd.DataFrame())
         else:
-            raw_df = committee_result if isinstance(committee_result, pd.DataFrame) else pd.DataFrame()
+            raw_df = (
+                committee_result
+                if isinstance(committee_result, pd.DataFrame)
+                else pd.DataFrame()
+            )
 
         result = transform_committees(raw_df)
         df = _result_to_df(result)

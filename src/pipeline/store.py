@@ -11,7 +11,8 @@ All dicts are persisted as individual JSON files in pipeline_data/.
     step3_results          — senate_bills, assembly_bills, committee_membership
     step4_results          — bill_trackers, leadership, members, committees (individual transforms)
     step5_results          — assembly, senate (normalised bills per sponsor)
-    step6_results          — merged_leadership, merged_members
+    step6_results          — merged_leadership, merged_members, assembly_bills_final, senate_bills_final
+    step7_results          — per-table push results (status, row_count, message)
     sponsor_name_corrections — user-supplied manual name overrides; persisted independently
                             of step results so corrections survive pipeline re-runs
 """
@@ -34,6 +35,7 @@ _STEP_KEYS = [
     "step5_results",
     "step5_5_results",
     "step6_results",
+    "step7_results",
     "sponsor_name_corrections",
 ]
 
@@ -49,6 +51,7 @@ class PipelineStore:
         self.step5_results: dict = {}
         self.step5_5_results: dict = {}
         self.step6_results: dict = {}
+        self.step7_results: dict = {}
         self.sponsor_name_corrections: dict = {}
 
     # ── Persistence ────────────────────────────────────────────────────────────

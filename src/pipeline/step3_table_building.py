@@ -102,9 +102,7 @@ def run_table_building_step(store: PipelineStore | None = None) -> dict:
 
         # Count successful builders
         success_count = sum(
-            1
-            for r in store.step3_results.values()
-            if r.get("status") == "success"
+            1 for r in store.step3_results.values() if r.get("status") == "success"
         )
         total_count = len(store.step3_results)
 

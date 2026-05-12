@@ -22,7 +22,9 @@ from src.scrapers.scrape_members import (
 from src.scrapers.scrape_committee_members_pdf import scrape_committee_leadership
 
 
-def run_bill_trackers_scraping(page_only: bool = True, store: PipelineStore | None = None) -> dict:
+def run_bill_trackers_scraping(
+    page_only: bool = True, store: PipelineStore | None = None
+) -> dict:
     """Run bill tracker scrapers.
 
     Args:
@@ -78,7 +80,9 @@ def run_house_leadership_scraping(store: PipelineStore | None = None) -> dict:
         step1 = store.step1_results or {}
         step1["house_leadership"] = {
             "senate": (
-                pd.DataFrame(senate_leadership).to_dict(orient="records") if senate_leadership else []
+                pd.DataFrame(senate_leadership).to_dict(orient="records")
+                if senate_leadership
+                else []
             ),
             "assembly": (
                 pd.DataFrame(assembly_leadership).to_dict(orient="records")
@@ -105,7 +109,9 @@ def run_house_leadership_scraping(store: PipelineStore | None = None) -> dict:
         }
 
 
-def run_member_lists_scraping(page_only: bool = False, store: PipelineStore | None = None) -> dict:
+def run_member_lists_scraping(
+    page_only: bool = False, store: PipelineStore | None = None
+) -> dict:
     """Run member list scrapers.
 
     Args:
@@ -126,10 +132,14 @@ def run_member_lists_scraping(page_only: bool = False, store: PipelineStore | No
         step1 = store.step1_results or {}
         step1["member_lists"] = {
             "senate": (
-                pd.DataFrame(senate_members).to_dict(orient="records") if senate_members else []
+                pd.DataFrame(senate_members).to_dict(orient="records")
+                if senate_members
+                else []
             ),
             "assembly": (
-                pd.DataFrame(assembly_members).to_dict(orient="records") if assembly_members else []
+                pd.DataFrame(assembly_members).to_dict(orient="records")
+                if assembly_members
+                else []
             ),
         }
         store.step1_results = step1
@@ -233,7 +243,9 @@ def run_scraping_step(
     log.info(f"Step 1 Complete: {'Success' if all_success else 'Partial failures'}")
 
     run_count = sum(1 for r in results.values() if r is not None)
-    success_count = sum(1 for r in results.values() if r is not None and r.get("status") == "success")
+    success_count = sum(
+        1 for r in results.values() if r is not None and r.get("status") == "success"
+    )
 
     return {
         "status": "success" if all_success else "partial",
