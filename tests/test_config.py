@@ -11,6 +11,7 @@ def _get_config_with_failing_secrets():
     if "src.config" in sys.modules:
         del sys.modules["src.config"]
     import src.config as cfg_module
+
     # Patch the st object inside the config module so secrets.get raises
     mock_st = mock.MagicMock()
     mock_st.secrets.get.side_effect = Exception("no secrets")

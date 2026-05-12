@@ -54,13 +54,15 @@ class TestHasMultipleNames:
 
 class TestPartition:
     def setup_method(self):
-        self.df = _df([
-            "Majority Leader",          # office
-            "Alice Wanjiku and Bob",    # multi
-            "Jane Muthoni",             # residue
-            "Minority Whip",            # office
-            "Carol, Dave",              # multi
-        ])
+        self.df = _df(
+            [
+                "Majority Leader",  # office
+                "Alice Wanjiku and Bob",  # multi
+                "Jane Muthoni",  # residue
+                "Minority Whip",  # office
+                "Carol, Dave",  # multi
+            ]
+        )
 
     def test_office_count(self):
         office, multi, residue = partition_assembly_bills(self.df)
