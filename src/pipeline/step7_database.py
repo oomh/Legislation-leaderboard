@@ -35,7 +35,7 @@ _TABLE_CONFIG: list[tuple[str, str, list[str] | None]] = [
             "serial_number", "bill_name", "sponsor",
             "bill_house", "bill_number", "bill_year",
             "gazette_number", "dated", "maturity_date",
-            "first_reading", "assent_date", "gazette_period", "assent_period",
+            "first_reading", "assent_date", "gazette_period_days", "assent_period_days",
         ],
     ),
     (
@@ -45,7 +45,7 @@ _TABLE_CONFIG: list[tuple[str, str, list[str] | None]] = [
             "serial_number", "bill_name", "sponsor",
             "bill_house", "bill_number", "bill_year",
             "gazette_number", "dated", "maturity_date",
-            "first_reading", "assent_date", "gazette_period", "assent_period",
+            "first_reading", "assent_date", "gazette_period_days", "assent_period_days",
         ],
     ),
     ("merged_leadership", "leadership", ["chamber", "office", "person"]),
@@ -73,6 +73,33 @@ def _df_to_rows(df: pd.DataFrame, columns: list[str]) -> list[tuple]:
     return [tuple(row) for row in clean.itertuples(index=False, name=None)]
 
 
+def _as_dataframe(data) -> pd.DataFrame:
+    """Coerce supported payload shapes into a DataFrame."""
+    if isinstance(data, pd.DataFrame):
+        return data
+    if isinstance(data, dict) and data.get("__dataframe__"):
+        return pd.DataFrame(data.get("records", []))
+    if isinstance(data, list):
+        return pd.DataFrame(data)
+    if isinstance(data, dict):
+        return pd.DataFrame(data)
+    return pd.DataFrame()
+
+
+def _normalise_step6_results(step6: dict) -> dict:
+    """Ensure all table payloads expose ``data`` as a DataFrame."""
+    normalised: dict = {}
+    for store_key, _, _ in _TABLE_CONFIG:
+        raw_result = step6.get(store_key, {})
+        result_dict = raw_result if isinstance(raw_result, dict) else {}
+        data = result_dict.get("data", pd.DataFrame())
+        normalised[store_key] = {
+            **result_dict,
+            "data": _as_dataframe(data),
+        }
+    return normalised
+
+
 def _push_table(cursor, store_result: dict, table_name: str, columns: list[str]) -> dict:
     """
     Create, truncate, and populate a single table.
@@ -80,7 +107,7 @@ def _push_table(cursor, store_result: dict, table_name: str, columns: list[str])
     Returns:
         dict with keys: status, row_count, message.
     """
-    df: pd.DataFrame = store_result.get("data", pd.DataFrame())
+    df = _as_dataframe(store_result.get("data", pd.DataFrame()))
     if df is None or df.empty:
         log.warning(f"step7: skipping {table_name} — no data available")
         return {"status": "skipped", "row_count": 0, "message": "No data to push"}
@@ -121,8 +148,8 @@ def run_neon_push(store) -> dict:
     Returns:
         dict with keys: status, tables (per-table result dicts), message.
     """
-    step6 = store.step6_results
-    if not step6:
+    step6_raw = store.step6_results
+    if not step6_raw:
         log.warning("step7: step6_results is empty — nothing to push")
         return {
             "status": "error",
@@ -130,12 +157,23 @@ def run_neon_push(store) -> dict:
             "message": "Step 6 results are empty. Run Step 6 first.",
         }
 
+    step6 = _normalise_step6_results(step6_raw)
+
     table_results: dict[str, dict] = {}
     failed: list[str] = []
 
     try:
         with get_cursor() as cursor:
             for store_key, table_name, columns in _TABLE_CONFIG:
+                if columns is None:
+                    table_results[table_name] = {
+                        "status": "error",
+                        "row_count": 0,
+                        "message": "No columns configured",
+                    }
+                    failed.append(table_name)
+                    continue
+
                 store_result = step6.get(store_key, {})
                 result = _push_table(cursor, store_result, table_name, columns)
                 table_results[table_name] = result

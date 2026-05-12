@@ -38,8 +38,8 @@ _ASSEMBLY_FINAL_COLS = [
     "maturity_date",
     "first_reading",
     "assent_date",
-    "gazette_period",
-    "assent_period",
+    "gazette_period_days",
+    "assent_period_days",
 ]
 
 _SENATE_FINAL_COLS = [
@@ -54,8 +54,8 @@ _SENATE_FINAL_COLS = [
     "maturity_date",
     "first_reading",
     "assent_date",
-    "gazette_period",
-    "assent_period",
+    "gazette_period_days",
+    "assent_period_days",
 ]
 
 
@@ -85,7 +85,7 @@ def _parse_date_col(series: pd.Series) -> pd.Series:
 def _calc_period(date_a: pd.Series, date_b: pd.Series) -> pd.Series:
     """Return (date_b - date_a).days formatted as 'X days', or pd.NA when either is NaT."""
     delta = (date_b - date_a).dt.days
-    return delta.apply(lambda d: f"{int(d)} days" if pd.notna(d) else pd.NA)
+    return delta.apply(lambda d: f"{int(d)}" if pd.notna(d) else pd.NA)
 
 
 def _clean_text_col(series: pd.Series) -> pd.Series:
@@ -230,8 +230,8 @@ def _finalize_assembly_bills(df: pd.DataFrame) -> dict:
         out["first_reading"] = _parse_date_col(df.get("1st read", pd.Series(dtype=str)))
         out["assent_date"] = _parse_date_col(df.get("assent", pd.Series(dtype=str)))
 
-        out["gazette_period"] = _calc_period(out["dated"], out["maturity_date"])
-        out["assent_period"] = _calc_period(out["first_reading"], out["assent_date"])
+        out["gazette_period_days"] = _calc_period(out["dated"], out["maturity_date"])
+        out["assent_period_days"] = _calc_period(out["first_reading"], out["assent_date"])
 
         out = _nullify_empties(out)[_ASSEMBLY_FINAL_COLS]
         out = out.sort_values("serial_number", na_position="last").reset_index(drop=True)
@@ -293,8 +293,8 @@ def _finalize_senate_bills(df: pd.DataFrame) -> dict:
             df.get("date of assent", pd.Series(dtype=str))
         )
 
-        out["gazette_period"] = _calc_period(out["dated"], out["maturity_date"])
-        out["assent_period"] = _calc_period(out["first_reading"], out["assent_date"])
+        out["gazette_period_days"] = _calc_period(out["dated"], out["maturity_date"])
+        out["assent_period_days"] = _calc_period(out["first_reading"], out["assent_date"])
 
         out = _nullify_empties(out)[_SENATE_FINAL_COLS]
         out = out.sort_values("serial_number", na_position="last").reset_index(drop=True)

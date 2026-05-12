@@ -11,6 +11,6 @@ CREATE TABLE IF NOT EXISTS senate_bills (
     maturity_date  DATE,
     first_reading  DATE,
     assent_date    DATE,
-    gazette_period TEXT,
-    assent_period  TEXT
+    gazette_period_days BIGINT,
+    assent_period_days  BIGINT
 );
