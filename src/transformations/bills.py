@@ -101,14 +101,16 @@ _ASSEMBLY_OFFICE_KEYWORDS: list[str] = [
 ]
 
 _SENATE_OFFICE_PATTERN = re.compile("|".join(_SENATE_OFFICE_KEYWORDS), re.IGNORECASE)
-_ASSEMBLY_OFFICE_PATTERN = re.compile("|".join(_ASSEMBLY_OFFICE_KEYWORDS), re.IGNORECASE)
+_ASSEMBLY_OFFICE_PATTERN = re.compile(
+    "|".join(_ASSEMBLY_OFFICE_KEYWORDS), re.IGNORECASE
+)
 
 _AND_PATTERN = re.compile(r"\s+and\s+", re.IGNORECASE)
 # Match ', And ', ', & ', ', ', ' and ', ' & ' as single separator tokens.
 _COMMA_AND_PATTERN = re.compile(r",\s*(?:(?:and|&)\s+)?|\s+(?:and|&)\s+", re.IGNORECASE)
 
 # Senate also matches "The Chairperson ..."
-_SENATE_CHAIRPERSON_PATTERN = re.compile(r"^\s*(?:the\s+)?chairperson", re.IGNORECASE)
+_SENATE_CHAIRPERSON_PATTERN = re.compile(r"^\s*(?:the\s*)?chairperson", re.IGNORECASE)
 _ASSEMBLY_CHAIRPERSON_PATTERN = re.compile(r"^\s*chairperson", re.IGNORECASE)
 
 
@@ -137,7 +139,9 @@ def _transform_bills(
     """
     try:
         if raw_df is None or raw_df.empty:
-            log.warning(f"_transform_bills: received empty DataFrame for {chamber_name}")
+            log.warning(
+                f"_transform_bills: received empty DataFrame for {chamber_name}"
+            )
             return {
                 "status": "success",
                 "data": pd.DataFrame(),
@@ -167,6 +171,7 @@ def _transform_bills(
         log.debug(f"columns after header removal: {df.columns.tolist()}")
 
         df = fix_shifted_serial_rows(df, serial_col=serial_col)
+        
         if spill_before_duplicate:
             df = merge_spill_rows(df, serial_col=serial_col)
             df = merge_duplicate_serial_rows(df, serial_col=serial_col)
@@ -178,7 +183,9 @@ def _transform_bills(
         df = strip_cell_punctuation(df)
 
         row_count = len(df)
-        log.info(f"{chamber_name.title()} bills transformation complete: {row_count} rows retained")
+        log.info(
+            f"{chamber_name.title()} bills transformation complete: {row_count} rows retained"
+        )
 
         return {
             "status": "success",
@@ -265,6 +272,7 @@ def _partition_bills(
     df: pd.DataFrame,
     office_pattern: re.Pattern,
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    
     office = _extract_office_bills(df, office_pattern)
     remainder = df[~df.index.isin(office.index)]
     multi = _extract_multi_bills(remainder)
@@ -281,11 +289,14 @@ def _split_office_on_and(
     chairperson_pattern: re.Pattern,
     chamber_name: str,
 ) -> pd.DataFrame:
+    
     def _split(sponsor: str) -> list[str]:
         if chairperson_pattern.match(str(sponsor)):
             return [sponsor.strip()]
         parts = _AND_PATTERN.split(str(sponsor))
-        return [p.strip().strip(",").strip() for p in parts if p.strip().strip(",").strip()]
+        return [
+            p.strip().strip(",").strip() for p in parts if p.strip().strip(",").strip()
+        ]
 
     expanded = df.copy()
     expanded["sponsor"] = expanded["sponsor"].apply(_split)
@@ -297,7 +308,9 @@ def _split_office_on_and(
 def _split_multi_on_comma_and(df: pd.DataFrame) -> pd.DataFrame:
     def _split(sponsor: str) -> list[str]:
         parts = _COMMA_AND_PATTERN.split(str(sponsor))
-        return [p.strip().strip(",").strip() for p in parts if p.strip().strip(",").strip()]
+        return [
+            p.strip().strip(",").strip() for p in parts if p.strip().strip(",").strip()
+        ]
 
     expanded = df.copy()
     expanded["sponsor"] = expanded["sponsor"].apply(_split)
@@ -323,7 +336,9 @@ def _rebuild_bills(
     if include_residue:
         parts.append(residue_bills)
     if not parts:
-        log.warning(f"No subsets selected for {chamber_name} rebuild — returning empty DataFrame")
+        log.warning(
+            f"No subsets selected for {chamber_name} rebuild — returning empty DataFrame"
+        )
         return pd.DataFrame()
     result = pd.concat(parts, ignore_index=True)
     log.info(f"Rebuilt {chamber_name} bills: {len(result)} rows total")
@@ -375,8 +390,13 @@ def rebuild_assembly_bills(
 ) -> pd.DataFrame:
     """Reassemble the three assembly bill subsets into one DataFrame."""
     return _rebuild_bills(
-        office_bills, multi_bills, residue_bills, "assembly",
-        include_office, include_multi, include_residue,
+        office_bills,
+        multi_bills,
+        residue_bills,
+        "assembly",
+        include_office,
+        include_multi,
+        include_residue,
     )
 
 
@@ -425,6 +445,11 @@ def rebuild_senate_bills(
 ) -> pd.DataFrame:
     """Reassemble the three senate bill subsets into one DataFrame."""
     return _rebuild_bills(
-        office_bills, multi_bills, residue_bills, "senate",
-        include_office, include_multi, include_residue,
+        office_bills,
+        multi_bills,
+        residue_bills,
+        "senate",
+        include_office,
+        include_multi,
+        include_residue,
     )
