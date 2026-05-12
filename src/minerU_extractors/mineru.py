@@ -35,7 +35,7 @@ def parse_by_url(pdf_url: str, api_key: str):
     data = {
         "url": pdf_url,
         "model_version": MINERU_MODEL_VERSION,
-        "language": "en",
+        # "language": "en",
         "enable_table": True,
     }
 
@@ -147,7 +147,9 @@ def get_parsed_zip(task_id: str, api_key: str, extract_to: str):
             for member in zip_file.infolist():
                 member_path = (resolved_base / member.filename).resolve()
                 if not member_path.is_relative_to(resolved_base):
-                    raise ValueError(f"Path traversal detected in ZIP: {member.filename}")
+                    raise ValueError(
+                        f"Path traversal detected in ZIP: {member.filename}"
+                    )
             zip_file.extractall(extract_to)
             log.info(f"MinerU files extracted to: {extract_to}")
 
