@@ -16,7 +16,11 @@ def _secret(key: str, default=None):
         value = st.secrets.get(key, None)
     except Exception:
         value = None
+        
     if value is None:
+        # Env fallback
+        from dotenv import load_dotenv
+        load_dotenv()  
         value = os.environ.get(key, default)
     return value
 
