@@ -13,6 +13,7 @@ dependencies = [
     "pytest>=9.0.3",
     "psycopg[binary]>=3.0.0",
     "lxml>=6.1.0",
+    "dotenv>=0.9.9",
 ]
 
 [project.optional-dependencies]
